@@ -1,4 +1,12 @@
-import React from 'react';
-import Routes from './routes';
+import { StackNavigator } from 'react-navigation';
 
-export default () => <Routes />;
+import Posts from './scenes/posts';
+import Profile from './scenes/profile';
+console.disableYellowBox = true;
+
+const App = StackNavigator({
+  Posts: { screen: Posts },
+  Profile: { screen: Profile },
+});
+
+export default App;
