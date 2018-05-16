@@ -1,12 +1,13 @@
 export default {
-    primary: '#00985B',
+    primary: '#00985B', //setted
   
     darker: '#111',
     dark: '#333',
-    regular: '#666',
-    light: '#C0C0C0',
-    lighter: '#eee',
+    regular: '#ADCCC7', //setted
+    light: '#14CC82', //setted
+    lighter: '#E6F2F0', //setted
     white: '#FFF',
-  
-    transparent: 'rgba(0, 0, 0, 0)',
+
+    gray: '#7B9995', //setted
+    transparent: 'rgba(0, 0, 0, 0)', //setted
   }
