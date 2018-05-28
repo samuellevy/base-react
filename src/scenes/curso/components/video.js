@@ -46,8 +46,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     videoImage: {
-        width: 182,
-        height: 93,
+        flex: 1,
     },
     videoInfo: {
         marginLeft: 10,
@@ -58,13 +57,12 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     videoDescription: {
-        flex: 1,
         fontSize: 16,
         color: '#999',
         width: 170,
     },
     videoButton: {
         color: '#14CC82',
-        fontSize: 16,
+        fontSize: 12,
     }
 });
