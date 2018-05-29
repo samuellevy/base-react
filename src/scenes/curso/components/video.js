@@ -7,20 +7,21 @@ import {
   View,
   Image,
   Platform,
+  WebView,
   TouchableOpacity,  
 } from 'react-native';
+import { colors, metrics, fonts } from '../../../styles';
 
 export default class Video extends Component {
     render() {
         return(
             <View style={styles.video}>
-                <Image 
-                    style={styles.videoImage}
-                    source={{uri: 'https://dummyimage.com/192x103/000/fff.jpg&text=Video'}}
-                />
+                <View style = {styles.viewVideo}>
+                    <WebView source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} />
+                </View>
 
                 <View style={styles.videoInfo}>
-                    <Text style={styles.videoTitle}>Modúlo</Text>
+                    <Text style={styles.videoTitle}>MODÚLO</Text>
                     <Text style={styles.videoDescription}>Quais os diferentes tipos de cimento?</Text>
                     <TouchableOpacity onPress={() =>{}}>
                         <Text style={styles.videoButton}>ASSISTIR ></Text>
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: '#fff',
         flexDirection: 'row',
+        justifyContent: 'space-between',
         borderWidth: 1,
         borderRadius: 2,
         borderColor: '#ddd',
@@ -45,26 +47,39 @@ const styles = StyleSheet.create({
         shadowRadius: 5,
         marginBottom: 20,
     },
+    viewVideo: {
+        width: 150,
+    },
     videoImage: {
         width: 182,
         height: 93,
     },
     videoInfo: {
         marginLeft: 10,
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        flexWrap: 'wrap',
     },
     videoTitle: {
         fontWeight: 'bold',
-        color: '#333',
-        fontSize: 16,
+        color: '#7B9995',
+        fontSize: 12,
+        paddingBottom: 10,
     },
     videoDescription: {
         flex: 1,
-        fontSize: 16,
-        color: '#999',
+        flexWrap: 'wrap',
+        fontSize: 11,
+        width: 100,
+        color: '#243331',
         width: 170,
+        fontFamily: fonts.main,
+        fontWeight: 'normal',
+        paddingBottom: 10,
     },
     videoButton: {
         color: '#14CC82',
-        fontSize: 16,
+        fontSize: 11,
     }
 });
