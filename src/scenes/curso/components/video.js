@@ -51,8 +51,7 @@ const styles = StyleSheet.create({
         width: 150,
     },
     videoImage: {
-        width: 182,
-        height: 93,
+        flex: 1,
     },
     videoInfo: {
         marginLeft: 10,
