@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     videoInfo: {
-        marginLeft: 10,
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
+        paddingLeft: 10,
     },
     videoTitle: {
         fontWeight: 'bold',
@@ -70,9 +70,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexWrap: 'wrap',
         fontSize: 11,
-        width: 100,
         color: '#243331',
-        width: 170,
         fontFamily: fonts.main,
         fontWeight: 'normal',
         paddingBottom: 10,
