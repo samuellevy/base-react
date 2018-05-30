@@ -56,6 +56,15 @@ const styles = StyleSheet.create({
     },
 
     inputBox:{
+        marginBottom: metrics.padding,
+    },
+
+    txtError:{
+        fontFamily: fonts.main,
+        fontWeight: 'normal',
+        marginTop: 5,
+        textAlign: 'right',
+        color: colors.error,
 
     },
     
@@ -68,7 +77,7 @@ const styles = StyleSheet.create({
     input:{
         height: 40, borderColor: colors.lighter, borderBottomWidth: 1,
         backgroundColor: colors.transparent,
-        marginBottom: metrics.padding,
+        
         color: colors.light,
         paddingLeft: 40,
     },

@@ -10,4 +10,6 @@ export default {
 
     gray: '#7B9995', //setted
     transparent: 'rgba(0, 0, 0, 0)', //setted
+
+    error: '#C71829',
   }

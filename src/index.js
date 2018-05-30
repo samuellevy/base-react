@@ -6,18 +6,23 @@ import Login from './scenes/login';
 import Home from './scenes/home';
 import Teste from './scenes/teste';
 import Curso from './scenes/curso';
+import Rule from './scenes/rule';
 
 console.disableYellowBox = true;
 
 const App = StackNavigator({
   // Teste: {screen: Teste},
+  Rule: {screen: Rule},
   // Login: { screen: Login },
+  // Teste: {screen: Teste},
+  Login: { screen: Login },
   // Home: {screen: Home},
   Curso: { screen: Curso },
   Login: { screen: Login },
   Home: {screen: Home},
   Posts: { screen: Posts },
-  Profile: { screen: Profile },
+  Profile: { screen: Profile }, 
 });
 
 export default App;
+
