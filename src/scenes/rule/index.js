@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import styles from './styles';
 
+import Header from '../components/header';
+import Nav from '../components/navigation';
+
 export default class Rule extends Component {
     static navigationOptions = {
         header: null
@@ -10,19 +13,11 @@ export default class Rule extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.header}>
-                    <View style={styles.logoContainer}>
-                    <Image
-                        style={styles.logo}
-                        source={require('../../../assets/img/marca2.png')}
-                    />
-                    </View>
-                </View>
+                <Header/>
                 <ScrollView>
                     <View style={styles.ruleContent}>
                         <Text style={styles.ruleTitle}>
                             {'Regulamento'.toUpperCase()}
-    
                         </Text>
                         <Text style={styles.ruleParagraph}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id mauris molestie, vestibulum nibh eu, finibus sem. 
@@ -41,6 +36,7 @@ export default class Rule extends Component {
                         </Text>
                     </View>
                 </ScrollView>
+                <Nav/>
             </View>
         );
     }

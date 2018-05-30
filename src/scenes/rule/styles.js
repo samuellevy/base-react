@@ -9,18 +9,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.white,
         justifyContent: 'center',
     },
-    header:{
-        height: 40,
-        backgroundColor: colors.primary,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    logo:{
-      height: 28,
-      width: 65,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
     ruleContent:{
         padding: 15,
     },
