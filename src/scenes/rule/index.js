@@ -11,10 +11,12 @@ export default class Rule extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
+                    <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
                         source={require('../../../assets/img/marca2.png')}
                     />
+                    </View>
                 </View>
                 <ScrollView style={styles.ruleContent}>
                     <Text style={styles.ruleTitle}>

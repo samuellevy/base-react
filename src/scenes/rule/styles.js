@@ -16,7 +16,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo:{
-        height: 30,
+      height: 28,
+      width: 65,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     ruleContent:{
         padding: 15,
