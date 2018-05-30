@@ -25,16 +25,17 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     ruleTitle:{
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: 'bold',
         color: colors.primary,
-        paddingVertical: 10,
+        paddingBottom: 10,
+        lineHeight: 16,
     },
     ruleParagraph:{
-        fontSize: 11,
+        fontSize: 12,
         color: colors.dark,
-        paddingBottom: 10,
-
+        marginBottom: 10,
+        lineHeight: 14,
     }
 });
 
