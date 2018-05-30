@@ -10,8 +10,8 @@ import Curso from './scenes/curso';
 console.disableYellowBox = true;
 
 const App = StackNavigator({
-  Teste: {screen: Teste},
-  // Login: { screen: Login },
+  // Teste: {screen: Teste},
+  Login: { screen: Login },
   // Home: {screen: Home},
   Curso: { screen: Curso },
   Login: { screen: Login },
