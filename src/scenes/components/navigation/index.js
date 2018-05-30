@@ -22,9 +22,7 @@ export default class Navigation extends Component {
                     <Text style={styles.title}>Curso</Text>
                 </View>
                 <View style={styles.tabBtn}>
-                <SVGImage style={{ width: 80, height: 80, color: 'red' }} source={{uri:'https://fluent-panda.appspot.com.storage.googleapis.com/dumbbell.svg'}} />
                     <FontAwesome name="calendar-o" size={25} style={styles.icon} color={"#ddd"}></FontAwesome>
-                    <MaterialIcon name="trending-up" size={15} style={styles.icon} color={"#ddd"}></MaterialIcon>
                     <Text style={styles.title}>Desempenho</Text>
                 </View>
                 <View style={styles.tabBtn}>
