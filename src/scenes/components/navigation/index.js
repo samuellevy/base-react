@@ -16,20 +16,20 @@ export default class Navigation extends Component {
                     <Text style={styles.title}>Home</Text>
                 </View>
                 <View style={styles.tabBtn}>
-                    <Icon name="video-library" size={25} style={styles.icon} color={"#ddd"}></Icon>
-                    <Text style={styles.title}>Módulos</Text>
+                    <Icon name="school" size={25} style={styles.icon} color={"#ddd"}></Icon>
+                    <Text style={styles.title}>Curso</Text>
                 </View>
                 <View style={styles.tabBtn}>
                     <Icon name="trending-up" size={25} style={styles.icon} color={"#ddd"}></Icon>
                     <Text style={styles.title}>Desempenho</Text>
                 </View>
                 <View style={styles.tabBtn}>
-                    <Icon name="star" size={25} style={styles.icon} color={"#ddd"}></Icon>
-                    <Text style={styles.title}>Prêmios</Text>
+                    <Icon name="star_border" size={25} style={styles.icon} color={"#ddd"}></Icon>
+                    <Text style={styles.title}>Rankin</Text>
                 </View>
                 <View style={styles.tabBtn}>
-                    <Icon name="person" size={25} style={styles.icon} color={"#ddd"}></Icon>
-                    <Text style={styles.title}>Perfil</Text>
+                    <Icon name="notes" size={25} style={styles.icon} color={"#ddd"}></Icon>
+                    <Text style={styles.title}>Mais</Text>
                 </View>
             </View>
         </View>

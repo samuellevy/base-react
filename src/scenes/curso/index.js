@@ -16,7 +16,7 @@ export default class Curso extends Component {
     render() {
         return (
             <View style={styles.containerView}>
-                <ScrollView contentContainerStyle={styles.repoList}>
+                <ScrollView contentContainerStyle={styles.videoList}>
                     <View style={styles.container}>
                         <Text style={styles.primaryTitle}>CURSO DE CAPACITAÇÃO</Text>
 
@@ -26,7 +26,6 @@ export default class Curso extends Component {
                         <Video />
                     </View>
                 </ScrollView>
-                
                 <Nav />
             </View>
         );

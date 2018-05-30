@@ -1,8 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { colors, metrics, fonts } from '../../../styles';
 
 const styles = StyleSheet.create({
     container:{
         position: 'absolute', left: 0, right: 0, bottom: 0,
+        borderWidth: 1,
+        borderColor: '#ddd',
     },
     navBar:{
         flex: 1,
@@ -20,9 +23,12 @@ const styles = StyleSheet.create({
     },
     title:{
         fontSize: 12,
+        fontFamily: fonts.main,
+        paddingBottom: 5,
+        color: '#7B9995',
     },
     icon:{
-        color: '#757575',
+        color: '#7B9995',
     }
 });
 
