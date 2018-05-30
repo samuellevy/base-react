@@ -11,6 +11,7 @@ import Rule from './scenes/rule';
 console.disableYellowBox = true;
 
 const App = StackNavigator({
+  // Teste: {screen: Teste},
   Rule: {screen: Rule},
   // Login: { screen: Login },
   // Teste: {screen: Teste},
@@ -20,7 +21,7 @@ const App = StackNavigator({
   Login: { screen: Login },
   Home: {screen: Home},
   Posts: { screen: Posts },
-  Profile: { screen: Profile },
+  Profile: { screen: Profile }, 
 });
 
 export default App;
