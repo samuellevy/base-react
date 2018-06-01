@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         width: '50%',
     },
     boxSplitText:{
-        borderRightWidth: 0.5,
+        borderRightWidth: 1,
         borderRightColor: colors.regular,
     },
     splitTitleBox:{

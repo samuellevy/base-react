@@ -21,7 +21,7 @@ export default class Home extends Component {
           <SmallProfile/>
           <RankingBox/>
         </ScrollView>
-        <Nav />
+        <Nav navigation={this.props.navigation} />
       </View>
     );
   }

@@ -36,7 +36,7 @@ export default class Rule extends Component {
                         </Text>
                     </View>
                 </ScrollView>
-                <Nav/>
+                <Nav navigation={this.props.navigation}/>
             </View>
         );
     }
