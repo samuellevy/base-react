@@ -10,11 +10,14 @@ export default {
     white: '#FFF',
 
     fontColor: '#4D6662',
+    textColor: '#243331',
     yellow: '#FCB415',
+    blue: '#00A6E3',
     greenlight: '#ADCCC7', //setted
     gray: '#7B9995', //setted
     graylight: '#E6F2F0', //setted
     transparent: 'rgba(0, 0, 0, 0)', //setted
+    black: '#000',
 
     error: '#C71829',
   }

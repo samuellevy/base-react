@@ -2,23 +2,7 @@ import { StyleSheet, Platform } from 'react-native';
 import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 10,
-        backgroundColor: colors.white,
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexDirection: 'row',
-    },
-    name: {
-        fontSize: 12,
-        fontWeight: 'bold',
-        
-    },
-    store:{
-        fontSize: 10,
-        
-    },
+
     box:{
         flex: 1,
         flexDirection: 'row',
