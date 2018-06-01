@@ -6,12 +6,14 @@ export default {
     regular: '#ADCCC7', //setted
     light: '#14CC82', //setted
     lighter: '#E6F2F0', //setted
+    ultralight: '#33FFA3', //setted
     white: '#FFF',
 
     fontColor: '#4D6662',
-
     yellow: '#FCB415',
+    greenlight: '#ADCCC7', //setted
     gray: '#7B9995', //setted
+    graylight: '#E6F2F0', //setted
     transparent: 'rgba(0, 0, 0, 0)', //setted
 
     error: '#C71829',
