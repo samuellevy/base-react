@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import { View, Text, TouchableHighlight } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import SVGImage from 'react-native-svg-image';
 
 import styles from './styles';
 
@@ -22,7 +20,11 @@ export default class Navigation extends Component {
                     <Text style={styles.title}>Curso</Text>
                 </View>
                 <View style={styles.tabBtn}>
+<<<<<<< HEAD
                     <MaterialIcon name="today" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
+=======
+                    <MaterialIcon name="home" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
+>>>>>>> 384437c437c83197dce23148aee2fae6c147fbb4
                     <Text style={styles.title}>Desempenho</Text>
                 </View>
                 <View style={styles.tabBtn}>

@@ -23,7 +23,6 @@ const App = StackNavigator({
   // Login: { screen: Login },
   // Home: {screen: Home},
   Login: { screen: Login },
-  Home: {screen: Home},
   Posts: { screen: Posts },
   Profile: { screen: Profile }, 
 });
