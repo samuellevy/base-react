@@ -24,32 +24,24 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '95%',
         margin: '2.5%',
-        elevation: 2,
+        borderRadius: 3,
+        elevation: 1,
         shadowColor: colors.black,
         shadowOpacity: 0.2,
         shadowRadius: 1,
         shadowOffset: {
             height: 1,
             width: 0
-        }
+        },
+        backgroundColor: colors.white,
     },
     split:{
         width: '50%',
-        height: '100%',
-        backgroundColor: colors.white,
     },
-    splitLeft:{
-        borderTopLeftRadius: 3,
-        borderBottomLeftRadius: 3,
-    },
-    splitRight:{
-        borderTopRightRadius: 3,
-        borderBottomRightRadius: 3,
-    },
-
+    
     splitTitleBox:{
         backgroundColor: colors.yellow,
-        padding: 3,
+        padding: 4,
     },
     splitTitleBoxLeft:{
         borderTopLeftRadius: 3,
@@ -58,31 +50,23 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 3,
     },
     splitTitle:{
-        fontSize: 9,
+        fontSize: 10,
         fontWeight: 'bold',
         color: colors.white,
         textAlign: 'center',
     },
-    splitTextBoxLeft:{
-        borderRightWidth: 0.5,
-        borderRightColor: colors.regular,
-    },
-    splitTextBox:{
-        height: 40,
-        padding: 0,
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
     splitText:{
         fontSize: 12,
         lineHeight: 12,
-        paddingBottom: 5,
         fontWeight: 'bold',
+        textAlign: 'center',
+        padding: 20,
         color: colors.fontColor,
     },
     splitTextScore:{
         color: colors.yellow,
+        borderLeftWidth: 0.5,
+        borderLeftColor: colors.regular,
     },
 
 });
