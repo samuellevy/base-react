@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         width: '95%',
         margin: '2.5%',
         borderRadius: 3,
-        elevation: 1,
+        elevation: 2,
         shadowColor: colors.black,
         shadowOpacity: 0.2,
         shadowRadius: 1,
@@ -38,7 +38,10 @@ const styles = StyleSheet.create({
     split:{
         width: '50%',
     },
-    
+    boxSplitText:{
+        borderRightWidth: 0.5,
+        borderRightColor: colors.regular,
+    },
     splitTitleBox:{
         backgroundColor: colors.yellow,
         padding: 4,
@@ -65,8 +68,6 @@ const styles = StyleSheet.create({
     },
     splitTextScore:{
         color: colors.yellow,
-        borderLeftWidth: 0.5,
-        borderLeftColor: colors.regular,
     },
 
 });

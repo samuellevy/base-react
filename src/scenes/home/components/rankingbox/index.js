@@ -15,7 +15,9 @@ export default class RankingBox extends Component {
                     <View style={[styles.splitTitleBox, styles.splitTitleBoxLeft]}>
                         <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
                     </View>
-                    <Text style={styles.splitText}>4º Lugar</Text>
+                    <View style={styles.boxSplitText}>
+                        <Text style={styles.splitText}>4º Lugar</Text>
+                    </View>
                 </View>
                 <View style={styles.split}>
                     <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
