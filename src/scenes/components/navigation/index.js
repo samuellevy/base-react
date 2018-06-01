@@ -25,7 +25,7 @@ export default class Navigation extends Component {
                 </View>
                 <View style={styles.tabBtn}>
                     <MaterialIcon name="star-border" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                    <Text style={styles.title}>Rankin</Text>
+                    <Text style={styles.title}>Ranking</Text>
                 </View>
                 <View style={styles.tabBtn}>
                     <MaterialIcon name="subject" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>

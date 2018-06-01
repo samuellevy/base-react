@@ -13,6 +13,7 @@ import Quiz from './scenes/quiz';
 console.disableYellowBox = true;
 
 const App = StackNavigator({
+  Home: {screen: Home},
   // Teste: {screen: Teste},
   Curso: { screen: Curso },
   ListCurso: { screen: ListCurso },
@@ -21,7 +22,6 @@ const App = StackNavigator({
   Quiz: { screen: Quiz },
   // Teste: {screen: Teste},
   // Login: { screen: Login },
-  // Home: {screen: Home},
   Login: { screen: Login },
   Posts: { screen: Posts },
   Profile: { screen: Profile }, 
