@@ -24,12 +24,27 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '95%',
         margin: '2.5%',
-        borderRadius: 3,
-        backgroundColor: colors.white,
-        elevation: 1,
+        elevation: 2,
+        shadowColor: colors.black,
+        shadowOpacity: 0.2,
+        shadowRadius: 1,
+        shadowOffset: {
+            height: 1,
+            width: 0
+        }
     },
     split:{
         width: '50%',
+        height: '100%',
+        backgroundColor: colors.white,
+    },
+    splitLeft:{
+        borderTopLeftRadius: 3,
+        borderBottomLeftRadius: 3,
+    },
+    splitRight:{
+        borderTopRightRadius: 3,
+        borderBottomRightRadius: 3,
     },
 
     splitTitleBox:{

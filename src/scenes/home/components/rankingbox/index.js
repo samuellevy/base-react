@@ -11,7 +11,7 @@ export default class RankingBox extends Component {
     render() {
         return (
             <View style={styles.box}>
-                <View style={styles.split}>
+                <View style={[styles.split, styles.splitLeft]}>
                     <View style={[styles.splitTitleBox, styles.splitTitleBoxLeft]}>
                         <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
                     </View>
@@ -19,7 +19,7 @@ export default class RankingBox extends Component {
                         <Text style={styles.splitText}>4º Lugar</Text>
                     </View>
                 </View>
-                <View style={styles.split}>
+                <View style={[styles.split, styles.splitRight]}>
                     <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
                         <Text style={styles.splitTitle}>{'Pontuação'.toUpperCase()}</Text>
                     </View>
