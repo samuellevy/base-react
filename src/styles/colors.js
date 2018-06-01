@@ -8,6 +8,9 @@ export default {
     lighter: '#E6F2F0', //setted
     white: '#FFF',
 
+    fontColor: '#4D6662',
+
+    yellow: '#FCB415',
     gray: '#7B9995', //setted
     transparent: 'rgba(0, 0, 0, 0)', //setted
 

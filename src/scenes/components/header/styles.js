@@ -3,14 +3,14 @@ import { colors } from '../../../styles';
 
 const styles = StyleSheet.create({
     header: {
-        height: 50,
+        height: 45,
         backgroundColor: colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
     },
     logo: {
-        height: 35,
-        width: 80,
+        height: 30,
+        width: 68,
         alignItems: 'center',
         justifyContent: 'center',
     }
