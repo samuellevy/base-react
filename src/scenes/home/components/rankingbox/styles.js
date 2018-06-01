@@ -4,19 +4,19 @@ import { colors, metrics, fonts } from '../../../../styles';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 15,
+        padding: 10,
         backgroundColor: colors.white,
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
     },
     name: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 'bold',
         
     },
     store:{
-        fontSize: 14,
+        fontSize: 12,
         
     }
 });

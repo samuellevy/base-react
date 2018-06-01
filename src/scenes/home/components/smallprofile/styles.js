@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     name: {
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 'bold',
         
     },
     store:{
-        fontSize: 14,
+        fontSize: 12,
         
     }
 });

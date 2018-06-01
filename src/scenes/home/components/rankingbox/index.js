@@ -10,13 +10,8 @@ export default class RankingBox extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.name}>
-                    Olá, Beatriz!
-                </Text>
-                <Text style={styles.store}>
-                    Loja Golveia Construção
-                </Text>
+            <View style={styles.box}>
+                
             </View>
         );
     }
