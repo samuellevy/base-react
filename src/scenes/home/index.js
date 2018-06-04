@@ -8,7 +8,7 @@ import Nav from '../components/navigation';
 import SmallProfile from './components/smallprofile';
 import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
-import InfoBox from './components/infobox';
+import Desempenho from './components/desempenho';
 
 export default class Home extends Component {
   static navigationOptions = {
@@ -19,11 +19,12 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <Header />
-        <ScrollView>
+        <ScrollView style={{marginBottom: 60}}>
           <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
-          <InfoBox/>
+          <Desempenho/>
+          <Desempenho/>
         </ScrollView>
         <Nav navigation={this.props.navigation} />
       </View>

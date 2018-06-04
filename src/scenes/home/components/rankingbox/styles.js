@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     splitText:{
-        fontSize: 12,
+        fontSize: 14,
         lineHeight: 12,
         fontWeight: 'bold',
         textAlign: 'center',

@@ -2,14 +2,17 @@ import { StyleSheet, Platform } from 'react-native';
 import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
-
     box:{
+        position: 'absolute',
+        top: 0,
+        width: '100%',
+        elevation: 3,
         flex: 1,
-        flexDirection: 'row',
-        width: '95%',
-        margin: '2.5%',
-        borderRadius: 3,
-        elevation: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    circle:{
+        elevation: 3,
         shadowColor: colors.black,
         shadowOpacity: 0.2,
         shadowRadius: 1,
@@ -17,24 +20,17 @@ const styles = StyleSheet.create({
             height: 1,
             width: 0
         },
-        backgroundColor: colors.white,
+        height: 32,
+        width: 32,
+        borderRadius: 32,
+        backgroundColor: colors.blue,
     },
-    splitLeft:{
-        width: '60%',
-        paddingLeft: 20,
-    },
-    text:{
-        fontSize: 14,
-        paddingBottom: 15,
-        color: colors.textColor,
-    },
-    tableTitle:{
+    title: {
         fontSize: 12,
         fontWeight: 'bold',
         color: colors.blue,
-    }
-    
-
+        marginTop: 5,
+    },
 });
 
 export default styles;
