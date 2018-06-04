@@ -11,9 +11,14 @@ import TitleSec from '../../components/title/secondaryTitle';
 import Nav from '../../components/navigation';
 import ModalBox from '../../components/modal';
 
+import NavIcon from '../../components/navigation/NavIcon';
+
 export default class Curso extends Component {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ focused, tintColor }) => {
+            return <NavIcon title={'Curso'} icon={'school'}/>;
+        },
     };
 
     render() {
