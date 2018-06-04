@@ -9,13 +9,15 @@ import Curso from './scenes/curso/curso';
 import ListCurso from './scenes/curso/listCurso';
 import Rule from './scenes/rule';
 import Quiz from './scenes/quiz';
+import ModalExample from './scenes/modalExample';
 
 console.disableYellowBox = true;
 
 const App = StackNavigator({
-  Home: {screen: Home},
+  ModalExample: { screen: ModalExample},
+  // Home: {screen: Home},
   // Teste: {screen: Teste},
-  Curso: { screen: Curso },
+  // Curso: { screen: Curso },
   ListCurso: { screen: ListCurso },
   Rule: {screen: Rule},
   // Login: { screen: Login },

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import { View, Text, Image, TextInput, ScrollView, ScrollSheet, WebView, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TextInput, ScrollView, ScrollSheet, WebView, TouchableOpacity, TouchableHighlight, Alert } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+
 import styles from './styles';
 import { colors } from '../../../styles';
 
@@ -9,24 +10,29 @@ import Header from '../../components/header';
 import Title from '../../components/title/primaryTitle';
 import TitleSec from '../../components/title/secondaryTitle';
 import Nav from '../../components/navigation';
-import ModalBox from '../../components/modal';
+import ModalBox from '../../components/modal/alert';
 
 export default class Curso extends Component {
     static navigationOptions = {
         header: null
     };
 
+    clickCurse() {
+        Alert.alert(
+            'Opss..',
+            'Este curso ainda não esta liberado',
+                [
+                    // {text: 'Ask me later', onPress: () => console.log('Ask me later pressed')},
+                    // {text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+                    {text: 'OK', onPress: () => console.log('OK Pressed')},
+            ],
+            { cancelable: false }
+        )
+    }
+
     render() {
 
         const testStart = null;
-
-        testOpen = () => {
-            if(testStart == null) {
-                return <ModalBox />
-            } else {
-                return <ModalBox />
-            }
-        }
 
         return (
             <View style={styles.container}>
@@ -52,7 +58,7 @@ export default class Curso extends Component {
                         </View>
 
                         <View style={styles.boxTest}>
-                            <TouchableOpacity style={this.testStart ? styles.startTestActive : styles.startTest} onPress={this.testOpen}>
+                            <TouchableOpacity style={styles.startTest} onPress={this.clickCurse}>
                                 {/* <Text style={this.testStart ? 'styles.textBtnActive' : ' styles.textBtn'}>FAZER O TESTE</Text> */}
                                 <Text style={styles.textBtn}>FAZER O TESTE</Text> 
                             </TouchableOpacity>
