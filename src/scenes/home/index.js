@@ -15,7 +15,6 @@ export default class Home extends Component {
   static navigationOptions = {
     header: null,
     tabBarIcon: ({ focused, tintColor }) => {
-      let iconName = `ios-options`;
       return <NavIcon title={'Home'} icon={'home'}/>;
     },
   };
@@ -31,7 +30,7 @@ export default class Home extends Component {
           <Desempenho/>
           <Desempenho/>
         </ScrollView>
-        <Nav navigation={this.props.navigation} />
+        {/* <Nav navigation={this.props.navigation} /> */}
       </View>
     );
   }

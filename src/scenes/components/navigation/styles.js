@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
     tabBtn:{
         justifyContent: 'center',
         alignItems: 'center',
+        borderColor: '#ddd',
+        borderWidth: 2,
     },
     title:{
         fontSize: 12,
