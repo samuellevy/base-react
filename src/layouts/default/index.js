@@ -20,10 +20,12 @@ export default TabNavigator(
   },
   {
     tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
+    tabBarPosition: 'bottom',
     tabBarOptions: {
+      showIcon: true,
       activeTintColor: 'tomato',
       inactiveTintColor: 'blue',
-      showLabel: false,
+      showLabel: true,
       style: {
         
       },

@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     tableTitle:{
-        fontSize: 10,
+        fontSize: metrics.fontTitle.size,
         fontWeight: 'bold',
         color: colors.gray,
     },

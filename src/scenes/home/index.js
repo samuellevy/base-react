@@ -27,7 +27,6 @@ export default class Home extends Component {
           <Desempenho/>
           <Desempenho/>
         </ScrollView>
-        <Nav navigation={this.props.navigation} />
       </View>
     );
   }
