@@ -14,9 +14,9 @@ console.disableYellowBox = true;
 
 const App = StackNavigator({
   // Teste: {screen: Teste},
-  Curso: { screen: Curso },
-  ListCurso: { screen: ListCurso },
-  Rule: {screen: Rule},
+  //Curso: { screen: Curso },
+  //ListCurso: { screen: ListCurso },
+  //Rule: {screen: Rule},
   // Login: { screen: Login },
   Quiz: { screen: Quiz },
   // Teste: {screen: Teste},

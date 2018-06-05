@@ -26,10 +26,11 @@ const styles = StyleSheet.create({
     width: "90%",
     marginHorizontal: '5%',
   },
-  txtQuestionTitlte:{
+  txtQuestionTitle:{
     color: colors.primary,
     textAlign: "center",
     fontWeight: "bold",
+    fontFamily: fonts.main,
   },
   boxAnswer:{
     

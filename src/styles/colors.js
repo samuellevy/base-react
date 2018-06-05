@@ -9,6 +9,7 @@ export default {
     ultralight: '#33FFA3', //setted
     white: '#FFF',
     
+    yellow: '#FCB415', //setted
     greenlight: '#ADCCC7', //setted
     gray: '#7B9995', //setted
     graylight: '#E6F2F0', //setted
