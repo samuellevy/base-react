@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderColor: '#ddd',
-        borderWidth: 2,
+        // borderWidth: 2,
     },
     title:{
         fontSize: 12,

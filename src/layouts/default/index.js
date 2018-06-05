@@ -19,7 +19,7 @@ export default TabNavigator(
     Posts: { screen: Posts, navigationOptions: { tabBarVisible: true }  },
   },
   {
-    // tabBarComponent: Nav,
+    tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
     tabBarOptions: {
       activeTintColor: 'tomato',
       inactiveTintColor: 'blue',
