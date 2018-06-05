@@ -6,15 +6,20 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 import { colors } from '../../../styles';
 
-import Header from '../../components/header';
-import Title from '../../components/title/primaryTitle';
-import TitleSec from '../../components/title/secondaryTitle';
-import Nav from '../../components/navigation';
-import ModalBox from '../../components/modal/alert';
+import Header from '../../../components/header';
+import Title from '../../../components/title/primaryTitle';
+import TitleSec from '../../../components/title/secondaryTitle';
+import Nav from '../../../components/navigation';
+import ModalBox from '../../../components/modal/alert';
+
+import NavIcon from '../../../components/navigation/NavIcon';
 
 export default class Curso extends Component {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ focused, tintColor }) => {
+            return <NavIcon title={'Curso'} icon={'school'}/>;
+        },
     };
 
     clickCurse() {

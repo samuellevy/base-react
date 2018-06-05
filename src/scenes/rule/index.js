@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import styles from './styles';
 
-import Header from '../components/header';
-import Nav from '../components/navigation';
+import NavIcon from '../../components/navigation/NavIcon';
+import Header from '../../components/header';
+import Nav from '../../components/navigation';
 
 export default class Rule extends Component {
     static navigationOptions = {
-        header: null
+        header: null,
+        tabBarIcon: ({ focused, tintColor }) => {
+            let iconName = `ios-options`;
+            return <NavIcon title={'Home'} icon={'home'}/>;
+        },
     };
 
     render() {

@@ -5,8 +5,8 @@ import Profile from './scenes/profile';
 import Login from './scenes/login';
 import Home from './scenes/home';
 import Teste from './scenes/teste';
-import Curso from './scenes/curso/curso';
-import ListCurso from './scenes/curso/listCurso';
+import Curso from './scenes/cursoStyle/curso';
+import ListCurso from './scenes/cursoStyle/listCurso';
 import Rule from './scenes/rule';
 import Quiz from './scenes/quiz';
 

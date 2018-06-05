@@ -6,8 +6,8 @@ import styles from './styles';
 import { colors } from '../../../styles';
 
 import Video from '../components/videoDescription';
-import Nav from '../../components/navigation';
-import Header from '../../components/header';
+import Nav from '../../../components/navigation';
+import Header from '../../../components/header';
 
 export default class ListCurso extends Component {
     static navigationOptions = {

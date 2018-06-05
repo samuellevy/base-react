@@ -1,33 +1,13 @@
 import { StackNavigator } from 'react-navigation';
+import React, { Component } from 'react';
 
-import Posts from './scenes/posts';
-import Profile from './scenes/profile';
-import Login from './scenes/login';
-import Home from './scenes/home';
-import Teste from './scenes/teste';
-import Curso from './scenes/curso/curso';
-import ListCurso from './scenes/curso/listCurso';
-import Rule from './scenes/rule';
-import Quiz from './scenes/quiz';
-import ModalExample from './scenes/modalExample';
+import { View } from 'react-native';
+import MainNavigator from './MainNavigator';
 
-console.disableYellowBox = true;
-
-const App = StackNavigator({
-  Home: {screen: Home},
-  // ModalExample: { screen: ModalExample},
-  // Teste: {screen: Teste},
-  // Curso: { screen: Curso },
-  ListCurso: { screen: ListCurso },
-  Rule: {screen: Rule},
-  // Login: { screen: Login },
-  Quiz: { screen: Quiz },
-  // Teste: {screen: Teste},
-  // Login: { screen: Login },
-  Login: { screen: Login },
-  Posts: { screen: Posts },
-  Profile: { screen: Profile }, 
-});
-
-export default App;
-
+export default class App extends Component {
+  render() {
+    return (
+      <MainNavigator />
+    );
+  }
+}
