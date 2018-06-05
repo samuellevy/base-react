@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 15,
-        backgroundColor: colors.white,
         justifyContent: 'space-between',
         alignItems: 'center',
         flexDirection: 'row',
@@ -13,11 +12,11 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 14,
         fontWeight: 'bold',
-        
+        color: colors.fontColor,
     },
     store:{
         fontSize: 12,
-        
+        color: colors.fontColor,
     }
 });
 

@@ -9,6 +9,7 @@ export default class Profile extends Component {
 
     render() {
         return (
+            
             <View style={styles.container}>
             <Text> PROFILE </Text>
             <Navigation navigation={this.props.navigation}/>

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         // padding: metrics.containerPadding,
         // paddingTop: (Platform.OS === 'ios') ? metrics.headerPadding : 0,
-        backgroundColor: colors.white,
+        backgroundColor: '#f7fbfc',
         justifyContent: 'center',
     },
     ruleContent:{
