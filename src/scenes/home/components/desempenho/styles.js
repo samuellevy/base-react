@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.blue,
-        paddingBottom: 10,
+        paddingBottom: 5,
     },
     table:{
         flex: 1,
@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
         fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.gray,
-        paddingBottom: 5,
     },
     tableText:{
         fontSize: metrics.fonts.medium,
