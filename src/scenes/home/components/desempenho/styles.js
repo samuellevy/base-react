@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
         fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.gray,
+        paddingBottom: 3,
     },
     tableText:{
         fontSize: metrics.fonts.medium,
