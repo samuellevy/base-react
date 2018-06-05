@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         top: 0,
         width: '100%',
         elevation: 3,
+        zIndex: 3,
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
@@ -20,17 +21,21 @@ const styles = StyleSheet.create({
             height: 1,
             width: 0
         },
-        height: 32,
-        width: 32,
+        height: metrics.infoBox.iconSize,
+        width: metrics.infoBox.iconSize,
         borderRadius: 32,
         backgroundColor: colors.blue,
+        justifyContent: 'center'
     },
     title: {
-        fontSize: 12,
+        fontSize: metrics.infoBox.fontSize,
         fontWeight: 'bold',
         color: colors.blue,
         marginTop: 5,
     },
+    icon:{
+        alignSelf: 'center',
+    }
 });
 
 export default styles;

@@ -14,9 +14,6 @@ import Desempenho from './components/desempenho';
 export default class Home extends Component {
   static navigationOptions = {
     header: null,
-    tabBarIcon: ({ focused, tintColor }) => {
-      return <NavIcon title={'Home'} icon={'home'}/>;
-    },
   };
   
   render() {
@@ -30,7 +27,6 @@ export default class Home extends Component {
           <Desempenho/>
           <Desempenho/>
         </ScrollView>
-        {/* <Nav navigation={this.props.navigation} /> */}
       </View>
     );
   }
