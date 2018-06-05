@@ -13,13 +13,13 @@ import Desempenho from './components/desempenho';
 
 export default class Home extends Component {
   static navigationOptions = {
-    header: null,
+    
   };
   
   render() {
     return (
       <View style={styles.container}>
-        <Header />
+        {/* <Header /> */}
         <ScrollView style={{marginBottom: 80}}>
           <SmallProfile/>
           <RankingBox/>

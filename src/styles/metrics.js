@@ -8,11 +8,11 @@ export default {
   }),
   tabBarHeight: 50,
   fonts:{
-    xbig: 20,
-    big: 18,
-    medium: 16,
-    small: 14,
-    xsmall: 12,
-    xxsmall: 10,
+    xbig: 18,
+    big: 16,
+    medium: 14,
+    small: 12,
+    xsmall: 10,
+    xxsmall: 8,
   }
 };

@@ -13,7 +13,7 @@ import Nav from '../../components/navigation';
 
 export default TabNavigator(
   {
-    Home: { screen: Home, navigationOptions: { tabBarVisible: true } },
+    Home: { screen: Home, navigationOptions: { tabBarVisible: true, } },
     Curso: { screen: Curso, navigationOptions: { tabBarVisible: true }  },
     Performance: { screen: Performance, navigationOptions: { tabBarVisible: true }  },
     Ranking: { screen: Ranking, navigationOptions: { tabBarVisible: true }  },
@@ -24,6 +24,6 @@ export default TabNavigator(
     tabBarPosition: 'bottom',
     animationEnabled: true, mode: "card",
     navigationOptions:{
-      header: <Text>HOME</Text>
+      
     }
   });
