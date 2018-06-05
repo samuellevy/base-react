@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     splitTitleBox:{
         backgroundColor: colors.yellow,
-        padding: 4,
+        padding: 5,
     },
     splitTitleBoxLeft:{
         borderTopLeftRadius: 3,
@@ -37,14 +37,14 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 3,
     },
     splitTitle:{
-        fontSize: 10,
+        fontSize: metrics.fonts.xsmall,
         fontWeight: 'bold',
         color: colors.white,
         textAlign: 'center',
     },
     splitText:{
-        fontSize: 14,
-        lineHeight: 12,
+        fontSize: metrics.fonts.xbig,
+        lineHeight: metrics.fonts.xbig,
         fontWeight: 'bold',
         textAlign: 'center',
         padding: 20,
