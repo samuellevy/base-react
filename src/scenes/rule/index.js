@@ -5,6 +5,7 @@ import styles from './styles';
 import NavIcon from '../../components/navigation/NavIcon';
 import Header from '../../components/header';
 import Nav from '../../components/navigation';
+import ModalBox from '../../components/modal/modalStyle'
 
 export default class Rule extends Component {
     static navigationOptions = {
@@ -15,9 +16,27 @@ export default class Rule extends Component {
         },
     };
 
-    render() {
+    state = {
+        modal: [
+            {
+                titleModal: 'FALTA POUCO!',
+                icon: 'school',
+                iconColor: '#fff',
+                colorTop: '#00985B',
+                video: null,
+                textBtn: 'ACESSAR CURSO',
+                titleDescription: 'Módulo 3: Cimento texturizado',
+                description: 'Você tem módulos a fazer no curso de capacitação. Complete-os agora e acumule pontos para sua loja.',
+            }
+        ]
+    }
+     
+    render() { 
         return (
             <View style={styles.container}>
+                {
+                    this.state.modal.map(modal => <ModalBox data={modal} /> )
+                }
                 <Header/>
                 <ScrollView>
                     <View style={styles.ruleContent}>

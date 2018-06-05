@@ -17,18 +17,16 @@ export default class ListCurso extends Component {
     render() {
         return (
             <View style={styles.containerView}>
-                <Header />
-                <ScrollView contentContainerStyle={styles.videoList}>
+                <ScrollView contentContainerStyle={styles.videoList} style={{marginBottom: 50}}>
                     <View style={styles.container}>
                         <Text style={styles.primaryTitle}>CURSO DE CAPACITAÇÃO</Text>
-
+ 
                         <Video />
                         <Video />
                         <Video />
                         <Video />
                     </View>
                 </ScrollView>
-                <Nav />
             </View>
         );
     }

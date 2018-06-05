@@ -12,7 +12,14 @@ import {
 } from 'react-native';
 import { colors, metrics, fonts } from '../../../styles';
 
+import Curse from '../listCurso';
+
 export default class Video extends Component {
+
+    accessVideo = () => {
+        Curse: {screen: Curse}
+    }
+
     render() {
         return(
             <View style={styles.video}>
@@ -23,7 +30,7 @@ export default class Video extends Component {
                 <View style={styles.videoInfo}>
                     <Text style={styles.videoTitle}>MODÚLO</Text>
                     <Text style={styles.videoDescription}>Quais os diferentes tipos de cimento?</Text>
-                    <TouchableOpacity onPress={() =>{}}>
+                    <TouchableOpacity onPress={this.accessVideo}>
                         <Text style={styles.videoButton}>ASSISTIR ></Text>
                     </TouchableOpacity>
                 </View>

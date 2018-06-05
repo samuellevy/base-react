@@ -2,13 +2,20 @@ import { StyleSheet } from 'react-native';
 import { colors, metrics, fonts } from '../../../styles';
 
 const styles = StyleSheet.create({
-    contentModal: {
-        flex: 1,
-        marginTop: 0,
-        justifyContent: 'center',
-        margin: 20,
-        marginTop: 30,
+    content: {
+        flex: 3,
+        backgroundColor: 'red',
     },
+    contentModal: {
+        flex: 3,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        // flex: 1,
+        // marginTop: 0,
+        justifyContent: 'center',
+        padding: 20,
+        // marginTop: 30, 
+        //height: "100%",   
+    }, 
     boxTitleTop: {
         flexDirection: 'row',
         justifyContent: 'space-between',

@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import { TabNavigator } from 'react-navigation'; // Version can be specified in package.json
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import Home from '../../scenes/home';
-import Curso from '../../scenes/cursoStyle/curso';
+import Curso from '../../scenes/cursoStyle/listCurso';
 import Performance from '../../scenes/performance';
 import Ranking from '../../scenes/ranking';
 import Posts from '../../scenes/posts';
