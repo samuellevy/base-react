@@ -7,6 +7,7 @@ import Curso from '../../scenes/cursoStyle/curso';
 import Performance from '../../scenes/performance';
 import Ranking from '../../scenes/ranking';
 import Posts from '../../scenes/posts';
+import Quiz from '../../scenes/quiz';
 
 import Nav from '../../components/navigation';
 
@@ -16,25 +17,13 @@ export default TabNavigator(
     Curso: { screen: Curso, navigationOptions: { tabBarVisible: true }  },
     Performance: { screen: Performance, navigationOptions: { tabBarVisible: true }  },
     Ranking: { screen: Ranking, navigationOptions: { tabBarVisible: true }  },
-    Posts: { screen: Posts, navigationOptions: { tabBarVisible: true }  },
+    Quiz: { screen: Quiz, navigationOptions: { tabBarVisible: true }  },
   },
   {
     tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
     tabBarPosition: 'bottom',
-    tabBarOptions: {
-      showIcon: true,
-      activeTintColor: 'tomato',
-      inactiveTintColor: 'blue',
-      showLabel: true,
-      style: {
-        
-      },
-      tabStyle:{
-
-      },
-      labelStyle:{
-
-      }
-    },
-    animationEnabled: true, mode: "card" 
+    animationEnabled: true, mode: "card",
+    navigationOptions:{
+      header: <Text>HOME</Text>
+    }
   });

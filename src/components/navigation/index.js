@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { View, Text, TouchableOpacity } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import NavIcon from './NavIcon';
 
 import styles from './styles';
 
@@ -16,33 +17,24 @@ export default class Navigation extends Component {
         <View style={styles.container}>
             <View style={styles.navBar}>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
-                    <View style={styles.tabBtn}>
-                        <MaterialIcon name="home" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                        <Text style={styles.title}>Home</Text>
-                    </View>
+                    <NavIcon title={'Home'} icon={'home'}/>
                 </TouchableOpacity>
                 
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Curso')}>
-                    <View style={styles.tabBtn}>
-                        <MaterialIcon name="school" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                        <Text style={styles.title}>Curso</Text>
-                    </View>
+                    <NavIcon title={'Curso'} icon={'school'}/>
                 </TouchableOpacity>
 
-                <View style={styles.tabBtn}>
-                    <MaterialIcon name="today" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                    <Text style={styles.title}>Desempenho</Text>
-                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Performance')}>
+                    <NavIcon title={'Desempenho'} icon={'today'}/>
+                </TouchableOpacity>
 
-                <View style={styles.tabBtn}>
-                    <MaterialIcon name="star-border" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                    <Text style={styles.title}>Ranking</Text>
-                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Ranking')}>
+                    <NavIcon title={'Ranking'} icon={'star-border'}/>
+                </TouchableOpacity>
                 
-                <View style={styles.tabBtn}>
-                    <MaterialIcon name="subject" size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
-                    <Text style={styles.title}>Mais</Text>
-                </View>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Quiz')}>
+                    <NavIcon title={'Mais'} icon={'subject'}/>
+                </TouchableOpacity>
             </View>
         </View>
     );}
