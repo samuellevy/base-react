@@ -14,8 +14,8 @@ import ModalExample from './scenes/modalExample';
 console.disableYellowBox = true;
 
 const App = StackNavigator({
-  ModalExample: { screen: ModalExample},
-  // Home: {screen: Home},
+  Home: {screen: Home},
+  // ModalExample: { screen: ModalExample},
   // Teste: {screen: Teste},
   // Curso: { screen: Curso },
   ListCurso: { screen: ListCurso },
