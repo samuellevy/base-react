@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize: metrics.fonts.medium,
-        paddingBottom: 15,
+        paddingBottom: 20,
         color: colors.textColor,
     },
     dateTitle:{
@@ -45,9 +45,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     tableTitle:{
-        fontSize: metrics.fonts.small,
+        fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.gray,
+        paddingBottom: 5,
     },
     tableText:{
         fontSize: metrics.fonts.medium,
