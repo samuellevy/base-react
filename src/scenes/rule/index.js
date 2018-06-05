@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import styles from './styles';
 
-import NavIcon from '../components/navigation/NavIcon';
-import Header from '../components/header';
-import Nav from '../components/navigation';
+import NavIcon from '../../components/navigation/NavIcon';
+import Header from '../../components/header';
+import Nav from '../../components/navigation';
 
 export default class Rule extends Component {
     static navigationOptions = {

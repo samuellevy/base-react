@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 
 import styles from './styles';
 
-import Header from '../components/header';
-import Nav from '../components/navigation';
-import ModalBox from '../components/modal/modalStyle'
+import Header from '../../components/header';
+import Nav from '../../components/navigation';
+import ModalBox from '../../components/modal/modalStyle'
 
 export default class ModalExample extends Component {
     static navigationOptions = {

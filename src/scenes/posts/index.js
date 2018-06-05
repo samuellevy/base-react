@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {  View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import Post from './components/Post';
-import NavIcon from '../components/navigation/NavIcon';
+import NavIcon from '../../components/navigation/NavIcon';
 
 export default class Posts extends Component {
     static navigationOptions = {

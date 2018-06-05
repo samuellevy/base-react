@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { View } from 'react-native';
-import NavIcon from '../components/navigation/NavIcon';
+import NavIcon from '../../components/navigation/NavIcon';
 // import styles from './styles';
 
 export default class Performance extends Component {
