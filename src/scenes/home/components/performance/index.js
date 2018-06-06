@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 import Pie from '../../../../components/pie';
+const timer = require('react-native-timer');
 
 export default class Performance extends Component {
     static navigationOptions = {
         header: null
     };
+
+    state = {
+        testeState: 0
+    };
+    
+    testBtn = () => {
+        this.setState({testeState: this.state.testeState}, () => timer.setInterval(
+            this, 'hideMsg', () => 
+            {
+                if(this.state.testeState != 80){
+                    this.setState({testeState: this.state.testeState+5})
+                }
+            }
+            , 10
+        ));
+    }
 
     render() {
         return (
@@ -26,9 +43,11 @@ export default class Performance extends Component {
                         </View>
                     </View>
                 </View>
-                <View style={styles.splitRight}>
-                    <Pie percent={"80"} />
-                </View>
+                <TouchableOpacity onPress={() => this.testBtn()}>
+                    <View style={styles.splitRight}>
+                        <Pie percent={this.state.testeState}/>
+                    </View>
+                </TouchableOpacity>
             </View>
         );
     }
