@@ -54,6 +54,12 @@ const styles = StyleSheet.create({
         fontSize: metrics.fonts.medium,
         color: colors.black,
         fontStyle: 'italic',
+    },
+    splitRight: {
+        flex: 1,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end',
+        position: 'relative',
     }
 
 });
