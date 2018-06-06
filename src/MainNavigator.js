@@ -3,25 +3,30 @@ import React from 'react';
 import {StackNavigator, TabNavigator} from 'react-navigation';
 import { View, Text} from 'react-native';
 
+// Load components
 import Nav from './components/navigation';
 import Header from './components/header';
 
-// Load Scenes
-import Posts from './scenes/posts';
-import Profile from './scenes/profile';
+// Load main scene
 import Login from './scenes/login';
-import Home from './scenes/home';
-// import Curso from './scenes/curso';
 
+// Logged scenes
+import Home from './scenes/home';
+import Curso from './scenes/curso';
+import Performance from './scenes/performance';
+import Ranking from './scenes/ranking';
+import Quiz from './scenes/quiz';
 
 // Other confs
 console.disableYellowBox = true;
 
-// scene imports
-
+// My component
 const RootScene = TabNavigator({
   Home: {screen: Home},
-  // Curso: {screen: Curso}
+  Curso: {screen: Curso},
+  Performance: {screen: Performance},
+  Ranking: {screen: Ranking},
+  More: {screen: Quiz},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
   initialRouteName: 'Home',
@@ -31,11 +36,10 @@ RootScene.navigationOptions = {
   header: <Header/>,
 };
 
-
-
+// Main navigator
 export default StackNavigator({
-  tour: {screen: Login}, // has a skip button that navigates to root
+  Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'Login',
 });

@@ -33,7 +33,7 @@ export default class Navigation extends Component {
                     <NavIcon title={'Ranking'} icon={'star-border'}/>
                 </TouchableOpacity>
                 
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Quiz')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('More')}>
                     <NavIcon title={'Mais'} icon={'subject'}/>
                 </TouchableOpacity>
             </View>
