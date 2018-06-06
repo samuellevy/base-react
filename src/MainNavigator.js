@@ -41,5 +41,5 @@ export default StackNavigator({
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
 }, {
-  initialRouteName: 'Login',
+  initialRouteName: 'Home',
 });
