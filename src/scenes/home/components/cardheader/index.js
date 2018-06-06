@@ -4,7 +4,7 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './styles';
 
-export default class InfoboxTitle extends Component {
+export default class CardHeader extends Component {
     static navigationOptions = {
         header: null
     };

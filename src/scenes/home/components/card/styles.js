@@ -7,13 +7,12 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: 10,
     },
-    box:{
+    card:{
         flex: 1,
-        flexDirection: 'row',
         width: '95%',
         margin: '2.5%',
         borderRadius: 3,
-        padding: 20,
+        paddingHorizontal: 20,
         paddingTop: 70,
         elevation: 2,
         shadowColor: colors.black,
@@ -23,45 +22,9 @@ const styles = StyleSheet.create({
             height: 1,
             width: 0
         },
+        alignItems: 'center',
         backgroundColor: colors.white,
     },
-    splitLeft:{
-        width: '60%',
-    },
-    text:{
-        fontSize: metrics.fonts.medium,
-        paddingBottom: 20,
-        color: colors.textColor,
-    },
-    dateTitle:{
-        fontSize: metrics.fonts.medium,
-        fontWeight: 'bold',
-        color: colors.blue,
-        paddingBottom: 5,
-    },
-    table:{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    tableTitle:{
-        fontSize: metrics.fonts.medium,
-        fontWeight: 'bold',
-        color: colors.gray,
-        paddingBottom: 3,
-    },
-    tableText:{
-        fontSize: metrics.fonts.medium,
-        color: colors.black,
-        fontStyle: 'italic',
-    },
-    splitRight: {
-        flex: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end',
-        position: 'relative',
-    }
-
 });
 
 export default styles;
