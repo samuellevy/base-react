@@ -11,6 +11,8 @@ import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
 import Desempenho from './components/desempenho';
 
+import Card from './components/card';
+
 export default class Home extends Component {
   static navigationOptions = {
     title: 'products',
@@ -21,11 +23,14 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <ScrollView style={{marginBottom: 50}}>
-          <SmallProfile/>
+          <Card>
+            <Text>dsadasdasda</Text>
+          </Card>
+          {/* <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
           <Desempenho/>
-          <Desempenho/>
+          <Desempenho/> */}
         </ScrollView>
       </View>
     );
