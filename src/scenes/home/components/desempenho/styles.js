@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         margin: '2.5%',
         borderRadius: 3,
         padding: 20,
-        paddingTop: 50,
+        paddingTop: 70,
         elevation: 2,
         shadowColor: colors.black,
         shadowOpacity: 0.2,
@@ -29,15 +29,15 @@ const styles = StyleSheet.create({
         width: '60%',
     },
     text:{
-        fontSize: 12,
-        paddingBottom: 14,
+        fontSize: metrics.fonts.medium,
+        paddingBottom: 20,
         color: colors.textColor,
     },
     dateTitle:{
-        fontSize: 10,
+        fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.blue,
-        paddingBottom: 10,
+        paddingBottom: 5,
     },
     table:{
         flex: 1,
@@ -45,12 +45,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     tableTitle:{
-        fontSize: metrics.fontTitle.size,
+        fontSize: metrics.fonts.medium,
         fontWeight: 'bold',
         color: colors.gray,
+        paddingBottom: 3,
     },
     tableText:{
-        fontSize: 12,
+        fontSize: metrics.fonts.medium,
         color: colors.black,
         fontStyle: 'italic',
     }

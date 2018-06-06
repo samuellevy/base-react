@@ -7,11 +7,12 @@ export default {
     android: { headerHeight: 44, headerPadding: 15 },
   }),
   tabBarHeight: 50,
-  fontTitle: {
-    size: 14
-  },
-  infoBox:{
-    iconSize: 40,
-    fontSize: 14
+  fonts:{
+    xbig: 18,
+    big: 16,
+    medium: 14,
+    small: 12,
+    xsmall: 10,
+    xxsmall: 8,
   }
 };

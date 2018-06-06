@@ -3,7 +3,7 @@ import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
     lastUpdate:{
-        fontSize: 10,
+        fontSize: metrics.fonts.xsmall,
         color: colors.fontColor,
         paddingHorizontal: 15,
     },

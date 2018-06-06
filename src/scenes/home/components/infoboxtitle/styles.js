@@ -21,14 +21,14 @@ const styles = StyleSheet.create({
             height: 1,
             width: 0
         },
-        height: metrics.infoBox.iconSize,
-        width: metrics.infoBox.iconSize,
+        height: 45,
+        width: 45,
         borderRadius: 32,
         backgroundColor: colors.blue,
         justifyContent: 'center'
     },
     title: {
-        fontSize: metrics.infoBox.fontSize,
+        fontSize: metrics.fonts.big,
         fontWeight: 'bold',
         color: colors.blue,
         marginTop: 5,

@@ -9,7 +9,7 @@ export default class NavIcon extends Component {
     let icon = this.props.icon;
     return (
       <View style={styles.tabBtn}>
-        <MaterialIcon name={icon} size={25} style={styles.icon} color={"#ddd"}></MaterialIcon>
+        <MaterialIcon name={icon} size={30} style={styles.icon} color={"#ddd"}></MaterialIcon>
         <Text style={styles.title}>{title}</Text>
       </View>
     );
