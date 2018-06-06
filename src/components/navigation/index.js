@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import NavIcon from './NavIcon';
+import Header from '../header';
 
 import styles from './styles';
 
@@ -32,7 +33,7 @@ export default class Navigation extends Component {
                     <NavIcon title={'Ranking'} icon={'star-border'}/>
                 </TouchableOpacity>
                 
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Quiz')}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('More')}>
                     <NavIcon title={'Mais'} icon={'subject'}/>
                 </TouchableOpacity>
             </View>

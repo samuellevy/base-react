@@ -11,19 +11,17 @@ import Quiz from '../../scenes/quiz';
 
 import Nav from '../../components/navigation';
 
-export default TabNavigator(
-  {
-    Home: { screen: Home, navigationOptions: { tabBarVisible: true, } },
-    Curso: { screen: Curso, navigationOptions: { tabBarVisible: true }  },
-    Performance: { screen: Performance, navigationOptions: { tabBarVisible: true }  },
-    Ranking: { screen: Ranking, navigationOptions: { tabBarVisible: true }  },
-    Quiz: { screen: Quiz, navigationOptions: { tabBarVisible: true }  },
+export default TabNavigator({
+  Home: { screen: Home, navigationOptions: { tabBarVisible: true } },
+  Curso: { screen: Curso, navigationOptions: { tabBarVisible: true }  },
+  Performance: { screen: Performance, navigationOptions: { tabBarVisible: true }  },
+  Ranking: { screen: Ranking, navigationOptions: { tabBarVisible: true }  },
+  Quiz: { screen: Quiz, navigationOptions: { tabBarVisible: true }  },
+},
+{
+  tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
+  tabBarPosition: 'bottom',
+  animationEnabled: true, mode: "card",
+  navigationOptions:{
   },
-  {
-    tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
-    tabBarPosition: 'bottom',
-    animationEnabled: true, mode: "card",
-    navigationOptions:{
-      
-    }
-  });
+});

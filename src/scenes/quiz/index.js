@@ -16,7 +16,7 @@ export default class Quiz extends Component {
         <View style={styles.boxTitle}>
           <Text style={styles.txtTitle}>MÓDULO 01: CIMENTO CPII</Text>
         </View>
-        <Question/>
+        
       </View>
     );
   }

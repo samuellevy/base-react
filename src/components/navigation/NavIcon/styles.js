@@ -3,15 +3,16 @@ import { colors, metrics, fonts } from '../../../styles';
 
 const styles = StyleSheet.create({
     tabBtn:{
-        width: Dimensions.get('screen').width / 5,
         flex: 1,
         justifyContent: 'space-around',
         alignItems: 'center',
+        paddingVertical: 7,
     },
     title:{
-        fontSize: 10,
+        fontSize: 11,
         fontFamily: fonts.main,
         color: '#7B9995',
+        fontWeight: 'normal',
     },
     icon:{
         alignSelf: 'center',
