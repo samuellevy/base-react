@@ -20,7 +20,6 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header />
         <ScrollView style={{marginBottom: 50}}>
           <SmallProfile/>
           <RankingBox/>

@@ -1,16 +1,17 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../styles';
+import { StyleSheet, Platform } from 'react-native';
+import { colors, metrics } from '../../styles';
 
 const styles = StyleSheet.create({
     header: {
-        height: 60,
+        paddingTop: (Platform.OS === 'ios') ? metrics.headerPadding : 0,
+        height: 70,
         backgroundColor: colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
     },
     logo: {
-        height: 40,
-        width: 112,
+        height: 32,
+        width: 72,
         alignItems: 'center',
         justifyContent: 'center',
     }
