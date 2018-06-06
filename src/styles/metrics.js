@@ -14,5 +14,14 @@ export default {
     small: 12,
     xsmall: 10,
     xxsmall: 8,
+  },
+  container:{
+    defaultPadding: 15,
+    marginBottom: 55,
+  },
+  title:{
+    primary:{
+      padding: 15
+    }
   }
 };

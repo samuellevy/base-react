@@ -4,6 +4,7 @@ import { View, Text, Image, TextInput, ScrollView, ScrollSheet } from 'react-nat
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 import { colors } from '../../styles';
+import Title from '../../components/title/primary';
 
 import Video from './components/videoDescription';
 
@@ -17,7 +18,7 @@ export default class ListCurso extends Component {
             <View style={styles.containerView}>
                 <ScrollView contentContainerStyle={styles.videoList}>
                     <View style={styles.container}>
-                        <Text style={styles.primaryTitle}>CURSO DE CAPACITAÇÃO</Text>
+                    <Title textContent="Curso de Capacitação"/>
                         <Video />
                         <Video />
                         <Video />
