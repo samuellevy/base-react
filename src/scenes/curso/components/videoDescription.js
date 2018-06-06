@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { colors, metrics, fonts } from '../../../styles';
 
-import Curse from '../listCurso';
+import Curse from '../index';
 
 export default class Video extends Component {
 
