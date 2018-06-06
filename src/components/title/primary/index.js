@@ -5,7 +5,7 @@ import styles from './styles';
 import { colors } from '../../../styles';
 
 const Title = ({textContent}) => (
-    <Text style={styles.titlePrimary}>{ textContent }</Text>
+    <Text style={styles.titlePrimary}>{ textContent.toUpperCase() }</Text>
 );
 
 export default Title;

@@ -3,12 +3,13 @@ import { colors, metrics, fonts } from '../../../styles';
 
 const styles = StyleSheet.create({
     titlePrimary: {
-        fontSize: 14,
+        fontSize: metrics.fonts.big,
         fontWeight: 'bold',
         color: colors.primary,
         paddingBottom: 10,
         lineHeight: 16,
         fontFamily: fonts.main,
+        paddingHorizontal: metrics.title.primary.padding
     },
 });
 

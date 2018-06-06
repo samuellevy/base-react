@@ -9,14 +9,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#F7FBFC',
         marginBottom: metrics.container.marginBottom,
     },
-    primaryTitle: {
-        paddingLeft: 15,
-        paddingRight: 15,
-        paddingBottom: 10,
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#00985B',
-    }
 });
 
 export default styles;
