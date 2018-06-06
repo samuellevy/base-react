@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 import InfoboxTitle from '../infoboxtitle';
+import Pie from '../../../../components/pie';
 
 export default class Desempenho extends Component {
     static navigationOptions = {
@@ -29,7 +30,7 @@ export default class Desempenho extends Component {
                         </View>
                     </View>
                     <View style={styles.splitRight}>
-
+                        <Pie percent={"80"}/>
                     </View>
                 </View>
             </View>
