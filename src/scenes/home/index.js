@@ -9,7 +9,7 @@ import Nav from '../../components/navigation';
 import SmallProfile from './components/smallprofile';
 import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
-import Desempenho from './components/desempenho';
+import Performance from './components/performance';
 
 import Card from './components/card';
 
@@ -23,14 +23,15 @@ export default class Home extends Component {
     return (
       <View style={styles.container}>
         <ScrollView style={{marginBottom: 50}}>
-          <Card>
-            <Text>dsadasdasda</Text>
-          </Card>
-          {/* <SmallProfile/>
+          <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
-          <Desempenho/>
-          <Desempenho/> */}
+          <Card>
+            <Performance/>
+          </Card>
+          <Card>
+            <Performance/>
+          </Card>
         </ScrollView>
       </View>
     );
