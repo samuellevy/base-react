@@ -6,7 +6,7 @@ import styles from './styles';
 import { colors } from '../../styles';
 import Title from '../../components/title/primary';
 
-import Video from './components/videoDescription';
+import Video from './components/videobox';
 
 export default class ListCurso extends Component {
     static navigationOptions = {
@@ -15,9 +15,9 @@ export default class ListCurso extends Component {
 
     render() {
         return (
-            <View style={styles.containerView}>
+            <View style={styles.container}>
                 <ScrollView contentContainerStyle={styles.videoList}>
-                    <View style={styles.container}>
+                    <View style={styles.containerVideo}>
                     <Title textContent="Curso de Capacitação"/>
                         <Video />
                         <Video />

@@ -48,8 +48,8 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A25F4AC20C87F090058D705 /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25F46D20C87D9F0058D705 /* libART.a */; };
 		8A25F54B20C99C040058D705 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54A20C99C040058D705 /* icomoon.ttf */; };
-		8A25F55020C9BA110058D705 /* NotoSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */; };
-		8A25F55120C9BA110058D705 /* NotoSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */; };
+		8AC4586820C9CBCE001DED75 /* NotoSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4586620C9CBCE001DED75 /* NotoSansBold.ttf */; };
+		8AC4586920C9CBCE001DED75 /* NotoSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4586720C9CBCE001DED75 /* NotoSansRegular.ttf */; };
 		95BF50B1D6E948EBB70483F2 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E16CD82BC8443AA2D14FF8 /* Zocial.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C503F47CD9AA4737AB087E63 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A333FEA759C4FF8ADDF2B0D /* Foundation.ttf */; };
@@ -401,8 +401,8 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8A25F46720C87D9E0058D705 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		8A25F54A20C99C040058D705 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
-		8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansBold.ttf; path = ../android/app/src/main/assets/fonts/NotoSansBold.ttf; sourceTree = "<group>"; };
-		8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansRegular.ttf; path = ../android/app/src/main/assets/fonts/NotoSansRegular.ttf; sourceTree = "<group>"; };
+		8AC4586620C9CBCE001DED75 /* NotoSansBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansBold.ttf; path = ../assets/fonts/NotoSansBold.ttf; sourceTree = "<group>"; };
+		8AC4586720C9CBCE001DED75 /* NotoSansRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansRegular.ttf; path = ../assets/fonts/NotoSansRegular.ttf; sourceTree = "<group>"; };
 		9AE75A88D168405DA62520EA /* libRCTYouTube.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTYouTube.a; sourceTree = "<group>"; };
 		9DBAA0BB0CB14432885C3C02 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -706,8 +706,8 @@
 		AADBD7AC626344D6AF8A25E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */,
-				8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */,
+				8AC4586620C9CBCE001DED75 /* NotoSansBold.ttf */,
+				8AC4586720C9CBCE001DED75 /* NotoSansRegular.ttf */,
 				8A25F54A20C99C040058D705 /* icomoon.ttf */,
 				E1DFBA66E54E4FC688211D01 /* Feather.ttf */,
 				2C60355CA9B04272909DBDB0 /* YTPlayerView-iframe-player.html */,
@@ -1221,10 +1221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A25F55120C9BA110058D705 /* NotoSansRegular.ttf in Resources */,
+				8AC4586920C9CBCE001DED75 /* NotoSansRegular.ttf in Resources */,
 				8A25F54B20C99C040058D705 /* icomoon.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				8A25F55020C9BA110058D705 /* NotoSansBold.ttf in Resources */,
+				8AC4586820C9CBCE001DED75 /* NotoSansBold.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				04A19A3F516D4004AFFAD049 /* Feather.ttf in Resources */,
 				2F9BA9B048014A92A9D2AFFB /* YTPlayerView-iframe-player.html in Resources */,

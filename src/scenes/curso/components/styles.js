@@ -1,43 +1,5 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  ScrollView,
-  ScrollSheet,
-  View,
-  Image,
-  Platform,
-  WebView,
-  TouchableOpacity,  
-} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { colors, metrics, fonts } from '../../../styles';
-
-import Curse from '../index';
-
-export default class Video extends Component {
-
-    accessVideo = () => {
-        Curse: {screen: Curse}
-    }
-
-    render() {
-        return(
-            <View style={styles.video}>
-                <View style = {styles.viewVideo}>
-                    <WebView source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} />
-                </View>
-
-                <View style={styles.videoInfo}>
-                    <Text style={styles.videoTitle}>MODÚLO</Text>
-                    <Text style={styles.videoDescription}>Quais os diferentes tipos de cimento?</Text>
-                    <TouchableOpacity onPress={this.accessVideo}>
-                        <Text style={styles.videoButton}>ASSISTIR ></Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-        );
-    }
-}
 
 const styles = StyleSheet.create({
     video: {
@@ -55,7 +17,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     viewVideo: {
-        width: 150,
+        width: ((Dimensions.get('window').width - 50) / 6) * 3.5,
+        height: ((((Dimensions.get('window').width - 50) / 6) * 3.5) * 9)/16,
+        overflow: 'hidden'
+    },
+    thumbvideo:{
+        width: '100%',
+        height: '100%'
     },
     videoImage: {
         flex: 1,
@@ -85,5 +53,20 @@ const styles = StyleSheet.create({
     videoButton: {
         color: '#14CC82',
         fontSize: 11,
+    },
+    status:{
+        position: 'absolute',
+        left: 0,
+        backgroundColor: colors.light,
+        paddingVertical: 3,
+        paddingHorizontal: 9,
+        zIndex: 2,
+        elevation: 2,
+        color: colors.white,
+        fontFamily: fonts.main,
+        fontWeight: 'bold',
+        fontSize: metrics.fonts.xsmall
     }
 });
+
+export default styles;

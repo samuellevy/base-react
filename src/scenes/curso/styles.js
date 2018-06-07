@@ -3,10 +3,13 @@ import { colors, metrics, fonts } from '../../styles';
 
 const styles = StyleSheet.create({
     container:{
+        flex:1,
+        backgroundColor: '#F7FBFC',
+    },
+    containerVideo:{
         flex: 1,
         paddingHorizontal: metrics.container.defaultPadding,
         paddingTop: metrics.headerPadding,
-        backgroundColor: '#F7FBFC',
         marginBottom: metrics.container.marginBottom,
     },
     primaryTitle: {
