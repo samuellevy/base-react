@@ -42,8 +42,8 @@ export default class Home extends Component {
             <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
           </Card>
 
-          <Card title={'Blog'} icon={'info-outline'} color={colors.dark}>
-            <CardFooter>{'Sobre o programa'.toUpperCase()}</CardFooter>
+          <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>
+            <CardFooter>{'Saiba mais'.toUpperCase()}</CardFooter>
           </Card>
         </ScrollView>
       </View>
