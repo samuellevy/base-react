@@ -16,6 +16,7 @@ import Curso from './scenes/curso';
 import Performance from './scenes/performance';
 import Ranking from './scenes/ranking';
 import Quiz from './scenes/quiz';
+import Contact from './scenes/contact';
 
 // Other confs
 console.disableYellowBox = true;
@@ -26,7 +27,7 @@ const RootScene = TabNavigator({
   Curso: {screen: Curso},
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
-  More: {screen: Quiz},
+  More: {screen: Contact},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
   initialRouteName: 'Home',

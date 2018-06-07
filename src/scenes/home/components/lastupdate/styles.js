@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     lastUpdate:{
         fontSize: metrics.fonts.xsmall,
         color: colors.fontColor,
-        paddingHorizontal: 15,
+        paddingHorizontal: '5%',
     },
 });
 

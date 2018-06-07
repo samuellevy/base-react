@@ -1,3 +1,4 @@
 export default {
-    main: 'NotoSans-Bold',
+    main: 'NotoSans',
+    icons: 'icomoon'
   }

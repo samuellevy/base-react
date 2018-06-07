@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#f7fbfc',
         justifyContent: 'center',
     },
+    scrollview:{
+        marginBottom: 65,
+    }
 });
 
 export default styles;

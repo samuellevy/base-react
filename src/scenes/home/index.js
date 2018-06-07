@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import NavIcon from '../../components/navigation/NavIcon';
 import styles from './styles';
@@ -10,6 +10,10 @@ import SmallProfile from './components/smallprofile';
 import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
 import Performance from './components/performance';
+import Course from './components/course';
+import Blog from './components/blog';
+import About from './components/about';
+import Button from '../../components/button';
 import { colors, metrics, fonts } from '../../styles';
 
 import Card from './components/card';
@@ -24,7 +28,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={{marginBottom: 50}}>
+        <ScrollView style={styles.scrollview}>
           <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
@@ -35,14 +39,21 @@ export default class Home extends Component {
           </Card>
 
           <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>
+            <Course/>
             <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
           </Card>
 
           <Card title={'Blog'} icon={'public'} color={colors.purple}>
-            <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
+            <Blog/>
+            <View style={{paddingTop: 10, paddingBottom: 20}}>
+              <TouchableOpacity onPress={this.signIn}>
+                <Button title={'Ir para o Blog'} size={60} color={colors.purple}/>
+              </TouchableOpacity>
+            </View>
           </Card>
 
           <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>
+            <About/>
             <CardFooter>{'Saiba mais'.toUpperCase()}</CardFooter>
           </Card>
         </ScrollView>

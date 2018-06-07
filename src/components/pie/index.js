@@ -20,7 +20,7 @@ export default class Home extends Component {
                     this.setState({percentValue: this.state.percentValue+deltaPercent})
                 }
             }
-            , 50
+            , 25
         ));
 	}
 		

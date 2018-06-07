@@ -4,11 +4,10 @@ import { colors, metrics, fonts } from '../../styles';
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingHorizontal: metrics.container.defaultPadding,
         paddingTop: metrics.headerPadding,
         backgroundColor: '#F7FBFC',
-        marginBottom: 55,
+        marginBottom: metrics.container.marginBottom,
     },
     primaryTitle: {
         paddingLeft: 15,
