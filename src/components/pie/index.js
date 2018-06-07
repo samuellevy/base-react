@@ -3,14 +3,14 @@ import { View, Text, StyleSheet, ScrollView, Image, ART, Platform, Animated, Eas
 import styles from './styles';
 const timer = require('react-native-timer');
 import Pie from  'react-native-pie';
-
+ 
 
 export default class Home extends Component {
 	state = {
 		percentValue: 0,
 		percent: this.props.percent
 	}
-
+    
 	componentDidMount() {
 		this.setState({percentValue: this.state.percentValue}, () => timer.setInterval(
             this, 'animatePie', () => 

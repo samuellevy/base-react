@@ -6,14 +6,17 @@ import styles from './styles';
 export default class Alert extends Component {
  
   	render() {
-    	return ( 
+
+        let mensager = this.props.mensager;
+
+    	return (  
 			<View style={styles.contentAlert}>
                 <View style={styles.boxAlert}>
                     <View style={styles.boxIcon}>
-                        <MaterialIcon name="done" size={15} style={styles.iconClear}></MaterialIcon>
+                        <MaterialIcon name="done" size={15} style={styles.iconDone}></MaterialIcon>
                     </View>
   
-                    <Text style={styles.textAlert}>Alterações salvas!</Text>
+                    <Text style={styles.textAlert}>{mensager}</Text>
                 </View>
             </View>
 	    ); 

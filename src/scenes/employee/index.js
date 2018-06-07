@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal } from 'react-native';
+const timer = require('react-native-timer');
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import NavIcon from '../../components/navigation/NavIcon';
@@ -15,12 +16,12 @@ export default class Employee extends Component {
   	static navigationOptions = {
     	title: 'products',
     	headerRight:<View style={{flex:1, backgroundColor: 'black', height: 50}}><Text>HOME</Text></View>
-  	};
-  
+	};
+	  
   	render() {
     	return (
-			<View style={styles.container}>
-				<ScrollView style={{marginBottom: 50}}>
+			<View style={styles.container}>   
+				<ScrollView style={{marginBottom: 50, padding: 18}}>
 					<TitleTop textContent={'FUNCIONÁRIOS'} />
  
 					<View style={styles.addEmplayee}>
