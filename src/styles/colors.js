@@ -20,5 +20,7 @@ export default {
     black: '#000',
     purple: '#962F76',
 
+    lightBackground: '#F7FBFC', //setted
+
     error: '#C71829',
   }
