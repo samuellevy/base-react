@@ -6,9 +6,30 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: metrics.container.defaultPadding,
         paddingTop: metrics.headerPadding,
-        backgroundColor: '#F7FBFC',
+        backgroundColor: colors.lightBackground,
         marginBottom: metrics.container.marginBottom,
     },
+    txtDescription:{
+       // paddingHorizontal: 15,
+        fontSize: metrics.fonts.medium,
+        fontFamily: fonts.main,
+        fontWeight: 'normal',
+        marginTop: 20,
+    },
+    contactForm:{
+        borderWidth: 1,
+        borderColor: colors.regular,
+        height: 180,
+        marginTop: 20,
+        backgroundColor: colors.white,
+    },
+    boxSend:{
+        flex:1,
+        justifyContent: 'flex-end',
+        marginBottom: metrics.tabBarHeight
+
+    }
+
 });
 
 export default styles;
