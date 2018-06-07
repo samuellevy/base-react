@@ -38,7 +38,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* LaFargeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LaFargeTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2F9BA9B048014A92A9D2AFFB /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C60355CA9B04272909DBDB0 /* YTPlayerView-iframe-player.html */; };
-		2FA3E69105844C68991B2D23 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97EA9C96D4DA4046A83ED2B4 /* NotoSans-Bold.ttf */; };
 		5119549629504B1D9050FFF4 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B00F90D01F540E38E8B8B06 /* FontAwesome.ttf */; };
 		5A80C35FB83249AAA6FFCFC3 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBFA464FC1274BAE89F46966 /* MaterialIcons.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -48,7 +47,9 @@
 		7FC6342213F64CE2ADD36316 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E2DBDB78AAE476FB6E4DE69 /* Entypo.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8A25F4AC20C87F090058D705 /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25F46D20C87D9F0058D705 /* libART.a */; };
-		8FF27B4C2ACD4AA0B9E2AAAE /* NotoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71EE9356903A41B9A3884FE0 /* NotoSans-Regular.ttf */; };
+		8A25F54B20C99C040058D705 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54A20C99C040058D705 /* icomoon.ttf */; };
+		8A25F55020C9BA110058D705 /* NotoSansBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */; };
+		8A25F55120C9BA110058D705 /* NotoSansRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */; };
 		95BF50B1D6E948EBB70483F2 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E16CD82BC8443AA2D14FF8 /* Zocial.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C503F47CD9AA4737AB087E63 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A333FEA759C4FF8ADDF2B0D /* Foundation.ttf */; };
@@ -395,12 +396,13 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		67A056C0C58C49BAAD4EE064 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		6B00F90D01F540E38E8B8B06 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		71EE9356903A41B9A3884FE0 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Regular.ttf"; path = "../assets/fonts/NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		774C1BF223CF411B8B40B026 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8A25F46720C87D9E0058D705 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
-		97EA9C96D4DA4046A83ED2B4 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSans-Bold.ttf"; path = "../assets/fonts/NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		8A25F54A20C99C040058D705 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansBold.ttf; path = ../android/app/src/main/assets/fonts/NotoSansBold.ttf; sourceTree = "<group>"; };
+		8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = NotoSansRegular.ttf; path = ../android/app/src/main/assets/fonts/NotoSansRegular.ttf; sourceTree = "<group>"; };
 		9AE75A88D168405DA62520EA /* libRCTYouTube.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTYouTube.a; sourceTree = "<group>"; };
 		9DBAA0BB0CB14432885C3C02 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -704,6 +706,9 @@
 		AADBD7AC626344D6AF8A25E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A25F54E20C9BA110058D705 /* NotoSansBold.ttf */,
+				8A25F54F20C9BA110058D705 /* NotoSansRegular.ttf */,
+				8A25F54A20C99C040058D705 /* icomoon.ttf */,
 				E1DFBA66E54E4FC688211D01 /* Feather.ttf */,
 				2C60355CA9B04272909DBDB0 /* YTPlayerView-iframe-player.html */,
 				0E2DBDB78AAE476FB6E4DE69 /* Entypo.ttf */,
@@ -716,8 +721,6 @@
 				1337061641E4410A94EC6AFB /* Octicons.ttf */,
 				46F14503A670468286A9AE5A /* SimpleLineIcons.ttf */,
 				09E16CD82BC8443AA2D14FF8 /* Zocial.ttf */,
-				97EA9C96D4DA4046A83ED2B4 /* NotoSans-Bold.ttf */,
-				71EE9356903A41B9A3884FE0 /* NotoSans-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1218,7 +1221,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A25F55120C9BA110058D705 /* NotoSansRegular.ttf in Resources */,
+				8A25F54B20C99C040058D705 /* icomoon.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				8A25F55020C9BA110058D705 /* NotoSansBold.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				04A19A3F516D4004AFFAD049 /* Feather.ttf in Resources */,
 				2F9BA9B048014A92A9D2AFFB /* YTPlayerView-iframe-player.html in Resources */,
@@ -1232,8 +1238,6 @@
 				F877CE7A87434F0BB0B5BF81 /* Octicons.ttf in Resources */,
 				73B7B43ADB6342F791A729F9 /* SimpleLineIcons.ttf in Resources */,
 				95BF50B1D6E948EBB70483F2 /* Zocial.ttf in Resources */,
-				2FA3E69105844C68991B2D23 /* NotoSans-Bold.ttf in Resources */,
-				8FF27B4C2ACD4AA0B9E2AAAE /* NotoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

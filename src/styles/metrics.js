@@ -8,11 +8,22 @@ export default {
   }),
   tabBarHeight: 50,
   fonts:{
-    xbig: 18,
+    /** @property size: 18 */
+    xbig: 18, 
+    
+    /** @property size: 16 */
     big: 16,
+    
+    /** @property size: 14 */
     medium: 14,
+    
+    /** @property size: 12 */
     small: 12,
+    
+    /** @property size: 10 */
     xsmall: 10,
+    
+    /** @property size: 8 */
     xxsmall: 8,
   },
   container:{
