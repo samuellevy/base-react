@@ -30,7 +30,10 @@ const RootScene = TabNavigator({
   More: {screen: Contact},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
-  initialRouteName: 'More',
+  initialRouteName: 'Home',
+  animationEnabled: true,
+  mode: "card",
+  tabBarPosition: 'bottom',
 });
 
 RootScene.navigationOptions = {

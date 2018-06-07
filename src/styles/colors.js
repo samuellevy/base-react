@@ -2,7 +2,7 @@ export default {
     primary: '#00985B', //setted
   
     darker: '#111',
-    dark: '#333',
+    dark: '#006644', //setted
     regular: '#ADCCC7', //setted
     light: '#14CC82', //setted
     lighter: '#E6F2F0', //setted
@@ -18,6 +18,7 @@ export default {
     graylight: '#E6F2F0', //setted
     transparent: 'rgba(0, 0, 0, 0)', //setted
     black: '#000',
+    purple: '#962F76',
 
     error: '#C71829',
   }
