@@ -10,6 +10,9 @@ import SmallProfile from './components/smallprofile';
 import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
 import Performance from './components/performance';
+import Course from './components/course';
+import Blog from './components/blog';
+import About from './components/about';
 import { colors, metrics, fonts } from '../../styles';
 
 import Card from './components/card';
@@ -24,7 +27,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ScrollView style={{marginBottom: 50}}>
+        <ScrollView style={styles.scrollview}>
           <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
@@ -35,14 +38,17 @@ export default class Home extends Component {
           </Card>
 
           <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>
+            <Course/>
             <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
           </Card>
 
           <Card title={'Blog'} icon={'public'} color={colors.purple}>
+            <Blog/>
             <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
           </Card>
 
           <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>
+            <About/>
             <CardFooter>{'Saiba mais'.toUpperCase()}</CardFooter>
           </Card>
         </ScrollView>
