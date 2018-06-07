@@ -10,17 +10,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     ruleContent:{
-        padding: 15,
+        padding: '5%',
     },
     ruleTitle:{
-        fontSize: 14,
+        fontSize: metrics.fonts.big,
         fontWeight: 'bold',
         color: colors.primary,
         paddingBottom: 10,
-        lineHeight: 16,
+        lineHeight: 18,
     },
     ruleParagraph:{
-        fontSize: 12,
+        fontSize: metrics.fonts.medium,
         color: colors.dark,
         marginBottom: 10,
         lineHeight: 14,

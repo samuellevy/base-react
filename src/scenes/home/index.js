@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import NavIcon from '../../components/navigation/NavIcon';
 import styles from './styles';
@@ -13,6 +13,7 @@ import Performance from './components/performance';
 import Course from './components/course';
 import Blog from './components/blog';
 import About from './components/about';
+import Button from '../../components/button';
 import { colors, metrics, fonts } from '../../styles';
 
 import Card from './components/card';
@@ -44,7 +45,11 @@ export default class Home extends Component {
 
           <Card title={'Blog'} icon={'public'} color={colors.purple}>
             <Blog/>
-            <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
+            <View style={{paddingTop: 10, paddingBottom: 20}}>
+              <TouchableOpacity onPress={this.signIn}>
+                <Button title={'Ir para o Blog'} size={60} color={colors.purple}/>
+              </TouchableOpacity>
+            </View>
           </Card>
 
           <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>

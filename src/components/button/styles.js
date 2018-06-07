@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     boxButton:{
         marginTop: 10,
         paddingVertical: 7,
-        backgroundColor: colors.regular,
         alignItems: 'center',
         borderRadius: 40,
         borderWidth: 1,

@@ -37,7 +37,6 @@ export default class Rule extends Component {
                 {
                     this.state.modal.map(modal => <ModalBox data={modal} /> )
                 }
-                <Header/>
                 <ScrollView>
                     <View style={styles.ruleContent}>
                         <Text style={styles.ruleTitle}>
@@ -60,7 +59,6 @@ export default class Rule extends Component {
                         </Text>
                     </View>
                 </ScrollView>
-                <Nav navigation={this.props.navigation}/>
             </View>
         );
     }
