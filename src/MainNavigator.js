@@ -11,7 +11,7 @@ import Header from './components/header';
 import Login from './scenes/login';
 
 // Logged scenes
-//import Home from './scenes/home';
+import Home from './scenes/home';
 import Curso from './scenes/curso';
 import Performance from './scenes/performance';
 import Ranking from './scenes/ranking';
@@ -23,7 +23,7 @@ console.disableYellowBox = true;
 
 // My component
 const RootScene = TabNavigator({
-  //Home: {screen: Home},
+  Home: {screen: Home},
   Curso: {screen: Curso},
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
