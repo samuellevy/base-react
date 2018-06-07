@@ -10,8 +10,10 @@ import SmallProfile from './components/smallprofile';
 import RankingBox from './components/rankingbox';
 import LastUpdate from './components/lastupdate';
 import Performance from './components/performance';
+import { colors, metrics, fonts } from '../../styles';
 
 import Card from './components/card';
+import CardFooter from './components/cardfooter';
 
 export default class Home extends Component {
   static navigationOptions = {
@@ -26,11 +28,22 @@ export default class Home extends Component {
           <SmallProfile/>
           <RankingBox/>
           <LastUpdate/>
-          <Card>
+
+          <Card title={'Desempenho'} icon={'today'} color={colors.blue}>
             <Performance/>
+            <CardFooter color={colors.blue}>{'Acompanhe o desempenho da loja'.toUpperCase()}</CardFooter>
           </Card>
-          <Card>
-            <Performance/>
+
+          <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>
+            <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
+          </Card>
+
+          <Card title={'Blog'} icon={'public'} color={colors.purple}>
+            <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
+          </Card>
+
+          <Card title={'Blog'} icon={'info-outline'} color={colors.dark}>
+            <CardFooter>{'Sobre o programa'.toUpperCase()}</CardFooter>
           </Card>
         </ScrollView>
       </View>

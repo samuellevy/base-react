@@ -10,11 +10,15 @@ export default class CardFooter extends Component {
     };
 
     render() {
+        let color = this.props.color;
+        const {children} = this.props;
         return (
             <View style={styles.box}>
                 <TouchableOpacity style={styles.button}>
-                    <Text style={styles.text}>{'Acompanhe o desempenho da loja'.toUpperCase()}</Text>
-                    <MaterialIcon name="arrow-forward" size={16} style={styles.icon}></MaterialIcon>
+                    <Text style={[styles.text, {color: color}]}>
+                        {children}
+                    </Text>
+                    <MaterialIcon name="arrow-forward" size={16} style={[styles.icon, {color:color}]}></MaterialIcon>
                 </TouchableOpacity>
             </View>
         );

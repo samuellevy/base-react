@@ -30,6 +30,9 @@ const RootScene = TabNavigator({
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
   initialRouteName: 'Home',
+  animationEnabled: true,
+  mode: "card",
+  tabBarPosition: 'bottom',
 });
 
 RootScene.navigationOptions = {

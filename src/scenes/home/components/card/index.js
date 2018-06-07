@@ -9,13 +9,21 @@ import CardFooter from '../cardfooter';
 
 export default class Card extends Component {
   render() {
+    let title = this.props.title;
+    let icon = this.props.icon;
+    let color = this.props.color;
+
     const {children} = this.props;
     return (
       <View style={styles.container}>
-        <CardHeader />
+        <CardHeader title={title} icon={icon} color={color}/>
         <View style={styles.card}>
-          {children}
-          <CardFooter />
+          {/* {children} */}
+          {React.Children.map(children, (child, i) => {
+            return React.cloneElement(child, {
+              color: color
+            })
+          })}
         </View>
       </View>
     );
