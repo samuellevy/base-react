@@ -9,6 +9,7 @@ export default class LaFargeIcon extends Component {
     let size = this.props.size;
     let color = this.props.color;
     let active = this.props.active;
+    let char = null;
 
     if (active){
         icon+='_active';
