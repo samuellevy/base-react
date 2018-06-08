@@ -18,8 +18,8 @@ export default class Employee extends Component {
     	headerRight:<View style={{flex:1, backgroundColor: 'black', height: 50}}><Text>HOME</Text></View>
 	};
 	  
-  	render() {
-    	return (
+  	render() { 
+    	return (   
 			<View style={styles.container}>   
 				<ScrollView style={{marginBottom: 50, padding: 18}}>
 					<TitleTop textContent={'FUNCIONÁRIOS'} />
