@@ -10,20 +10,22 @@ export default class RankingBox extends Component {
 
     render() {
         return (
-            <View style={styles.box}>
-                <View style={styles.split}>
-                    <View style={[styles.splitTitleBox, styles.splitTitleBoxLeft]}>
-                        <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
+            <View style={styles.container}>
+                <View style={styles.box}>
+                    <View style={styles.split}>
+                        <View style={[styles.splitTitleBox, styles.splitTitleBoxLeft]}>
+                            <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
+                        </View>
+                        <View style={styles.boxSplitText}>
+                            <Text style={styles.splitText}>4º Lugar</Text>
+                        </View>
                     </View>
-                    <View style={styles.boxSplitText}>
-                        <Text style={styles.splitText}>4º Lugar</Text>
+                    <View style={styles.split}>
+                        <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
+                            <Text style={styles.splitTitle}>{'Pontuação'.toUpperCase()}</Text>
+                        </View>
+                        <Text style={[styles.splitText, styles.splitTextScore]}>360 pontos</Text>
                     </View>
-                </View>
-                <View style={styles.split}>
-                    <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
-                        <Text style={styles.splitTitle}>{'Pontuação'.toUpperCase()}</Text>
-                    </View>
-                    <Text style={[styles.splitText, styles.splitTextScore]}>360 pontos</Text>
                 </View>
             </View>
         );

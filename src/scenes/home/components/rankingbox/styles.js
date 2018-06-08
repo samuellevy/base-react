@@ -2,12 +2,14 @@ import { StyleSheet, Platform } from 'react-native';
 import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
-
+    container:{
+        flex:1,
+        padding: 15,
+    },
     box:{
-        flex: 1,
+        flex:1,
         flexDirection: 'row',
-        width: '95%',
-        margin: '2.5%',
+        width: '100%',
         borderRadius: 3,
         elevation: 2,
         shadowColor: colors.black,
