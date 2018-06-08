@@ -8,8 +8,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: colors.white,
         paddingLeft: 40,
-        borderTopWidth: 0.5,
-        borderTopColor: colors.regular,
     },
     text:{
         fontSize: metrics.fonts.xbig,

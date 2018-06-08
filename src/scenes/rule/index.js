@@ -34,9 +34,9 @@ export default class Rule extends Component {
     render() { 
         return (
             <View style={styles.container}>
-                {
+                {/* {
                     this.state.modal.map(modal => <ModalBox data={modal} /> )
-                }
+                } */}
                 <ScrollView>
                     <View style={styles.ruleContent}>
                         <Text style={styles.ruleTitle}>
