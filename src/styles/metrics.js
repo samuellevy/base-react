@@ -1,13 +1,20 @@
-import { Platform } from 'react-native';
+import { Platform, Dimensions } from 'react-native';
+
+
 
 export default {
   containerPadding: 30,
+  marginDefault: 15,
   ...Platform.select({
     ios: { headerHeight: 64, headerPadding: 20 },
     android: { headerHeight: 44, headerPadding: 15 },
   }),
+  
   tabBarHeight: 50,
   fonts:{
+    /** @property size: 18 */
+    xxbig: 24, 
+
     /** @property size: 18 */
     xbig: 18, 
     
@@ -34,5 +41,8 @@ export default {
     primary:{
       padding: 15
     }
+  },
+  paddings:{
+    dynamicDefault: (Dimensions.get('window').height / 100) * 2
   }
 };

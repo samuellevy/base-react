@@ -7,56 +7,50 @@ const styles = StyleSheet.create({
         padding: metrics.containerPadding,
         paddingTop: metrics.headerPadding,
         backgroundColor: colors.white,
-        justifyContent: 'center',
     },
-    boxAlert:{
-        
-    },
-    iconAlert:{
-
-    },
-    boxAlertText:{
-
-    },
-
     boxHello:{
         paddingTop: metrics.headerPadding,
         flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    txtHello:{
-        fontSize: 24,
-        fontFamily: fonts.main,
-        color: colors.primary
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf: 'center',
+        width: '60%'
     },
     imgMarca:{
-
+        flex:1,
+        resizeMode:"contain"
     },
-    
     boxWelcome:{
-        
+        marginVertical: metrics.marginDefault,
     },
 
     txtWelcome:{
-        fontSize: 24,
-        fontWeight: 'normal',
+        fontSize: metrics.fonts.xxbig,
+        fontWeight: 'bold',
         fontFamily: fonts.main,
-    },
-    
-    boxLogin:{
-        
+        color: colors.primary,
+        alignSelf: 'center',
     },
 
     txtInitial:{
         paddingVertical: metrics.padding,
-        fontSize: 12,
+        fontSize: metrics.fonts.medium,
         color: colors.gray,
         fontFamily: fonts.main,
         fontWeight: 'normal',
+        alignSelf: 'center',
+        paddingVertical: metrics.marginDefault
     },
+    
+    boxLogin:{
+        marginVertical: metrics.marginDefault,
+        paddingHorizontal: metrics.marginDefault,
+    },
+
 
     inputBox:{
         marginBottom: metrics.padding,
+        paddingBottom: metrics.marginDefault * 2,
     },
 
     txtError:{
