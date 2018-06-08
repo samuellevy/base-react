@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     scrollview:{
-        marginBottom: 65,
+        marginBottom: 55,
     }
 });
 
