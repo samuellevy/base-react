@@ -54,7 +54,6 @@ export default StackNavigator({
   Home: {screen: RootScene},
   //Profile: {screen: Profile},
 }, {
-  initialRouteName: 'Splash',
+  initialRouteName: 'Home',
   // headerMode: 'none',
-  mode: 'modal'
 });
