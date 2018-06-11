@@ -17,7 +17,7 @@ import Performance from './scenes/performance';
 import Ranking from './scenes/ranking';
 import Quiz from './scenes/quiz';
 import Contact from './scenes/contact';
-import More from './scenes/more';
+//import More from './scenes/more';
 import Rule from './scenes/rule';
 import Splash from './scenes/splash';
 
@@ -26,11 +26,12 @@ console.disableYellowBox = true;
 
 // My component
 const RootScene = TabNavigator({
+  //Profile: {screen: Profile},
   Home: {screen: Home},
   Curso: {screen: Curso},
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
-  More: {screen: More},
+  //More: {screen: More},
   Contact: {screen: Contact},
   // Rule: {screen: Rule},
 }, {
@@ -51,6 +52,7 @@ export default StackNavigator({
   Splash: {screen: Splash},
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
+  //Profile: {screen: Profile},
 }, {
   initialRouteName: 'Splash',
   headerMode: 'none',
