@@ -39,7 +39,7 @@ const RootScene = TabNavigator({
   animationEnabled: true,
   mode: "card",
   tabBarPosition: 'bottom',
-  swipeEnabled: false
+  swipeEnabled: false,
 });
 
 RootScene.navigationOptions = {
@@ -53,5 +53,6 @@ export default StackNavigator({
   Home: {screen: RootScene},
 }, {
   initialRouteName: 'Splash',
-  headerMode: 'none',
+  // headerMode: 'none',
+  mode: 'modal'
 });

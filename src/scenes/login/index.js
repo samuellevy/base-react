@@ -14,7 +14,8 @@ export default class Login extends Component {
     state = {
         username: null,
         password: null,
-        errorMessage: null
+        errorMessage: null,
+        save: false
     };
 
     componentDidMount = async () => {
@@ -61,12 +62,12 @@ export default class Login extends Component {
                 <View style={styles.boxLogin}>
                         <View style={styles.inputBox}>
                             <MaterialIcon name="person" size={25} style={styles.inputIcon} />
-                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='E-mail' placeholderTextColor={colors.light} onChangeText={username => this.setState({username})}/>
+                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='E-mail' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={username => this.setState({username})} value={this.state.username!=null?this.state.username:''}/>
                             { !!this.state.errorMessage && <Text style={styles.txtError}>{ this.state.errorMessage }</Text>}
                         </View>
                         <View style={styles.inputBox}>
                             <MaterialIcon name="lock" size={25} style={styles.inputIcon} />
-                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Senha' placeholderTextColor={colors.light} onChangeText={password => this.setState({password})}/>
+                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Senha' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
                         </View>
                         <View style={styles.boxCheck}>
                             <MaterialIcon name="check-box-outline-blank" size={25} style={styles.checkIcon} />
