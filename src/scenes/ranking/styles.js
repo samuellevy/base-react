@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     rankingContent:{
-        padding: '5%',
+        padding: 20,
     },
     rankingTitle:{
         fontSize: metrics.fonts.big,
@@ -19,11 +19,10 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         lineHeight: 18,
     },
-    rankingParagraph:{
-        fontSize: metrics.fonts.medium,
-        color: colors.dark,
-        marginBottom: 10,
-        lineHeight: 14,
+    otherPlaces:{
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     }
 });
 

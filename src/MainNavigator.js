@@ -52,6 +52,6 @@ export default StackNavigator({
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
 }, {
-  initialRouteName: 'Splash',
-  headerMode: 'none',
+  initialRouteName: 'Home',
+  // headerMode: 'none',
 });

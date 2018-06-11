@@ -3,7 +3,7 @@ import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
     container:{
-        paddingVertical: 15,
+        paddingVertical: 10,
         position: 'relative',
     },
     card:{
@@ -33,16 +33,34 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
     },
     content: {
+        flex: 1,
         height: '100%',
         justifyContent: 'space-between',
     },
-    title:{
+    titleBox:{
         backgroundColor: colors.yellow,
-        color: colors.white,
-        padding: 5,
-        fontWeight: 'bold',
         borderRadius: 3,
+        padding: 5,
+        width: 130,
+    },
+    title:{
+        fontSize: metrics.fonts.medium,
+        color: colors.white,
+        fontWeight: 'bold',
         textAlign: 'center',
+    },
+    loja:{
+        fontSize: metrics.fonts.xbig,
+        lineHeight: metrics.fonts.xbig,
+        fontWeight: 'bold',
+        color: colors.fontColor,
+        paddingVertical: 10,
+    },
+    score:{
+        fontSize: metrics.fonts.big,
+        lineHeight: metrics.fonts.big,
+        fontWeight: 'bold',
+        color: colors.yellow,
     }
 });
 

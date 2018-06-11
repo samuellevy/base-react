@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import styles from './styles';
 
 import WinnerCard from './components/winnercard';
+import Card from './components/card';
+import { metrics, colors } from '../../styles';
 
 export default class Ranking extends Component {
     static navigationOptions = {
@@ -20,7 +22,12 @@ export default class Ranking extends Component {
                         <Text style={styles.rankingTitle}>
                             {'Ranking das lojas'.toUpperCase()}
                         </Text>
-                        <WinnerCard color='color' title='title' image='1placegold' store='store' score='score'/>
+                        <WinnerCard store='Casa Fort Distribuidora' score='430'/>
+                        <View style={styles.otherPlaces}>
+                           <Card color={colors.gray} title='2º Lugar' image='2-ranking' store='Duas Irmãs Materiais' score='420'/>
+                           <Card color={colors.gray} title='3º Lugar' image='3-ranking' store='Fornecedora Caçula' score='380'/>
+                           <Card color={colors.primary} title='4º Lugar' image='4-ranking-active' store='Loja Golveia Construção' score='360'/>
+                        </View>
                     </View>
                 </ScrollView>
             </View>

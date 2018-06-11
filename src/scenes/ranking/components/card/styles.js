@@ -2,18 +2,15 @@ import { StyleSheet, Platform } from 'react-native';
 import { colors, metrics, fonts } from '../../../../styles';
 
 const styles = StyleSheet.create({
-    container:{
-        paddingTop: 10,
+    container: {
         position: 'relative',
-        marginTop: 10,
+        width: '30%',
+        paddingVertical: 10,
     },
-    card:{
+    card: {
         flex: 1,
-        width: '95%',
-        margin: '2.5%',
+        flexWrap: 'nowrap',
         borderRadius: 3,
-        paddingHorizontal: 20,
-        paddingTop: 70,
         elevation: 2,
         shadowColor: colors.black,
         shadowOpacity: 0.2,
@@ -22,9 +19,39 @@ const styles = StyleSheet.create({
             height: 1,
             width: 0
         },
+        padding: 15,
         alignItems: 'center',
         backgroundColor: colors.white,
     },
+    image: {
+        height: 70,
+        width: 70,
+        marginVertical: 15,
+        resizeMode: 'contain',
+    },
+    titleBox: {
+        backgroundColor: colors.yellow,
+        borderRadius: 3,
+        padding: 3,
+        width: '100%',
+    },
+    title: {
+        fontSize: metrics.fonts.small,
+        color: colors.white,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    loja: {
+        fontSize: metrics.fonts.medium,
+        color: colors.fontColor,
+        textAlign: 'center',
+        paddingBottom: 10,
+    },
+    score: {
+        fontSize: metrics.fonts.medium,
+        fontWeight: 'bold',
+        color: colors.yellow,
+    }
 });
 
 export default styles;
