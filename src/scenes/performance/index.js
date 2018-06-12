@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 import { View } from 'react-native';
 import NavIcon from '../../components/navigation/NavIcon';
-// import styles from './styles';
+
+import styles from './styles';
+
+import General from './components/general';
+import LastUpdate from './components/lastupdate';
+import Sales from './components/sales';
 
 export default class Performance extends Component {
     static navigationOptions = {
@@ -13,7 +18,11 @@ export default class Performance extends Component {
     };
     render() {
         return (
-            <View />
+            <View>
+                <Sales />
+                <General />
+                <LastUpdate />
+            </View>
         );
     }
 }
