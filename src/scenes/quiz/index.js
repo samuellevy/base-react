@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal, ListView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal, ListView, Button } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import NavIcon from '../../components/navigation/NavIcon';
@@ -19,8 +19,10 @@ export default class Quiz extends Component {
     }
 
     state = {
+        btnSelected: 0,
+        confirmBtn: false,
         modalVisible: false,
-    };
+    };      
 
     setModalVisible(visible) {
         this.setState({modalVisible: visible});
@@ -47,31 +49,50 @@ export default class Quiz extends Component {
                             <Text style={styles.titleQuizBox}>2. Qual é o melhor cimento para obras internas?</Text>
 
                             <View style={styles.contentList}>
-                                <TouchableOpacity style={styles.btnQuestion}>   
-                                    <Text style={styles.textQuestion}>Votoran</Text>
+
+                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 1)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 1, confirmBtn: true })}>     
+                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 1)?styles.textQuestionSelect:'']}>Votoran</Text>
+                                </TouchableOpacity> 
+                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 2)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 2, confirmBtn: true })}>
+                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 2)?styles.textQuestionSelect:'']}>Tupi</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnQuestion}>   
-                                    <Text style={styles.textQuestion}>Tupi</Text>
+                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 3)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 3, confirmBtn: true })}>   
+                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 3)?styles.textQuestionSelect:'']}>Mauá</Text>
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnQuestion}>   
-                                    <Text style={styles.textQuestion}>Mauá</Text>
+                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 4)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 4, confirmBtn: true })}>   
+                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 4)?styles.textQuestionSelect:'']}>CSN</Text> 
                                 </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnQuestion}>   
-                                    <Text style={styles.textQuestion}>CSN</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={styles.btnQuestion}>   
-                                    <Text style={styles.textQuestion}>Holcim</Text>
+                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 5)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 5, confirmBtn: true })}>   
+                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 5)?styles.textQuestionSelect:'']}>Holcim</Text>
                                 </TouchableOpacity>
                             </View>
 
                             <View style={styles.boxBtn}>
-                                <TouchableOpacity style={[styles.btnConfirm, styles.opacityBtn]}>   
+                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]}>   
                                     <Text style={styles.textBtn}>CONFIRMAR RESPOSTA</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
                     </View>
-
+ 
+                    <View style={styles.contentSlider}> 
+                        <View style={styles.boxIcon}>
+                            <MaterialIcon name="brightness-1" size={10} style={[styles.iconSlider, styles.iconSliderSelect]}></MaterialIcon>
+                        </View>
+                        <View style={styles.boxIcon}>
+                            <MaterialIcon name="brightness-1" size={10} style={styles.iconSlider}></MaterialIcon>
+                        </View>
+                        <View style={styles.boxIcon}>
+                            <MaterialIcon name="brightness-1" size={10} style={styles.iconSlider}></MaterialIcon>
+                        </View>
+                        <View style={styles.boxIcon}>
+                            <MaterialIcon name="brightness-1" size={10} style={styles.iconSlider}></MaterialIcon>
+                        </View>
+                        <View style={styles.boxIcon}>
+                            <MaterialIcon name="brightness-1" size={10} style={styles.iconSlider}></MaterialIcon>
+                        </View>
+                    </View> 
+  
                     <ScrollView style={styles.scrollview}>
 
                     </ScrollView>
