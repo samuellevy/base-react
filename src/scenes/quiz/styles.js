@@ -57,10 +57,17 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         padding: 15,
         width: "100%",
-        backgroundColor: colors.graylight,
+        alignItems: 'center', 
+        backgroundColor: colors.graylight, 
     },
     boxBtn: {
         alignItems: 'center', 
+    },
+    btnQuestionSelect: {
+        backgroundColor: "#FFB100",
+    }, 
+    textQuestionSelect: {
+        color: colors.white, 
     },
     btnConfirm: {
         backgroundColor: colors.regular,
@@ -73,7 +80,29 @@ const styles = StyleSheet.create({
         paddingBottom: 10, 
         paddingLeft: 30, 
         paddingRight: 30, 
-    }
+    },
+    btnConfirmOk: {
+        backgroundColor: "#FFB100",    
+    },
+    textBtn: {
+        color: colors.white, 
+    },
+    contentSlider: {
+        flex: 1,
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+    },
+    boxIcon: {
+        paddingLeft: 4,
+        paddingRight: 4, 
+    },
+    iconSlider: { 
+        color: colors.white, 
+    },
+    iconSliderSelect: {
+        color: colors.yellow, 
+    },
 })
 
 export default styles;
