@@ -4,7 +4,8 @@ import { colors, metrics, fonts } from '../../../../styles';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: '5%',
+        marginTop: metrics.headerPadding,
+        paddingHorizontal: metrics.headerPadding,
         height: 40,
         justifyContent: 'space-between',
         alignItems: 'center',

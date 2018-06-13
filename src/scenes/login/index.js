@@ -19,15 +19,18 @@ export default class Login extends Component {
     };
 
     componentDidMount = async () => {
-        const token = await AsyncStorage.getItem('@CodeApi:token');
-        if(token) {
-            console.log(token);
-            this.props.navigation.navigate('Home');
+        const user = await AsyncStorage.getItem('@CodeApi:user');
+        if(!!user) {
+            console.log(user);
+            //this.props.navigation.navigate('Home');
+            this.setState({username:user});
+        }else{
+
         }
     }
     
     signIn = async () => {
-        // AsyncStorage.clear();
+        //AsyncStorage.clear();
         console.log(this.state.username);
         try{
             const response = await api.post('/users/token',{
@@ -39,12 +42,20 @@ export default class Login extends Component {
 
             await AsyncStorage.multiSet([
                 ['@CodeApi:token', token],
-                ['@CodeApi:user', JSON.stringify(user)]
+                ['@CodeApi:user', user]
             ]);
 
             this.props.navigation.navigate('Home');
         } catch (response){
             this.setState({ errorMessage: response.data.message });
+        }
+    }
+
+    clickRemember = () => {
+        if(this.state.save){
+            this.setState({save: false});
+        }else{
+            this.setState({save: true});
         }
     }
 
@@ -67,14 +78,16 @@ export default class Login extends Component {
                         </View>
                         <View style={styles.inputBox}>
                             <MaterialIcon name="lock" size={25} style={styles.inputIcon} />
-                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Senha' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={password => this.setState({password})} secureTextEntry={true}/>
+                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Senha' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={password => !!password?this.setState({password: password}):this.setState({password: null})} secureTextEntry={true}/>
                         </View>
-                        <View style={styles.boxCheck}>
-                            <MaterialIcon name="check-box-outline-blank" size={25} style={styles.checkIcon} />
-                            <Text style={styles.txtKeep}>Mantenha-me conectado</Text>
-                        </View>
-                        <TouchableOpacity onPress={this.signIn}>
-                            <View style={styles.boxButton}>
+                        <TouchableOpacity onPress={this.clickRemember}>
+                            <View style={styles.boxCheck}>
+                                <MaterialIcon name={this.state.save?"check-box":"check-box-outline-blank"} size={25} style={styles.checkIcon} />
+                                <Text style={styles.txtKeep}>Mantenha-me conectado</Text> 
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={this.signIn} disabled={this.state.username!=null&&this.state.password!=null?false:true}>
+                            <View style={[styles.boxButton, this.state.username!=null&&this.state.password!=null?{backgroundColor: colors.primary}:{backgroundColor: colors.gray}]}>
                                 <Text style={styles.txtSign}>ENTRAR</Text>
                             </View>
                         </TouchableOpacity>
@@ -84,4 +97,4 @@ export default class Login extends Component {
             </ScrollView>
         );
     }
-}
+} 
