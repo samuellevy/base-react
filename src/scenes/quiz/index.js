@@ -23,73 +23,90 @@ export default class Quiz extends Component {
         confirmBtn: false,
         modalVisible: false,
         quizSelect: 1,
+        titleQuestion: '',
         quest: [
             {
                 id: 1,
                 question: "1. Qual é o melhor cimento para obras internas?",
                 answer: [
-                    'Votoran',
-                    'Tupi',
-                    'Mauá',
-                    'CSN',
-                    'Holcim'
+                    {id: 1, name: 'Votoran'},
+                    {id: 2, name: 'Tupi'},
+                    {id: 3, name: 'Mauá'},
+                    {id: 4, name: 'CSN'},
+                    {id: 5, name: 'Holcim'}
                 ]
             },
             {
                 id: 2,
                 question: '2. Qual é o melhor cimento para obras internas?',
                 answer: [
-                    'Votoran',
-                    'Tupi',
-                    'Mauá',
-                    'CSN',
-                    'Holcim'
+                    {id: 1, name: 'Votoran'},
+                    {id: 2, name: 'Tupi'},
+                    {id: 3, name: 'Mauá'},
+                    {id: 4, name: 'CSN'},
+                    {id: 5, name: 'Holcim'}
                 ]
             },
             {
                 id: 3,
                 question: '3. Qual é o melhor cimento para obras internas?',
                 answer: [
-                    'Votoran',
-                    'Tupi',
-                    'Mauá',
-                    'CSN',
-                    'Holcim'
+                    {id: 1, name: 'Votoran'},
+                    {id: 2, name: 'Tupi'},
+                    {id: 3, name: 'Mauá'},
+                    {id: 4, name: 'CSN'},
+                    {id: 5, name: 'Holcim'}
                 ]
             },
             {
                 id: 4,
                 question: '4. Qual é o melhor cimento para obras internas?',
                 answer: [
-                    'Votoran',
-                    'Tupi',
-                    'Mauá',
-                    'CSN',
-                    'Holcim'
+                    {id: 1, name: 'Votoran'},
+                    {id: 2, name: 'Tupi'},
+                    {id: 3, name: 'Mauá'},
+                    {id: 4, name: 'CSN'},
+                    {id: 5, name: 'Holcim'}
                 ]
             }
         ]
     };
 
     getTitle() {
-        this.state.quest.map((quest) => {
-            if(quest.id == this.state.quizSelect) {
-                return quest.question;
-            }  
-        });
-    }
+        return (
+            <View>
+                {this.state.quest.map(quest => {
+                    return ( 
+                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
+                            {(this.state.quizSelect== quest.id)?<Text style={styles.titleQuizBox}>{quest.question}</Text>:''}
+                        </View> 
+                    )
+                })}
+            </View>
+        )
+    }  
 
     getAnswer() {
-        this.state.quest.map((quest) => {
-            if(quest.id == this.state.quizSelect) {
-                this.state.quest.answer.map((answer) => {
-                    console.log(answer) 
-                });
-            }  
-        });
+        return (
+            <View>
+                {this.state.quest.map(quest => {
+                    console.log(quest)
+                    let idBtn = 0;  
+                    return ( 
+                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
+                            { quest.id == this.state.quizSelect && quest.answer.map(answer => {
+                                console.log(answer.id)  
+                                return <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.name}</Text></TouchableOpacity>
+                            }) 
+                            }
+                        </View> 
+                    )
+                })}
+            </View>
+        )
     }
 
-    setModalVisible(visible) {
+    setModalVisible(visible) { 
         this.setState({modalVisible: visible});
     }
 
@@ -105,37 +122,19 @@ export default class Quiz extends Component {
                         <MaterialIcon name="clear" size={25} style={styles.iconClear}></MaterialIcon>
                     </TouchableOpacity>
 
-                    {this.getAnswer()}
-
                     <View style={styles.titleModulo}>
                         <Text style={styles.titleQuiz}>MÓDULO 03: CIMENTO CPII</Text>
                     </View>
-
+  
                     <View style={styles.contentQuiz}>
                         <View style={styles.content}> 
-                            <Text style={styles.titleQuizBox}>${this.getTitle()}</Text>
+                            <Text style={styles.titleQuizBox}>4. Qual é o melhor cimento para obras internas?</Text>  
+                            {/* {this.getTitle()} */}
 
-                            <View style={styles.contentList}>
-
-                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 1)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 1, confirmBtn: true })}>     
-                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 1)?styles.textQuestionSelect:'']}>Votoran</Text>
-                                </TouchableOpacity> 
-                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 2)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 2, confirmBtn: true })}>
-                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 2)?styles.textQuestionSelect:'']}>Tupi</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 3)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 3, confirmBtn: true })}>   
-                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 3)?styles.textQuestionSelect:'']}>Mauá</Text>
-                                </TouchableOpacity>
-                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 4)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 4, confirmBtn: true })}>   
-                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 4)?styles.textQuestionSelect:'']}>CSN</Text> 
-                                </TouchableOpacity>
-                                <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== 5)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: 5, confirmBtn: true })}>   
-                                    <Text style={[styles.textQuestion, (this.state.btnSelected== 5)?styles.textQuestionSelect:'']}>Holcim</Text>
-                                </TouchableOpacity>
-                            </View>
+                            {this.getAnswer()} 
 
                             <View style={styles.boxBtn}>
-                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]}>   
+                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={() => {this.setState({quizSelect: (this.quizSelect + 1)})}}>   
                                     <Text style={styles.textBtn}>CONFIRMAR RESPOSTA</Text>
                                 </TouchableOpacity>
                             </View>
