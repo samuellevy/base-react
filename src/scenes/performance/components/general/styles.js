@@ -4,8 +4,8 @@ import { colors, metrics, fonts } from '../../../../styles';
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        padding: 10,
-        paddingBottom: 5,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
     },
     box:{
         flex:1,

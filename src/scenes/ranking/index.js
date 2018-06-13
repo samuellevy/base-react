@@ -18,15 +18,15 @@ export default class Ranking extends Component {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    <View style={styles.rankingContent}>
-                        <Text style={styles.rankingTitle}>
+                    <View style={styles.content}>
+                        <Text style={styles.title}>
                             {'Ranking das lojas'.toUpperCase()}
                         </Text>
                         <WinnerCard store='Casa Fort Distribuidora' score='430'/>
                         <View style={styles.otherPlaces}>
-                           <Card color={colors.gray} title='2º Lugar' image='2-ranking' store='Duas Irmãs Materiais' score='420'/>
-                           <Card color={colors.gray} title='3º Lugar' image='3-ranking' store='Fornecedora Caçula' score='380'/>
-                           <Card color={colors.primary} title='4º Lugar' image='4-ranking-active' store='Loja Golveia Construção' score='360'/>
+                           <Card status='non-user' title='2º Lugar' image='2-ranking' store='Duas Irmãs Materiais' score='420'/>
+                           <Card status='non-user' title='3º Lugar' image='3-ranking' store='Fornecedora Caçula' score='380'/>
+                           <Card status='user' title='4º Lugar' image='4-ranking' store='Loja Golveia Construção' score='360'/>
                         </View>
                     </View>
                 </ScrollView>

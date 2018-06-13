@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         paddingLeft: 4,
         paddingRight: 4, 
     },
-    iconSlider: {
+    iconSlider: { 
         color: colors.white, 
     },
     iconSliderSelect: {
