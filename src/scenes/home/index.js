@@ -19,18 +19,44 @@ import { colors, metrics, fonts } from '../../styles';
 import Card from './components/card';
 import CardFooter from './components/cardfooter';
 
+import api from '../../services/api';
+
 export default class Home extends Component {
   static navigationOptions = {
     title: 'products',
     headerRight:<View style={{flex:1, backgroundColor: 'black', height: 50}}><Text>HOME</Text></View>
   };
+
+  state = {
+    user:{
+      name: null
+    }
+  };
+
+
+  constructor (){
+    super();
+    this.getUserData();
+  }
+
+  getUserData = async () => {
+    try{
+        const response = await api.get('/users/me');
+        const user = response.data.user;
+        this.setState({user: user});
+        // console.log(this.state.user.name);
+       
+    } catch (response){
+        this.setState({ errorMessage: response.data.message });
+    }
+  }
   
   render() {
     return (
       <View style={styles.container}>
         <ScrollView style={styles.scrollview}>
-          <SmallProfile/>
-          <RankingBox/>
+          <SmallProfile user={this.state.user}/>
+          <RankingBox user={this.state.user}/>
           <LastUpdate/>
 
           <Card title={'Desempenho'} icon={'today'} color={colors.blue}>

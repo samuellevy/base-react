@@ -39,7 +39,7 @@ export default class More extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.border}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => { this.props.navigation.navigate('Login'); }}>
             <Item icon={'export'} title={'Sair'}/>
           </TouchableOpacity>
         </View>

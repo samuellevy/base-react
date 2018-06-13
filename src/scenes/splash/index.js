@@ -25,7 +25,7 @@ export default class Splash extends Component {
                 }else{
                     this.setState({percentValue: this.state.percentValue + 5});
                 }
-                console.log(this.state.percentValue);
+                // console.log(this.state.percentValue);
             }
             , 10
         ));
@@ -35,8 +35,9 @@ export default class Splash extends Component {
         // AsyncStorage.clear();
         let navigateTo;
         const token = await AsyncStorage.getItem('@CodeApi:token');
-        if(token) {
-            navigateTo = 'Login'; //or home to instantly enter
+        const remember = await AsyncStorage.getItem('@CodeApi:remember');
+        if(token && remember == 'true') {
+            navigateTo = 'Home'; //or home to instantly enter
         } else {
             navigateTo = 'Login';
         }
@@ -46,7 +47,7 @@ export default class Splash extends Component {
                 this.props.navigation.navigate(navigateTo);
                 timer.clearInterval(this);
             }
-            , 800
+            , 1000
         );
     }
 

@@ -9,6 +9,8 @@ export default class RankingBox extends Component {
     };
 
     render() {
+        let user = this.props.user;
+
         return (
             <View style={styles.container}>
                 <View style={styles.box}>
@@ -17,14 +19,14 @@ export default class RankingBox extends Component {
                             <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
                         </View>
                         <View style={styles.boxSplitText}>
-                            <Text style={styles.splitText}>4º Lugar</Text>
+                            <Text style={styles.splitText}>{user.ranking}º Lugar</Text>
                         </View>
                     </View>
                     <View style={styles.split}>
                         <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
                             <Text style={styles.splitTitle}>{'Pontuação'.toUpperCase()}</Text>
                         </View>
-                        <Text style={[styles.splitText, styles.splitTextScore]}>360 pontos</Text>
+                        <Text style={[styles.splitText, styles.splitTextScore]}>{user.pontuacao>0?user.pontuacao + ' pontos':'nenhum'}</Text>
                     </View>
                 </View>
             </View>

@@ -15,14 +15,14 @@ export default class Login extends Component {
         username: null,
         password: null,
         errorMessage: null,
-        save: false
+        remember: false
     };
 
     componentDidMount = async () => {
         const user = await AsyncStorage.getItem('@CodeApi:user');
+        const token = await AsyncStorage.getItem('@CodeApi:token');
+        
         if(!!user) {
-            console.log(user);
-            //this.props.navigation.navigate('Home');
             this.setState({username:user});
         }else{
 
@@ -30,8 +30,7 @@ export default class Login extends Component {
     }
     
     signIn = async () => {
-        //AsyncStorage.clear();
-        console.log(this.state.username);
+        AsyncStorage.clear();
         try{
             const response = await api.post('/users/token',{
                 username: this.state.username,
@@ -39,10 +38,11 @@ export default class Login extends Component {
             });
             
             const { user, token } = response.data.data;
-
+            console.log(this.state.remember);
             await AsyncStorage.multiSet([
                 ['@CodeApi:token', token],
-                ['@CodeApi:user', user]
+                ['@CodeApi:user', user],
+                ['@CodeApi:remember', JSON.stringify(this.state.remember)]
             ]);
 
             this.props.navigation.navigate('Home');
@@ -52,10 +52,10 @@ export default class Login extends Component {
     }
 
     clickRemember = () => {
-        if(this.state.save){
-            this.setState({save: false});
+        if(this.state.remember){
+            this.setState({remember: false});
         }else{
-            this.setState({save: true});
+            this.setState({remember: true});
         }
     }
 
@@ -82,7 +82,7 @@ export default class Login extends Component {
                         </View>
                         <TouchableOpacity onPress={this.clickRemember}>
                             <View style={styles.boxCheck}>
-                                <MaterialIcon name={this.state.save?"check-box":"check-box-outline-blank"} size={25} style={styles.checkIcon} />
+                                <MaterialIcon name={this.state.remember?"check-box":"check-box-outline-blank"} size={25} style={styles.checkIcon} />
                                 <Text style={styles.txtKeep}>Mantenha-me conectado</Text> 
                             </View>
                         </TouchableOpacity>
