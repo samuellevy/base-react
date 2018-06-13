@@ -4,7 +4,7 @@ import { colors, metrics, fonts } from '../../../../styles';
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        padding: 15,
+        padding: 10,
         paddingBottom: 5,
     },
     box:{

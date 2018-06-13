@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         flexDirection: 'row',
+        marginHorizontal: 20,
     },
     splitLeft:{
         width: '60%',

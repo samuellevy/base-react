@@ -18,8 +18,8 @@ export default class Ranking extends Component {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    <View style={styles.rankingContent}>
-                        <Text style={styles.rankingTitle}>
+                    <View style={styles.content}>
+                        <Text style={styles.title}>
                             {'Ranking das lojas'.toUpperCase()}
                         </Text>
                         <WinnerCard store='Casa Fort Distribuidora' score='430'/>

@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
         backgroundColor: colors.lightBackground,
         justifyContent: 'center',
     },
-    rankingContent:{
+    content:{
         padding: 20,
     },
-    rankingTitle:{
+    title:{
         fontSize: metrics.fonts.big,
         fontWeight: 'bold',
         color: colors.primary,

@@ -13,7 +13,7 @@ export default class Sales extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.splitLeft}>
-                    <Text style={styles.text}>Falta apenas <Text style={{ fontWeight: "bold" }}>20%</Text> para sua loja completar a meta do mês!</Text>
+                    <Text style={styles.text}>Quase lá! Falta apenas <Text style={{ fontWeight: "bold" }}>20%</Text> para sua loja completar a meta do mês!</Text>
                     <Text style={styles.dateTitle}>{'Agosto de 2018'.toUpperCase()}</Text>
                     <View style={styles.table}>
                         <View>
