@@ -9,6 +9,9 @@ const styles = StyleSheet.create({
         backgroundColor: colors.lightBackground,
         justifyContent: 'center',
     },
+    scrollview: {
+        marginBottom: 55,
+    },
     content:{
         padding: 20,
     },

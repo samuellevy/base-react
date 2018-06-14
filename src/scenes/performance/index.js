@@ -20,7 +20,7 @@ export default class Performance extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ScrollView>
+                <ScrollView style={styles.scrollview}>
                     <Text style={styles.title}>
                         {'Desempenho'.toUpperCase()}
                     </Text>

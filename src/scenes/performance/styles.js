@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.white,
     },
+    scrollview: {
+        marginBottom: 55,
+    },
     title: {
         fontSize: metrics.fonts.big,
         fontWeight: 'bold',

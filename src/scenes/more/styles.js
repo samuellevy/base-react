@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: colors.white,
     },
+    scrollview: {
+        marginBottom: 55,
+    },
     border:{
         borderTopWidth: 0.5,
         borderTopColor: colors.regular,

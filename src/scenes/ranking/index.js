@@ -17,7 +17,7 @@ export default class Ranking extends Component {
     render() { 
         return (
             <View style={styles.container}>
-                <ScrollView>
+                <ScrollView style={styles.scrollview}>
                     <View style={styles.content}>
                         <Text style={styles.title}>
                             {'Ranking das lojas'.toUpperCase()}
