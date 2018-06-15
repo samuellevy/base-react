@@ -32,11 +32,11 @@ export default class Performance extends Component {
                     <LastUpdate />
                     <Text style={styles.subtitle}>Histórico</Text>
                     <View style={styles.historyBox}>
-                        <History date='08/18' description='Módulo completado' score='25'/>
-                        <History date='08/18' description='Módulo completado' score='25'/>
-                        <History date='08/18' description='Módulo completado' score='25'/>
-                        <History date='08/18' description='Módulo completado' score='25'/>
-                        <History date='08/18' description='Módulo completado' score='25'/>
+                        <History child='not-last' date='08/18' description='Módulo completado' score='25'/>
+                        <History child='not-last' date='07/18' description='Meta mensal atingida - 100%' score='50'/>
+                        <History child='not-last' date='06/18' description='Módulo completado' score='100'/>
+                        <History child='not-last' date='06/18' description='Cadastro de funcionários' score='25'/>
+                        <History child='last' date='06/18' description='Módulo completado' score='20'/>
                     </View>
                 </ScrollView>
             </View>
