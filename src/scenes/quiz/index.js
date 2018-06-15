@@ -7,6 +7,21 @@ import styles from './styles';
 
 import { colors, metrics, fonts } from '../../styles';
 
+// // Load the full build.
+// var _ = require('lodash');
+// // Load the core build.
+// var _ = require('lodash/core');
+// // Load the FP build for immutable auto-curried iteratee-first data-last methods.
+// var fp = require('lodash/fp');
+ 
+// // Load method categories.
+// var array = require('lodash/array');
+// var object = require('lodash/fp/object');
+ 
+// // Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+// var at = require('lodash/at');
+// var curryN = require('lodash/fp/curryN');
+
 export default class Quiz extends Component {
     
     contentTop = (video) => {
@@ -73,17 +88,20 @@ export default class Quiz extends Component {
     };
 
     getTitle() {
-        return (
-            <View>
-                {this.state.quest.map(quest => {
-                    return ( 
-                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
-                            {(this.state.quizSelect== quest.id)?<Text style={styles.titleQuizBox}>{quest.question}</Text>:''}
-                        </View> 
-                    )
-                })}
-            </View>
-        )
+        // return (
+        //     <View>
+        //         {this.state.quest.map(quest => {
+        //             return ( 
+        //                 <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
+        //                     {(this.state.quizSelect== quest.id)?<Text style={styles.titleQuizBox}>{quest.question}</Text>:''}
+        //                 </View> 
+        //             )
+        //         })}
+        //     </View>
+            
+        //     _.find(quests, { 'id': this.state.quizSelect });
+        // )
+        // _.find(quests, { 'id': this.state.quizSelect });
     }  
 
     getAnswer() {
@@ -110,6 +128,20 @@ export default class Quiz extends Component {
         this.setState({modalVisible: visible});
     }
 
+    clickNext() {
+        // this.setState({quizSelect: (this.quizSelect + 1)})
+        var nextId = this.quizSelect + 1;
+        console.log("nextId") 
+    }
+
+    getTitle(quest){
+        return (
+            <View style={{alignItems: 'center', paddingHorizontal: 15}}>
+                <Text style={styles.titleQuizBox}>{quest.question}</Text>
+            </View> 
+        )
+    }
+
     render() {
         return (
             <Modal animationType="fade"    
@@ -134,7 +166,7 @@ export default class Quiz extends Component {
                             {this.getAnswer()} 
 
                             <View style={styles.boxBtn}>
-                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={() => {this.setState({quizSelect: (this.quizSelect + 1)})}}>   
+                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={this.clickNext()}>
                                     <Text style={styles.textBtn}>CONFIRMAR RESPOSTA</Text>
                                 </TouchableOpacity>
                             </View>
