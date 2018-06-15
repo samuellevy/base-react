@@ -110,6 +110,12 @@ export default class Quiz extends Component {
         this.setState({modalVisible: visible});
     }
 
+    clickNext() {
+        // this.setState({quizSelect: (this.quizSelect + 1)})
+        var nextId = this.quizSelect + 1;
+        console.log("nextId") 
+    }
+
     render() {
         return (
             <Modal animationType="fade"    
@@ -134,7 +140,7 @@ export default class Quiz extends Component {
                             {this.getAnswer()} 
 
                             <View style={styles.boxBtn}>
-                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={() => {this.setState({quizSelect: (this.quizSelect + 1)})}}>   
+                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={this.clickNext()}>
                                     <Text style={styles.textBtn}>CONFIRMAR RESPOSTA</Text>
                                 </TouchableOpacity>
                             </View>
