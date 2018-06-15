@@ -56,5 +56,6 @@ export default StackNavigator({
 }, {
   initialRouteName: 'Splash',
   // headerMode: 'none',
-  mode: 'modal'
+  mode: 'modal',
+  swipeEnabled: false,
 });
