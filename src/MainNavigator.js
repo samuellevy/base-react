@@ -20,6 +20,7 @@ import Contact from './scenes/contact';
 import More from './scenes/more';
 import Rule from './scenes/rule';
 import Splash from './scenes/splash';
+import Password from './scenes/password';
 
 // Other confs
 console.disableYellowBox = true;
@@ -33,6 +34,7 @@ const RootScene = TabNavigator({
   Ranking: {screen: Ranking},
   More: {screen: More},
   Contact: {screen: Contact},
+  Password: {screen: Password},
   // Rule: {screen: Rule},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
@@ -54,7 +56,7 @@ export default StackNavigator({
   Home: {screen: RootScene},
   //Profile: {screen: Profile},
 }, {
-  initialRouteName: 'Splash',
+  initialRouteName: 'Login',
   // headerMode: 'none',
   mode: 'modal',
   swipeEnabled: false,
