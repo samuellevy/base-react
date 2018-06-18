@@ -7,20 +7,22 @@ import styles from './styles';
 
 import { colors, metrics, fonts } from '../../styles';
 
-// // Load the full build.
-// var _ = require('lodash');
-// // Load the core build.
-// var _ = require('lodash/core');
-// // Load the FP build for immutable auto-curried iteratee-first data-last methods.
-// var fp = require('lodash/fp');
+// Load the full build.
+var _ = require('lodash');
+// Load the core build.
+var _ = require('lodash/core');
+// Load the FP build for immutable auto-curried iteratee-first data-last methods.
+var fp = require('lodash/fp');
  
-// // Load method categories.
-// var array = require('lodash/array');
-// var object = require('lodash/fp/object');
+// Load method categories.
+var array = require('lodash/array');
+var object = require('lodash/fp/object');
  
-// // Cherry-pick methods for smaller browserify/rollup/webpack bundles.
-// var at = require('lodash/at');
-// var curryN = require('lodash/fp/curryN');
+// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
+var at = require('lodash/at');
+var curryN = require('lodash/fp/curryN');
+
+var arrayQuest = new Array();
 
 export default class Quiz extends Component {
     
@@ -87,7 +89,7 @@ export default class Quiz extends Component {
         ]
     };
 
-    getTitle() {
+    getTitle(quests) {
         // return (
         //     <View>
         //         {this.state.quest.map(quest => {
@@ -101,21 +103,21 @@ export default class Quiz extends Component {
             
         //     _.find(quests, { 'id': this.state.quizSelect });
         // )
-        // _.find(quests, { 'id': this.state.quizSelect });
+        _.find(quests, { 'id': this.state.quizSelect });
     }  
 
     getAnswer() {
         return (
             <View>
                 {this.state.quest.map(quest => {
-                    console.log(quest)
+                    // console.log(quest)
                     let idBtn = 0;  
                     return ( 
                         <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
                             { quest.id == this.state.quizSelect && quest.answer.map(answer => {
-                                console.log(answer.id)  
-                                return <TouchableOpacity style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.name}</Text></TouchableOpacity>
-                            }) 
+                                // console.log(answer.id)  
+                                return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.name}</Text></TouchableOpacity>
+                            })  
                             }
                         </View> 
                     )
@@ -129,9 +131,10 @@ export default class Quiz extends Component {
     }
 
     clickNext() {
-        // this.setState({quizSelect: (this.quizSelect + 1)})
-        var nextId = this.quizSelect + 1;
-        console.log("nextId") 
+        return (
+            console.log(arrayQuest),
+            console.log(this.state.quizSelect)   
+        )
     }
 
     getTitle(quest){
@@ -140,9 +143,12 @@ export default class Quiz extends Component {
                 <Text style={styles.titleQuizBox}>{quest.question}</Text>
             </View> 
         )
-    }
+    }  
 
     render() {
+
+        // let CompArray = new Array();
+
         return (
             <Modal animationType="fade"    
             transparent={true}
@@ -161,12 +167,12 @@ export default class Quiz extends Component {
                     <View style={styles.contentQuiz}>
                         <View style={styles.content}> 
                             <Text style={styles.titleQuizBox}>4. Qual é o melhor cimento para obras internas?</Text>  
-                            {/* {this.getTitle()} */}
+                            {this.getTitle(this.state.quest)}
 
                             {this.getAnswer()} 
 
                             <View style={styles.boxBtn}>
-                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={this.clickNext()}>
+                                <TouchableOpacity style={[styles.btnConfirm, (this.state.btnSelected? styles.btnConfirmOk:'')]} onPress={this.clickNext}>
                                     <Text style={styles.textBtn}>CONFIRMAR RESPOSTA</Text>
                                 </TouchableOpacity>
                             </View>
