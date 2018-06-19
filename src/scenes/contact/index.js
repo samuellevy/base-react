@@ -9,17 +9,25 @@ import Button from '../../components/button';
 import styles from './styles';
 
 export default class Contact extends Component {
+  state = {
+    message: null,
+  };
+
   render() {
     return (
       <View style={styles.container}>
         <View>
-          <Title textContent="Fale Conosco"/>
+          <Text style={styles.title}>
+            {'Fale Conosco'.toUpperCase()}
+          </Text>
           <Text style={styles.txtDescription}>Possui algum comentário, dúvida ou sugestão? Entre em contato com a gente!</Text>
-          <TextInput style={styles.contactForm} placeholder="Enter password" placeholderTextColor="white"/>
+          <View style={styles.inputBox}>
+            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Escreva sua mensagem' placeholderTextColor={colors.gray} onChangeText={message => this.setState({ message })} value={this.state.message != null ? this.state.message : ''}/>
+          </View>
         </View>
         <View style={styles.boxSend}>
           <TouchableOpacity onPress={this.signIn}>
-            <Button title={'Enviar mensagem'} size={60} color={colors.regular}/>
+            <Button title={'Enviar mensagem'} size={60} color={colors.regular} style={[styles.boxSend, this.state.message != null ? { backgroundColor: colors.yellow } : { backgroundColor: colors.gray }]}/>
           </TouchableOpacity>
         </View>
       </View>

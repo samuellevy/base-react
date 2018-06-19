@@ -4,25 +4,30 @@ import { colors, metrics, fonts } from '../../styles';
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        padding: metrics.containerPadding,
-        paddingTop: metrics.headerPadding,
         backgroundColor: colors.white,
-    },
-    boxHello:{
-        paddingTop: metrics.headerPadding,
-        flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        alignSelf: 'center',
-        width: '60%'
     },
-    imgMarca:{
-        flex:1,
-        resizeMode:"contain"
+    scrollView:{
+        padding: metrics.containerPadding,
+        paddingTop: metrics.headerPadding,
     },
     boxWelcome:{
         marginVertical: metrics.marginDefault,
         marginHorizontal: 30,
+        paddingTop: 50,
+    },
+    turnBack:{
+        flexDirection:'row',
+        justifyContent: 'flex-start',
+        paddingVertical: 10,
+    },
+    iconBack:{
+        paddingRight: 10,
+        color: colors.light,
+    },
+    txtBack:{
+        color: colors.light,
     },
 
     txtWelcome:{
