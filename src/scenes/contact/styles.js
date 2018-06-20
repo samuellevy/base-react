@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
         marginVertical: 30,
     },
 
+    placeholder:{
+        color: colors.gray,
+        fontStyle: 'italic',
+    },
+
     input: {
         height: 200, 
         borderColor: colors.gray, 
@@ -35,6 +40,7 @@ const styles = StyleSheet.create({
         color: colors.fontColor,
         fontSize: metrics.fonts.big,
         padding: 20,
+        textAlignVertical: 'top',
     },
 
     boxSend:{
