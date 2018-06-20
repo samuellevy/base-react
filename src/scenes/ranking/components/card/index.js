@@ -54,7 +54,7 @@ export default class Card extends Component {
         historyBtn = <View style={styles.history}><TouchableOpacity style={styles.historyBtn}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon}/>
 </TouchableOpacity></View>;
         break;
-        case 'non-user':
+      case 'non-user':
         color = colors.gray;
         historyBtn = null;
         break;
