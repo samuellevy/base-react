@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     boxSend:{
         flex:1,
         justifyContent: 'flex-end',
-        marginBottom: metrics.tabBarHeight
+        marginBottom: metrics.tabBarHeight,
 
     }
 

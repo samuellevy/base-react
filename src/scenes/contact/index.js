@@ -9,9 +9,10 @@ import Button from '../../components/button';
 import styles from './styles';
 
 export default class Contact extends Component {
-  state = {
-    message: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = { text: '' };
+  }
 
   render() {
     return (
@@ -22,12 +23,12 @@ export default class Contact extends Component {
           </Text>
           <Text style={styles.txtDescription}>Possui algum comentário, dúvida ou sugestão? Entre em contato com a gente!</Text>
           <View style={styles.inputBox}>
-            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Escreva sua mensagem' placeholderTextColor={colors.gray} multiline={true} onChangeText={message => this.setState({ message })} value={this.state.message != null ? this.state.message : ''}/>
+            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='Escreva sua mensagem' placeholderTextColor={colors.gray} multiline={true} onChangeText={(text) => this.setState({ text })}/>
           </View>
         </View>
         <View style={styles.boxSend}>
-          <TouchableOpacity onPress={this.signIn}>
-            <Button title={'Enviar mensagem'} size={60} color={colors.regular} style={[styles.boxSend, this.state.message != null ? { backgroundColor: colors.yellow } : { backgroundColor: colors.gray }]}/>
+          <TouchableOpacity>
+            <Button title={'Enviar mensagem'} size={60} color={colors.regular} style={[styles.boxSend, this.state.text!=null?{backgroundColor:colors.yellow}:{backgroundColor:colors.gray}]}/>
           </TouchableOpacity>
         </View>
       </View>
