@@ -46,6 +46,7 @@ const RootScene = TabNavigator({
   More: {screen: More},
   Contact: {screen: Contact},
   Password: {screen: Password},
+  Sent: {screen: Sent},
   // Rule: {screen: Rule},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
