@@ -11,7 +11,7 @@ import Nav from '../../../components/navigation';
 import AlertBox from '../components/alert';
 
 import ModalDelete from '../components/modal';
-import TitleTop from '../../../components/title/primaryTitle';
+import TitleTop from '../../../components/title/primary';
 
 export default class addEmployee extends Component {
   	static navigationOptions = {

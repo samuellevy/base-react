@@ -134,8 +134,8 @@ export default class Quiz extends Component {
         }
     }
 
-    clickNext() {
-        if(this.state.quizSelect == this.state.quest.length) {
+    clickNext() {    
+        if(this.state.quizSelect == this.state.quest.length) {    
             this.setState({finish: true})
         } else { 
             this.setState({quizSelect: this.state.quizSelect + 1})
@@ -144,7 +144,7 @@ export default class Quiz extends Component {
     }  
  
     render() {     
-
+ 
         // let CompArray = new Array();
   
         return ( 

@@ -21,14 +21,25 @@ import More from './scenes/more';
 import Rule from './scenes/rule';
 import Splash from './scenes/splash';
 import Password from './scenes/password';
+import FeedBack from './scenes/feedback';
+import Answers from './scenes/feedback/answers';
+import Profile from './scenes/profile';
+import Employe from './scenes/employee';
+import addEmployee from './scenes/employee/addEmployee';
+import AboutCourse from './scenes/aboutCourse';
 
 // Other confs
 console.disableYellowBox = true;
 
 // My component
 const RootScene = TabNavigator({
-  //Profile: {screen: Profile},
   Home: {screen: Home},
+  AboutCourse: {screen: AboutCourse},
+  Profile: {screen: Profile},
+  addEmployee: {screen: addEmployee},
+  Employe: {screen: Employe},
+  FeedBack: {screen: FeedBack},
+  Answers: {screen: Answers},
   Curso: {screen: Curso},
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
@@ -44,7 +55,7 @@ const RootScene = TabNavigator({
   tabBarPosition: 'bottom',
   swipeEnabled: false,
 });
-
+  
 RootScene.navigationOptions = {
   header: <Header/>,
 };
@@ -54,10 +65,8 @@ export default StackNavigator({
   Splash: {screen: Splash},
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
-  Contact: {screen: RootScene},
-  //Profile: {screen: Profile},
 }, {
-  initialRouteName: 'Contact',
+  initialRouteName: 'Home',
   // headerMode: 'none',
   mode: 'modal',
   swipeEnabled: false,

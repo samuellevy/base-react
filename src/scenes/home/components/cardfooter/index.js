@@ -10,11 +10,12 @@ export default class CardFooter extends Component {
     };
 
     render() {
-        let color = this.props.color;
+        let color   = this.props.color;
+        const url = this.props.url;
         const {children} = this.props;
         return (
             <View style={styles.box}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={url}>
                     <Text style={[styles.text, {color: color}]}>
                         {children}
                     </Text>
@@ -24,5 +25,5 @@ export default class CardFooter extends Component {
         );
     }
 }
-
+  
 

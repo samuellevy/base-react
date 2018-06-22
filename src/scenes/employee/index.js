@@ -9,7 +9,7 @@ import styles from './styles';
 import Header from '../../components/header';
 import Nav from '../../components/navigation';
 
-import TitleTop from '../../components/title/primaryTitle';
+import TitleTop from '../../components/title/primary';
 import ListUser from './components/listEmployee';
 
 export default class Employee extends Component {
@@ -25,7 +25,7 @@ export default class Employee extends Component {
 					<TitleTop textContent={'FUNCIONÁRIOS'} />
  
 					<View style={styles.addEmplayee}>
-						<TouchableOpacity style={styles.addBtn} onPress={() => {this.setState({visibleModal: false})} }>
+						<TouchableOpacity style={styles.addBtn} onPress={() => { this.props.navigation.navigate('addEmployee'); this.setState({ screen: 'addEmployee' }) }}>
 							<View style={styles.boxIcon}>
 								<MaterialIcon name="add" size={15} style={styles.iconClear}></MaterialIcon>
 							</View>

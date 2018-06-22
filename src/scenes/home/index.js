@@ -61,7 +61,7 @@ export default class Home extends Component {
 
           <Card title={'Desempenho'} icon={'today'} color={colors.blue}>
             <Performance/>
-            <CardFooter color={colors.blue}>{'Acompanhe o desempenho da loja'.toUpperCase()}</CardFooter>
+            <CardFooter color={colors.blue} url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }}>{'Acompanhe o desempenho da loja'.toUpperCase()}</CardFooter>
           </Card>
 
           <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>

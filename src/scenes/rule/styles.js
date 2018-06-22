@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     },
     ruleContent:{
         padding: '5%',
+        marginBottom: 50,
     },
     ruleTitle:{
         fontSize: metrics.fonts.big,
@@ -18,12 +19,12 @@ const styles = StyleSheet.create({
         color: colors.primary,
         paddingBottom: 10,
         lineHeight: 18,
-    },
+    }, 
     ruleParagraph:{
         fontSize: metrics.fonts.medium,
         color: colors.dark,
         marginBottom: 10,
-        lineHeight: 14,
+        lineHeight: 20,    
     }
 });
 
