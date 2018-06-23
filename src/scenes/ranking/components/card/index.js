@@ -14,6 +14,7 @@ export default class Card extends Component {
     let image = this.props.image;
     let store = this.props.store;
     let score = this.props.score;
+    let url   = this.props.url;
 
     switch(image){
       case '2-ranking':
@@ -47,11 +48,11 @@ export default class Card extends Component {
         }
       break;
     }
-
+ 
     switch (status) {
       case 'user':
         color = colors.light;
-        historyBtn = <View style={styles.history}><TouchableOpacity style={styles.historyBtn}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon}/>
+        historyBtn = <View style={styles.history}><TouchableOpacity style={styles.historyBtn} onPress={url}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon}/>
 </TouchableOpacity></View>;
         break;
       case 'non-user':

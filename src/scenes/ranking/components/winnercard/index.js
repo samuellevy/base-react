@@ -18,7 +18,7 @@ export default class WinnerCard extends Component {
             <Image
               style={styles.image}
               source={require('../../../../../assets/img/1-ranking.png')}
-            />
+            /> 
           </View>
 
           <View style={styles.content}>

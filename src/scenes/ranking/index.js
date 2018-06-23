@@ -24,9 +24,9 @@ export default class Ranking extends Component {
                         </Text>
                         <WinnerCard store='Casa Fort Distribuidora' score='430'/>
                         <View style={styles.otherPlaces}>
-                           <Card status='non-user' title='2º Lugar' image='2-ranking' store='Duas Irmãs Materiais' score='420'/>
-                           <Card status='non-user' title='3º Lugar' image='3-ranking' store='Fornecedora Caçula' score='380'/>
-                           <Card status='user' title='4º Lugar' image='4-ranking' store='Loja Golveia Construção' score='360'/>
+                           <Card url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }} status='non-user' title='2º Lugar' image='2-ranking' store='Duas Irmãs Materiais' score='420'/>
+                           <Card url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }} status='non-user' title='3º Lugar' image='3-ranking' store='Fornecedora Caçula' score='380'/>
+                           <Card url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }} status='user' title='4º Lugar' image='4-ranking' store='Loja Golveia Construção' score='360'/>
                         </View>
                     </View>
                 </ScrollView>

@@ -7,7 +7,7 @@ import styles from './styles';
 import { colors } from '../../../styles';
 
 import Header from '../../../components/header';
-import Title from '../../../components/title/primaryTitle';
+import Title from '../../../components/title/primary'; 
 import TitleSec from '../../../components/title/secondaryTitle';
 import Nav from '../../../components/navigation';
 import ModalBox from '../../../components/modal/alert';
@@ -41,8 +41,6 @@ export default class Curso extends Component {
 
         return (
             <View style={styles.container}>
-                <Header />
-
                 <ScrollView contentContainerStyle={styles.cursoInfo}>
                     <View style={styles.containerCurso}>
                         <View style={styles.boxTitle}>
@@ -59,7 +57,7 @@ export default class Curso extends Component {
                         </Text>
 
                         <View style = {styles.viewVideo}>
-                            <WebView source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} />
+                            <WebView style={styles.boxVideo} source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} />
                         </View>
 
                         <View style={styles.boxTest}>

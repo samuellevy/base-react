@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         width: "80%",
         fontSize: 14,
         color: colors.gray, 
+        padding: 20,
     },
     boxBtn: {
         alignItems: 'center',

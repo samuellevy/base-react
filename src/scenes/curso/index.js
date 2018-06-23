@@ -19,10 +19,10 @@ export default class ListCurso extends Component {
                 <ScrollView contentContainerStyle={styles.videoList}>
                     <View style={styles.containerVideo}>
                     <Title textContent="Curso de Capacitação"/>
-                        <Video />
-                        <Video />
-                        <Video />
-                        <Video />
+                        <Video navigation={this.props.navigation}/> 
+                        <Video navigation={this.props.navigation}/>
+                        <Video navigation={this.props.navigation}/>
+                        <Video navigation={this.props.navigation}/>
                     </View>
                 </ScrollView>
             </View>

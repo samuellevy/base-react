@@ -27,6 +27,7 @@ import Profile from './scenes/profile';
 import Employe from './scenes/employee';
 import addEmployee from './scenes/employee/addEmployee';
 import AboutCourse from './scenes/aboutCourse';
+import Aula from './scenes/curso/aula'; 
 
 // Other confs
 console.disableYellowBox = true;
@@ -34,19 +35,20 @@ console.disableYellowBox = true;
 // My component
 const RootScene = TabNavigator({
   Home: {screen: Home},
+  Curso: {screen: Curso},
+  Aula: {screen: Aula},
+  Performance: {screen: Performance},
+  Ranking: {screen: Ranking},
+  More: {screen: More},
+  Contact: {screen: Contact},
+  Password: {screen: Password},
   AboutCourse: {screen: AboutCourse},
   Profile: {screen: Profile},
   addEmployee: {screen: addEmployee},
   Employe: {screen: Employe},
   FeedBack: {screen: FeedBack},
   Answers: {screen: Answers},
-  Curso: {screen: Curso},
-  Performance: {screen: Performance},
-  Ranking: {screen: Ranking},
-  More: {screen: More},
-  Contact: {screen: Contact},
-  Password: {screen: Password},
-  Sent: {screen: Sent},
+  // Sent: {screen: Sent},
   // Rule: {screen: Rule},
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
@@ -67,8 +69,8 @@ export default StackNavigator({
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'Splash',
   // headerMode: 'none',
   mode: 'modal',
-  swipeEnabled: false,
+  swipeEnabled: false,  
 });

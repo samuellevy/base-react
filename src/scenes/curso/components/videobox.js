@@ -5,12 +5,8 @@ import styles from './styles';
 import Curse from '../index';
 
 export default class VideoBox extends Component {
-
-    accessVideo = () => {
-        Curse: {screen: Curse}
-    }
-
     render() {
+        let navigation = this.props.navigation;
         return(
             <View style={styles.video}>
                 <Text style={styles.status}>{'Completo'.toUpperCase()}</Text>
@@ -22,7 +18,7 @@ export default class VideoBox extends Component {
                 <View style={styles.videoInfo}>
                     <Text style={styles.videoTitle}>MÓDULO</Text>
                     <Text style={styles.videoDescription}>Quais os diferentes tipos de cimento?</Text>
-                    <TouchableOpacity onPress={this.accessVideo}>
+                    <TouchableOpacity onPress={() => { navigation.navigate('Aula'); this.setState({ screen: 'Aula' }) }}>
                         <Text style={styles.videoButton}>ASSISTIR ></Text>
                     </TouchableOpacity>
                 </View>

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, Dimensions  } from 'react-native';
 import { colors, metrics, fonts } from '../../../styles';
 
 const styles = StyleSheet.create({
@@ -13,10 +13,13 @@ const styles = StyleSheet.create({
         paddingLeft: 15,
         paddingRight: 15,
         paddingTop: metrics.headerPadding,
-        backgroundColor: '#F7FBFC',
     },
     boxTitle: {
         paddingBottom: 10,
+    },
+    boxVideo: {
+        width: ((Dimensions.get('window').width - 50) / 3) * 3.15,
+        height: 400,
     },
     infoCurse: {
         fontFamily: fonts.main,
@@ -40,6 +43,7 @@ const styles = StyleSheet.create({
     boxTest: {
         justifyContent: 'center',
         alignItems: 'center',
+        marginTop: 50,
     },
     startTest: {
         width: 170,
