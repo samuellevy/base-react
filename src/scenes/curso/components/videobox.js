@@ -18,7 +18,7 @@ export default class VideoBox extends Component {
                 <View style={styles.videoInfo}>
                     <Text style={styles.videoTitle}>MÓDULO</Text>
                     <Text style={styles.videoDescription}>Quais os diferentes tipos de cimento?</Text>
-                    <TouchableOpacity onPress={() => { navigation.navigate('Aula'); this.setState({ screen: 'Aula' }) }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate('Aula'); this.setState({ screen: 'Aula' }) }} navigation={this.props.navigation}>
                         <Text style={styles.videoButton}>ASSISTIR ></Text>
                     </TouchableOpacity>
                 </View>
