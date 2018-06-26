@@ -21,11 +21,15 @@ export default class Quiz extends Component {
         }
     }
 
+    constructor (){
+        this.getUserData();
+    }
+
     state = {
         btnSelected: 0,
         confirmBtn: false,
         modalVisible: false,
-        quizSelect: 1,
+        quizSelect: 1,  
         finish: false,
         titleQuestion: '',
         quest: [
@@ -87,6 +91,19 @@ export default class Quiz extends Component {
         ]
     };
 
+    getUserData = async () => { 
+        try{
+            const response = await api.get('/questions/get/1');
+            const question = response.data.question;
+            this.setState({user: user});
+            
+            console.log(question);
+           
+        } catch (response){
+            this.setState({ errorMessage: response.data.message });
+        }
+    }
+
     getTitle() {
         var idArray = this.state.quizSelect - 1;
         return (
@@ -98,12 +115,10 @@ export default class Quiz extends Component {
         return (
             <View>
                 {this.state.quest.map(quest => {
-                    // console.log(quest)
                     let idBtn = 0;  
                     return ( 
                         <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
                             { quest.id == this.state.quizSelect && quest.answer.map(answer => {
-                                // console.log(answer.id)  
                                 return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })} onClick={() => arrayQuest}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.name}</Text></TouchableOpacity>
                             })  
                             }
@@ -152,6 +167,7 @@ export default class Quiz extends Component {
             transparent={true}
             visible={this.state.visibleModal}
             onRequestClose={() => { this.visibleModal(false); } }> 
+                {this.getUserData()}
                 {this.finishFunction()}
                 <View style={styles.contentModal}>
                     <TouchableOpacity style={styles.clearBtn} onPress={() => {this.setState({visibleModal: false})} }>
