@@ -36,6 +36,7 @@ export default class Curso extends Component {
     }
 
     render() {
+        let navigation = this.props.navigation;
 
         const testStart = null;
 
@@ -61,7 +62,7 @@ export default class Curso extends Component {
                         </View>
 
                         <View style={styles.boxTest}>
-                            <TouchableOpacity style={styles.startTest} onPress={this.clickCurse}>
+                            <TouchableOpacity style={styles.startTest} onPress={() => { navigation.navigate('Question');}}>
                                 {/* <Text style={this.testStart ? 'styles.textBtnActive' : ' styles.textBtn'}>FAZER O TESTE</Text> */}
                                 <Text style={styles.textBtn}>FAZER O TESTE</Text> 
                             </TouchableOpacity>

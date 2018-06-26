@@ -28,6 +28,7 @@ import Employe from './scenes/employee';
 import addEmployee from './scenes/employee/addEmployee';
 import AboutCourse from './scenes/aboutCourse';
 import Aula from './scenes/curso/aula'; 
+import Question from './scenes/question'; 
 
 // Other confs
 console.disableYellowBox = true;
@@ -68,6 +69,7 @@ export default StackNavigator({
   Splash: {screen: Splash},
   Login: {screen: Login}, // has a skip button that navigates to root
   Home: {screen: RootScene},
+  Question: {screen: Question}
 }, {
   initialRouteName: 'Splash',
   // headerMode: 'none',
