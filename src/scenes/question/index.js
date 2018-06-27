@@ -84,7 +84,7 @@ export default class Question extends Component {
     constructor (){
         super();
         this.getUserData();
-        this.state.quizSelect = 1;
+        this.state.quizSelect = 0;
     }
     
     getUserData = async () => {
@@ -99,7 +99,7 @@ export default class Question extends Component {
     }
 
     getTitle() {
-        var idArray = this.state.quizSelect - 1;
+        var idArray = this.state.quizSelect;
         return (
             <Text style={styles.titleQuizBox}>{this.state.quest[idArray].question}</Text>  
         ) 
@@ -119,7 +119,7 @@ export default class Question extends Component {
                         </View> 
                     )
                 })} */}
-                {this.state.question.map(function(quest, index) {
+                {this.state.question.map((quest, index) => {
                     let idBtn = 0;  
                     // console.log(quest)
                     return ( 
@@ -138,8 +138,8 @@ export default class Question extends Component {
     getBullet() {  
         return (
             <View style={styles.contentSlider}>
-                {this.state.quest.map(quest => {
-                    return <View style={styles.boxIcon}><MaterialIcon name="brightness-1" size={10} style={(this.state.quizSelect== quest.id)?styles.iconSliderSelect:styles.iconSlider}></MaterialIcon></View>
+                {this.state.question.map((quest,index )=> {
+                    return <View style={styles.boxIcon}><MaterialIcon name="brightness-1" size={10} style={(this.state.quizSelect == index)?styles.iconSliderSelect:styles.iconSlider}></MaterialIcon></View>
                 })}
             </View>
         )
@@ -184,7 +184,7 @@ export default class Question extends Component {
 
                     <View style={styles.contentQuiz}>
                         <View style={styles.content}> 
-                            {/* {this.getTitle()} */}
+                            {this.getTitle()}
 
                             {this.getAnswer()} 
 

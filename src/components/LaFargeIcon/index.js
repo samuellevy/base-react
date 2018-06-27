@@ -37,7 +37,7 @@ export default class LaFargeIcon extends Component {
             char = 'e907';
             break;
         case 'performance_active':
-            char = 'e908';
+            char = 'e907';
             break;
         case 'student':
             char = 'e90a';
