@@ -8,109 +8,78 @@ import Title from '../../../components/title/primary';
 import Button from '../../../components/button';
 
 import styles from './styles';
+import api from '../../../services/api';
 
 export default class Answers extends Component {
     state = {
         message: null,
+        question: [],
+        errorMessage: '',
+        paramsData: [],
     };
 
+    constructor (){
+        super();
+        this.getUserData();
+    }
+ 
+    getUserData = async () => {
+        try{
+            const response = await api.get('/questions/get/2');
+            var question = response.data.question;
+            
+            this.setState({question: response.data.question});
+        } catch (response){
+            console.log("catch")
+            this.setState({ errorMessage: response.data.message });
+        }
+    }
+
+    formAsk() {
+        return(
+            <View style={styles.Answers}>
+                {this.state.question.map((answer, index) => {
+                    return (
+                        <View>
+                            <Text style={styles.textAnswers}>{answer.title}</Text>
+                            
+                            <View>
+                                
+                                {answer.options.map((option, index) => {
+                                    return (
+                                        <View style={styles.item}>
+                                            <MaterialIcon name={(index == answer.value)?"check-box":"crop-square"} size={13} style={(index !== answer.value)?styles.iconCheck:styles.iconCheckSelect}></MaterialIcon>
+                                            <Text style={(index !== answer.value)?styles.textAsk:styles.textAskSelect} >{option.title}</Text>
+                                        </View>
+                                    );
+                                })}
+                            </View>
+
+                            <View style={styles.answersCorrect}>
+                                <Text style={styles.textCorrectAnswers}>Acertou! O Cimento Mauá possui secagem rápida e qualidade superior, facilitando o manuseio para obras internas e acabamentos.</Text>
+                            </View>
+                        </View>
+                    )
+                })}
+            </View>
+        )
+    }
+
     render() { 
-        return (
+
+        // var teste = this.props.navigation.state.params;
+        //console.log(teste)
+
+        return ( 
             <ScrollView style={styles.scrollContent}>
                 <View style={styles.container}>
                     <Title textContent={"CURSO DE CAPACITAÇÃO"} />
                     <Text style={styles.title}>Módulo 03: Cimento CPII</Text>
                     
-
                     <View style={styles.formAnswers}>
-                        <View style={styles.Answers}>
-                            <Text style={styles.textAnswers}>1. Qual o melhor cimento para obras internas?</Text>
-
-                            <View style={styles.ask}>
-                                <View style={styles.item}>
-                                    <Text style={styles.textAsk} >Votoran</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconCheck}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Tupi</Text>
-                                </View>
-                                <View style={styles.item}>
-                                    <MaterialIcon name="check-box" size={13} style={[styles.iconCheck, styles.iconCheckSelect]}></MaterialIcon>
-                                    <Text style={[styles.textAsk, styles.textAskSelect]} >Mauá</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconCheck}></MaterialIcon>
-                                    <Text style={styles.textAsk} >CSN</Text>
-                                </View>
-                                <View style={styles.item}> 
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconCheck}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Holcim</Text>
-                                </View>
-                            </View>
-
-                            <View style={styles.answersCorrect}>
-                                <Text style={styles.textCorrectAnswers}>Acertou! O Cimento Mauá possui secagem rápida e qualidade superior, facilitando o manuseio para obras internas e acabamentos.</Text>
-                            </View>
-                        </View>
 
                         <View style={styles.Answers}>
-                            <Text style={styles.textAnswers}>1. Qual o melhor cimento para obras internas?</Text>
-
-                            <View style={styles.ask}>
-                                <View style={styles.item}>
-                                    <Text style={styles.textAsk} >Votoran</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Tupi</Text>
-                                </View>
-                                <View style={styles.item}>
-                                    <MaterialIcon name="check-box" size={13} style={[styles.iconCheck, styles.iconCheckSelect]}></MaterialIcon>
-                                    <Text style={[styles.textAsk, styles.textAskSelect]} >Mauá</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >CSN</Text> 
-                                </View>
-                                <View style={styles.item}>  
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Holcim</Text>
-                                </View>
-                            </View>
-
-                            <View style={styles.answersCorrect}>
-                                <Text style={styles.textCorrectAnswers}>Acertou! O Cimento Mauá possui secagem rápida e qualidade superior, facilitando o manuseio para obras internas e acabamentos.</Text>
-                            </View>
-                        </View>
-
-                        <View style={styles.Answers}>
-                            <Text style={styles.textAnswers}>1. Qual o melhor cimento para obras internas?</Text>
-
-                            <View style={styles.ask}>
-                                <View style={styles.item}>
-                                    <Text style={styles.textAsk} >Votoran</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Tupi</Text>
-                                </View>
-                                <View style={styles.item}>
-                                    <MaterialIcon name="check-box" size={13} style={[styles.iconCheck, styles.iconCheckSelect]}></MaterialIcon>
-                                    <Text style={[styles.textAsk, styles.textAskSelect]} >Mauá</Text>
-                                </View> 
-                                <View style={styles.item}>
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >CSN</Text>
-                                </View>
-                                <View style={styles.item}> 
-                                    <MaterialIcon name="crop-square" size={13} style={styles.iconClear}></MaterialIcon>
-                                    <Text style={styles.textAsk} >Holcim</Text>
-                                </View>
-                            </View>
-
-                            <View style={styles.answersCorrect}>
-                                <Text style={styles.textCorrectAnswers}>Acertou! O Cimento Mauá possui secagem rápida e qualidade superior, facilitando o manuseio para obras internas e acabamentos.</Text>
-                            </View>
+                            {this.formAsk()}
                         </View>
                     </View>
                 </View> 

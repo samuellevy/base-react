@@ -5,19 +5,21 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import NavIcon from '../../components/navigation/NavIcon';
 
+import Finish from './components/finish';
+
 import styles from './styles';
 import api from '../../services/api';
-
-var arrayQuest = new Array();
 
 export default class Question extends Component {
     static navigationOptions = {
         header: null
     };
     state = {
-        teste: '',
+        teste: '',   
         question: [],
+        arrayQuest: [],
         btnSelected: 0,
+        selectRespo: 0,
         confirmBtn: false,
         modalVisible: false,
         quizSelect: 0,  
@@ -91,7 +93,7 @@ export default class Question extends Component {
         try{
             const response = await api.get('/questions/get/2');
             var question = response.data.question;
-            console.log(question)
+            
             this.setState({question: response.data.question});
         } catch (response){
             this.setState({ errorMessage: response.data.message });
@@ -108,24 +110,12 @@ export default class Question extends Component {
     getAnswer() {  
         return (
             <View style={{width: '100%'}}>
-                {/* {this.state.quest.map(quest => {
-                    let idBtn = 0;  
-                    return ( 
-                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
-                            { quest.id == this.state.quizSelect && quest.answer.map(answer => {
-                                return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })} onClick={() => arrayQuest}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.name}</Text></TouchableOpacity>
-                            })  
-                            }
-                        </View> 
-                    )
-                })} */}
                 {this.state.question.map((quest, index) => {
                     let idBtn = 0;  
-                    // console.log(quest)
                     return ( 
                         <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
                             { index == this.state.quizSelect && quest.options.map(answer => {
-                                return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })} onClick={() => arrayQuest}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.title}</Text></TouchableOpacity>
+                                return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.title}</Text></TouchableOpacity>
                             })  
                             }
                         </View> 
@@ -145,34 +135,42 @@ export default class Question extends Component {
         )
     }
 
-    setModalVisible(visible) { 
-        this.setState({modalVisible: visible});
-    }
+    clickNext() {    
+        if(this.state.quizSelect == this.state.question.length -1) {
+            var arrayExemp = this.state.arrayQuest.concat({id: this.state.quizSelect, value: this.state.btnSelected});
+            this.setState({arrayQuest: arrayExemp})
 
-    finishFunction() {
-        if(this.state.finish) {
-            return <Finish />;
-        }
-    }
+            //this.state.arrayQuest.push({id: this.state.quizSelect, value: this.state.btnSelected})
+            var data = this.state.arrayQuest;
 
-    clickNext() {
-        if(this.state.quizSelect == this.state.quest.length) {    
+            //this.finishFunction(true, data)
             this.setState({finish: true})
         } else { 
             this.setState({quizSelect: this.state.quizSelect + 1})
+
+            var arrayExemp = this.state.arrayQuest.concat({id: this.state.quizSelect, value: this.state.btnSelected});
+            this.setState({arrayQuest: arrayExemp})
+ 
+            // this.state.arrayQuest.push({id: this.state.quizSelect, value: this.state.btnSelected})
+            
+            
             this.setState({confirmBtn: false})
         }
     }  
+
+    finishFunction() {
+        if(this.state.finish) {
+            console.log(this.state.arrayQuest)
+            return <Finish navigator={() => { this.props.navigation.navigate('Answers');}} />
+        }
+    } 
     
     render() {
-        console.log(this.state.question);
         return (
             // <View style={{margin: 40}}>
             //     <Text>{this.state.teste}ds</Text>
             // </View>
             <View style={styles.contentAll}> 
-                {/* {this.getUserData()} */}
-                {/* {this.finishFunction()} */}
                 <View style={styles.contentModal}>
                     <TouchableOpacity style={styles.clearBtn} onPress={() => {this.setState({visibleModal: false})} }>
                         <MaterialIcon name="clear" size={25} style={styles.iconClear}></MaterialIcon>
@@ -195,6 +193,8 @@ export default class Question extends Component {
                             </View>
                         </View>
                     </View>
+
+                    {this.finishFunction()}
 
                     {this.getBullet()} 
                 </View>
