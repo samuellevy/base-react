@@ -21,10 +21,6 @@ export default class Quiz extends Component {
         }
     }
 
-    constructor (){
-        this.getUserData();
-    }
-
     state = {
         btnSelected: 0,
         confirmBtn: false,
@@ -95,7 +91,6 @@ export default class Quiz extends Component {
         try{
             const response = await api.get('/questions/get/1');
             const question = response.data.question;
-            this.setState({user: user});
             
             console.log(question);
            
