@@ -27,7 +27,7 @@ export default class AboutCourse extends Component {
 
                     <View style = {styles.viewVideo}>
                         {/* <WebView source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} /> */}
-                        <Image style={styles.thumbvideo} source={{ uri: 'http://img.youtube.com/vi/AbN7lbjOUho/maxresdefault.jpg'}}/>
+                        <Image style={styles.thumbvideo} source={{ uri: 'https://i.ytimg.com/vi/CSZxjQwDKF0/hqdefault.jpg'}}/>
                     </View>
 
                     <Text style={styles.titleSecondary}>Pontuação</Text>
@@ -43,16 +43,16 @@ export default class AboutCourse extends Component {
                                 <Text style={styles.textScore}><Text style={styles.destaqueText}>25</Text> pts</Text>
                             </View>
                             <View style={styles.infoBox}>
-                                <Text style={styles.textTable}>Meta mensal atingida - 130%</Text>
+                                <Text style={styles.textTable}>Meta mensal atingida => 100% - 115%</Text>
                                 <Text style={styles.textScore}><Text style={styles.destaqueText}>50</Text> pts</Text>
                             </View>
                             <View style={styles.infoBox}>
-                                <Text style={styles.textTable}>Meta mensal atingida - até 170%</Text>
-                                <Text style={styles.textScore}><Text style={styles.destaqueText}>100</Text> pts</Text>
+                                <Text style={styles.textTable}>Meta mensal atingida => 116% - 145%</Text>
+                                <Text style={styles.textScore}><Text style={styles.destaqueText}>75</Text> pts</Text>
                             </View>
                             <View style={styles.infoBox}>
-                                <Text style={styles.textTable}>Meta mensal atingida - acima de 170%</Text>
-                                <Text style={styles.textScore}><Text style={styles.destaqueText}>200</Text> pts</Text>
+                                <Text style={styles.textTable}>Meta mensal atingida => acima de 146%</Text>
+                                <Text style={styles.textScore}><Text style={styles.destaqueText}>100</Text> pts</Text>
                             </View>
                             <View style={styles.boxResult}>
                                 <Text style={styles.textBold}>BÔNUS</Text>

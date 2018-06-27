@@ -9,7 +9,6 @@ export default class Employee extends Component {
         let iconSelect = this.props.icon;
         let nameUser = this.props.nameUser;
         let mensager = this.props.mensager;
-        console.log(iconSelect)
   
     	return ( 
 			<View style={styles.container}> 

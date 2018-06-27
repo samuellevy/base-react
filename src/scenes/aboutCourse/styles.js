@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden' 
     },
     thumbvideo:{
-        width: '100%',
+        width: '97%',
         height: '100%'
     },
     text: {

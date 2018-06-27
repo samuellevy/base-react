@@ -40,6 +40,7 @@ const RootScene = TabNavigator({
   Aula: {screen: Aula},
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
+  Rule: {screen: Rule},
   More: {screen: More},
   Contact: {screen: Contact},
   Password: {screen: Password},
@@ -48,9 +49,9 @@ const RootScene = TabNavigator({
   addEmployee: {screen: addEmployee},
   Employe: {screen: Employe},
   FeedBack: {screen: FeedBack},
-  Answers: {screen: Answers},
+  // Answers: {screen: Answers},
   // Sent: {screen: Sent},
-  // Rule: {screen: Rule},
+  
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
   initialRouteName: 'Home',

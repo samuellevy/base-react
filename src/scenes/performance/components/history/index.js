@@ -23,7 +23,7 @@ export default class History extends Component {
     //     break;
     // }
     return (
-      <View style={[styles.container, borderBottomWidth=1, borderBottomColor=colors.regular,]}>
+      <View style={[styles.container,{borderBottomWidth:1, borderBottomColor:colors.regular}]}>
         <View style={styles.dateCell}>
           <Text style={styles.date}>{date}</Text>
         </View>

@@ -155,7 +155,7 @@ export default class Question extends Component {
         }
     }
 
-    clickNext() {    
+    clickNext() {
         if(this.state.quizSelect == this.state.quest.length) {    
             this.setState({finish: true})
         } else { 

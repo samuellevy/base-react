@@ -15,12 +15,12 @@ export default class CardFooter extends Component {
         const {children} = this.props;
         return (
             <View style={styles.box}>
-                <TouchableOpacity style={styles.button} onPress={url}>
+                <View style={styles.button}>
                     <Text style={[styles.text, {color: color}]}>
                         {children}
                     </Text>
                     <MaterialIcon name="arrow-forward" size={16} style={[styles.icon, {color:color}]}></MaterialIcon>
-                </TouchableOpacity>
+                </View>
             </View>
         );
     }

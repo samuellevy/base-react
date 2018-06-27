@@ -10,25 +10,53 @@ import styles from './styles';
  
 import TitleTop from '../../components/title/primary';
 
+import api from '../../services/api';
+
 
 export default class Profile extends Component {
   	static navigationOptions = {
     	title: 'products',
     	headerRight:<View style={{flex:1, backgroundColor: 'black', height: 50}}><Text>HOME</Text></View>
     };
+
+    state={
+        loja:null,
+        email:null,
+        name:null,
+        tel:null,
+        senha:null,
+    }
+
     
     constructor(props) {
         super(props); 
-        this.stateInput = { 
-            loja: 'Loja Golveia Construção',
-            email: 'beatriz@3aww.com',
-            name: 'Beatriz Martins', 
-            senha: '123456',
-            tel: '00 0000-0000',
-        };
-        this.state = {
-            viewSection :false
-        } 
+        this.getData();
+    }
+
+    getData = async () => {
+        try{
+            const response = await api.get('/users/me');
+            var user = response.data.user;
+            this.setState({loja:user.loja,email:user.email,name:user.name,tel:user.phone});
+            console.log(user);
+            this.setState({user: response.data.user});
+        } catch (response){
+            this.setState({ errorMessage: response.data.message });
+        }
+    }
+
+    postData = async () => {
+        try{
+            const response = await api.post('/users/edit/me',{
+                name: this.state.name,
+                tel: this.state.tel,
+                senha: this.state.senha
+            });
+
+            console.log(response.data);
+        } catch (response){
+            this.setState({ errorMessage: response.data.message });
+        }
     }
 	  
   	render() {  
@@ -40,26 +68,20 @@ export default class Profile extends Component {
                     <View style={styles.boxForm}>
                         <View style={styles.boxInput}> 
                             <Text style={styles.inputText}>LOJA</Text>
-                            <TextInput editable={false} style={styles.input} underlineColorAndroid='transparent' onChangeText={(loja) => this.setState({loja})} value={this.stateInput.loja} placeholderTextColor={colors.textColor}/>
+                            <TextInput editable={false} style={styles.input} underlineColorAndroid='transparent'  value={this.state.loja} placeholderTextColor={colors.textColor}/>
                         </View>
                         <View style={styles.boxInput}> 
                             <Text style={styles.inputText}>E-MAIL</Text>
-                            <TextInput editable={false} style={styles.input} underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})} value={this.stateInput.email} placeholderTextColor={colors.textColor}/>
+                            <TextInput editable={false} style={styles.input} underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})} value={this.state.email} placeholderTextColor={colors.textColor}/>
                         </View>
                         <View style={styles.boxInput}> 
                             <Text style={styles.inputTextGreen}>NOME</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(name) => this.setState({name})} value={this.stateInput.name} placeholderTextColor={colors.textColor}/>
+                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(name) => this.setState({name})} value={this.state.name} placeholderTextColor={colors.textColor} returnKeyType='done'/>
                         </View>
-                        <View style={styles.boxInput}>  
-                            <Text style={styles.inputTextGreen}>SENHA</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(senha) => this.setState({senha})} value={this.stateInput.senha} placeholderTextColor={colors.textColor}/>
-                            <TouchableOpacity style={styles.btnVisible}> 
-                                <MaterialIcon name="remove-red-eye" size={15} style={styles.iconDeleteTransparent}></MaterialIcon>
-                            </TouchableOpacity>
-                        </View>  
+                        
                         <View style={styles.boxInput}> 
                             <Text style={styles.inputTextGreen}>TEL.</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(tel) => this.setState({tel})} value={this.stateInput.tel} placeholderTextColor={colors.textColor}/>
+                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(tel) => this.setState({tel})} value={this.state.tel} placeholderTextColor={colors.textColor} returnKeyType='done'/>
 
                             {/* <TextInputMask
                             refInput={ref => { this.input = ref }}
@@ -71,8 +93,16 @@ export default class Profile extends Component {
                             /> */}
                         </View>
 
+                        <View style={styles.boxInput}>  
+                            <Text style={styles.inputTextGreen}>SENHA</Text>
+                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(senha) => this.setState({senha})} value={this.state.senha} placeholderTextColor={colors.textColor} returnKeyType='done'/>
+                            <TouchableOpacity style={styles.btnVisible}> 
+                                <MaterialIcon name="remove-red-eye" size={15} style={styles.iconDeleteTransparent}></MaterialIcon>
+                            </TouchableOpacity>
+                        </View>
+
                         <View style={styles.boxBtn}>
-                            <TouchableOpacity style={styles.btnSalve}> 
+                            <TouchableOpacity style={styles.btnSalve} onPress={() => { this.postData(); }}> 
                                 <Text style={styles.textBtn}>SALVAR ALTERAÇÕES</Text>
                             </TouchableOpacity>
                         </View>

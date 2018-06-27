@@ -11,7 +11,6 @@ export default class SmallProfile extends Component {
     render() {
         let user = this.props.user;
         
-        console.log(user.name);
         return (
             <View style={styles.container}>
                 <Text style={styles.name}>

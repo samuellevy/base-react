@@ -1,6 +1,5 @@
 export default {
     primary: '#00985B', //setted
-  
     darker: '#111',
     dark: '#006644', //setted
     regular: '#ADCCC7', //setted
@@ -8,7 +7,6 @@ export default {
     lighter: '#E6F2F0', //setted
     ultralight: '#33FFA3', //setted
     white: '#FFF',
-
     fontColor: '#4D6662',
     textColor: '#243331',
     yellow: '#FCB415',
@@ -19,8 +17,6 @@ export default {
     transparent: 'rgba(0, 0, 0, 0)', //setted
     black: '#000',
     purple: '#962F76',
-
     lightBackground: '#F7FBFC', //setted
-
     error: '#C71829',
   }

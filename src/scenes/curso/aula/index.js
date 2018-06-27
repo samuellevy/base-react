@@ -14,6 +14,8 @@ import ModalBox from '../../../components/modal/alert';
 
 import NavIcon from '../../../components/navigation/NavIcon';
 
+import api from '../../../services/api';
+
 export default class Curso extends Component {
     static navigationOptions = {
         header: null,
@@ -21,6 +23,9 @@ export default class Curso extends Component {
             return <NavIcon title={'Curso'} icon={'school'}/>;
         },
     };
+    state={
+
+    }
 
     clickCurse() {
         Alert.alert(
@@ -36,7 +41,8 @@ export default class Curso extends Component {
     }
 
     render() {
-        let navigation = this.props.navigation;
+        const { navigation } = this.props;
+        const item = navigation.getParam('item', 'NO-ID');
 
         const testStart = null;
 
@@ -47,18 +53,18 @@ export default class Curso extends Component {
                         <View style={styles.boxTitle}>
                             <Title textContent={'CURSO DE CAPACITAÇÃO'} />
                         </View>
-                        <TitleSec textContent={'MÓDULO 03'} />
+                        <TitleSec textContent={item.title} />
 
                         <Text style={styles.infoCurse}>
-                            Cimento CP II: tudo o que você precisa saber                     
+                            {item.subtitle}                   
                         </Text>
 
                         <Text style={styles.description}>
-                            Conheça a categoria de cimentos ideal para obras internas e acabamento.                   
+                            {item.description}
                         </Text>
 
                         <View style = {styles.viewVideo}>
-                            <WebView style={styles.boxVideo} source = {{ uri: 'https://www.youtube.com/embed/fBrOtR3pgPU' }} />
+                            <WebView style={styles.boxVideo} scrollEnabled={false} source = {{ uri: 'https://www.youtube.com/embed/'+item.video_url+'?controls=0&fs=0&rel=0&showinfo=0' }} />
                         </View>
 
                         <View style={styles.boxTest}>
