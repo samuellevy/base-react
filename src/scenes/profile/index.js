@@ -62,7 +62,7 @@ export default class Profile extends Component {
   	render() {  
     	return (    
 			<View style={styles.container}> 
-				<ScrollView style={{marginBottom: 10, padding: 18}}>   
+				<ScrollView style={{marginBottom: 60, padding: 18}}>   
 					<TitleTop textContent={'EDITAR PERFIL'} />    
 
                     <View style={styles.boxForm}>
