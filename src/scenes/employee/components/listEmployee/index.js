@@ -3,12 +3,13 @@ import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'rea
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 
-export default class Employee extends Component {
- 
+
+export default class Employee extends Component { 
   	render() {
-        let iconSelect = this.props.icon;
-        let nameUser = this.props.nameUser;
-        let mensager = this.props.mensager;
+        let iconSelect    = this.props.icon;
+        let nameUser      = this.props.nameUser;
+        let mensager      = this.props.mensager;
+        // let navigator     = this.props.navigator;
   
     	return ( 
 			<View style={styles.container}> 
@@ -22,7 +23,7 @@ export default class Employee extends Component {
                 </View>
 
                 <View style={styles.boxIconEdit}>
-                    <TouchableOpacity style={styles.clearBtn} onPress={() => {this.setState({visibleModal: false})} }>
+                    <TouchableOpacity style={styles.clearBtn}>
                         <MaterialIcon name="create" size={25} style={styles.iconEdit}></MaterialIcon>
                     </TouchableOpacity>
                 </View>
