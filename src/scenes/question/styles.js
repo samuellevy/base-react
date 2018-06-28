@@ -69,8 +69,6 @@ const styles = StyleSheet.create({
     },
     btnConfirm: {
         backgroundColor: colors.regular,
-        color: colors.white,
-        fontSize: 12,
         borderRadius: 50,
         marginTop: 15, 
         marginBottom: 25,

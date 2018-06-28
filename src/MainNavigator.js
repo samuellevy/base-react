@@ -49,7 +49,7 @@ const RootScene = TabNavigator({
   addEmployee: {screen: addEmployee},
   Employe: {screen: Employe},
   FeedBack: {screen: FeedBack},
-  // Answers: {screen: Answers},
+  Answers: {screen: Answers},
   // Sent: {screen: Sent},
   
 }, {

@@ -33,6 +33,8 @@ export default class Answers extends Component {
             console.log("catch")
             this.setState({ errorMessage: response.data.message });
         }
+        console.log('vai comecar');
+        console.log(this.state.params);
     }
 
     formAsk() {
@@ -40,14 +42,14 @@ export default class Answers extends Component {
             <View style={styles.Answers}>
                 {this.state.question.map((answer, index) => {
                     return (
-                        <View>
+                        <View key={'ask_'+index}>
                             <Text style={styles.textAnswers}>{answer.title}</Text>
                             
                             <View>
                                 
                                 {answer.options.map((option, index) => {
                                     return (
-                                        <View style={styles.item}>
+                                        <View style={styles.item} key={'option_'+index}>
                                             <MaterialIcon name={(index == answer.value)?"check-box":"crop-square"} size={13} style={(index !== answer.value)?styles.iconCheck:styles.iconCheckSelect}></MaterialIcon>
                                             <Text style={(index !== answer.value)?styles.textAsk:styles.textAskSelect} >{option.title}</Text>
                                         </View>

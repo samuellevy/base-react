@@ -113,7 +113,7 @@ export default class Question extends Component {
                 {this.state.question.map((quest, index) => {
                     let idBtn = 0;  
                     return ( 
-                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}}>
+                        <View style={{alignItems: 'center', paddingLeft: 15,paddingRight: 15}} key={'answer_'+index}>
                             { index == this.state.quizSelect && quest.options.map(answer => {
                                 return <TouchableOpacity key={answer.id} style={[styles.btnQuestion, (this.state.btnSelected== answer.id)?styles.btnQuestionSelect:styles.btnQuestion]} onPress={() => this.setState({ btnSelected: answer.id, confirmBtn: true })}><Text style={[styles.textQuestion, (this.state.btnSelected== answer.id)?styles.textQuestionSelect:'']}>{answer.title}</Text></TouchableOpacity>
                             })  
@@ -129,7 +129,7 @@ export default class Question extends Component {
         return (
             <View style={styles.contentSlider}>
                 {this.state.question.map((quest,index )=> {
-                    return <View style={styles.boxIcon}><MaterialIcon name="brightness-1" size={10} style={(this.state.quizSelect == index)?styles.iconSliderSelect:styles.iconSlider}></MaterialIcon></View>
+                    return <View style={styles.boxIcon} key={'bullet_'+index}><MaterialIcon name="brightness-1" size={10} style={(this.state.quizSelect == index)?styles.iconSliderSelect:styles.iconSlider}></MaterialIcon></View>
                 })}
             </View>
         )
@@ -161,7 +161,7 @@ export default class Question extends Component {
     finishFunction() {
         if(this.state.finish) {
             console.log(this.state.arrayQuest)
-            return <Finish navigator={() => { this.props.navigation.navigate('Answers');}} />
+            return <Finish navigator={() => { this.props.navigation.navigate('Answers', {arrayQuest: this.state.arrayQuest});}} />
         }
     } 
     

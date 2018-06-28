@@ -47,8 +47,6 @@ const styles = StyleSheet.create({
         right: 0,
         top: 5,   
         width: '10%', 
-        color: "#fff",
-        fontSize: 12,
     },
     viewVideo: {
         width: "86%",

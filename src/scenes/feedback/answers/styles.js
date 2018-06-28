@@ -45,8 +45,7 @@ const styles = StyleSheet.create({
         width: "100%",
         padding: 15,
         borderRadius: 3,
-        backgroundColor: colors.yellow,
-        color: colors.white,
+        backgroundColor: colors.yellow,        
     },
     textCorrectAnswers: {
         color: colors.white, 

@@ -43,7 +43,6 @@ export default class Curso extends Component {
     render() {
         const { navigation } = this.props;
         const item = navigation.getParam('item', 'NO-ID');
-
         const testStart = null;
 
         return (
@@ -69,7 +68,6 @@ export default class Curso extends Component {
 
                         <View style={styles.boxTest}>
                             <TouchableOpacity style={styles.startTest} onPress={() => { navigation.navigate('Question');}}>
-                                {/* <Text style={this.testStart ? 'styles.textBtnActive' : ' styles.textBtn'}>FAZER O TESTE</Text> */}
                                 <Text style={styles.textBtn}>FAZER O TESTE</Text> 
                             </TouchableOpacity>
                         </View>
