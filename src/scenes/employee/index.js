@@ -17,6 +17,52 @@ export default class Employee extends Component {
     	title: 'products',
     	headerRight:<View style={{flex:1, backgroundColor: 'black', height: 50}}><Text>HOME</Text></View>
 	};
+
+	state = {
+		id: 1,
+		arrayUser: [
+			{
+				id: 1,
+				email:"admin@3aworldwide.com.br",
+				loja:"3aW",
+				name:"Admin dev",
+				phone:"2122711700",
+				pontuacao:"510",
+				ranking:"4",
+				username:"admin",
+			},
+			{
+				id: 2,
+				email:"admin@3aworldwide.com.br",
+				loja:"3aW",
+				name:"Admin dev",
+				phone:"2122711700",
+				pontuacao:"510",
+				ranking:"4",
+				username:"admin",
+			},
+			{
+				id: 3,
+				email:"admin@3aworldwide.com.br",
+				loja:"3aW",
+				name:"Admin dev",
+				phone:"2122711700",
+				pontuacao:"510",
+				ranking:"4",
+				username:"admin",
+			},
+			{
+				id: 4,
+				email:"admin@3aworldwide.com.br",
+				loja:"3aW",
+				name:"Admin dev",
+				phone:"2122711700",
+				pontuacao:"510",
+				ranking:"4",
+				username:"admin",
+			}
+		]
+	}
 	  
   	render() { 
     	return (   
@@ -32,11 +78,13 @@ export default class Employee extends Component {
 							<Text style={styles.textBtn}>ADICIONAR FUNCIONÁRIO</Text>
 						</TouchableOpacity>
 					</View> 
-					 
-					<ListUser icon={true} nameUser="Ronald Junger" mensager="Todos os módulos foram completos!"/>
-					<ListUser icon={false} nameUser="Kayalla Pontes" mensager="Nunca acessou ao curso!"/>
-					<ListUser icon={false} nameUser="Samuel Levy" mensager="Ainda não completou o módulo desse mês."/>
-					<ListUser icon={false} nameUser="Vinicius Machado" mensager="Está atrasado no curso: faltam 2 módulos!"/>
+					   
+					<TouchableOpacity style={styles.button} onPress={() => {this.props.navigation.navigate('addEmployee');}}>
+						<ListUser icon={true} nameUser="Ronald Junger" mensager="Todos os módulos foram completos!" />
+					</TouchableOpacity>
+					{/* <ListUser icon={false} idUser={2} nameUser="Kayalla Pontes" mensager="Nunca acessou ao curso!" navigator={() => {this.props.navigation.navigate('addEmployee', this.state.id);}}/>
+					<ListUser icon={false} idUser={3} nameUser="Samuel Levy" mensager="Ainda não completou o módulo desse mês." navigator={() => {this.props.navigation.navigate('addEmployee', this.state.id);}}/>
+					<ListUser icon={false} idUser={4} nameUser="Vinicius Machado" mensager="Está atrasado no curso: faltam 2 módulos!" navigator={() => {this.props.navigation.navigate('addEmployee', this.state.id);}}/> */}
 				</ScrollView>
 			</View>
 	    ); 

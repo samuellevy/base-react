@@ -62,30 +62,35 @@ export default class Password extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <ScrollView scrollEnabled={Platform.OS == 'ios' ? false : true} style={styles.scrollView}>
-                <TouchableOpacity>
-                    <View style={styles.turnBack}>
-                        <MaterialCommunityIcon name="arrow-left" size={19} style={styles.iconBack} />
-                        <Text style={styles.txtBack}>{'Login'.toUpperCase()}</Text>
-                    </View>
-                </TouchableOpacity>
-                <View style={styles.boxWelcome}>
-                    <Text style={styles.txtWelcome}>Esqueceu sua senha?</Text>
-                        <Text style={styles.txtInitial}>Insira seu e-mail abaixo para receber novamente sua senha pré-definida.</Text>
-                </View>
-                <View style={styles.boxLogin}>
-                        <View style={styles.inputBox}>
-                            <MaterialCommunityIcon name="email" size={25} style={styles.inputIcon} />
-                            <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={styles.input} placeholder='E-mail' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={username => this.setState({username})} value={this.state.username!=null?this.state.username:''}/>
-                            { !!this.state.errorMessage && <Text style={styles.txtError}>{ this.state.errorMessage }</Text>}
+                <View style={styles.header}>
+                    <TouchableOpacity onPress={() => { this.props.navigation.navigate('Login'); this.setState({ screen: 'Login' }) }}>
+                        <View style={styles.turnBack}>
+                            <MaterialCommunityIcon name="arrow-left" size={19} style={styles.iconBack} />
+                            <Text style={styles.txtBack}>{'Login'.toUpperCase()}</Text>
                         </View>
-                        <TouchableOpacity onPress={this.signIn} disabled={this.state.username!=null?false:true}>
-                            <View style={[styles.boxButton, this.state.username!=null?{backgroundColor: colors.primary}:{backgroundColor: colors.gray}]}>
-                                <Text style={styles.txtSign}>ENTRAR</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.content}>
+                        <View style={styles.boxWelcome}>
+                            <Text style={styles.txtWelcome}>Esqueceu sua senha?</Text>
+                                <Text style={styles.txtInitial}>Insira seu e-mail abaixo para poder redefinir sua senha.</Text>
+                        </View>
+                        <View style={styles.boxLogin}>
+                            <View style={styles.inputBox}>
+                            <MaterialCommunityIcon name="email" size={20} style={[styles.inputIcon, this.state.errorMessage && this.state.username != null? styles.inputIconError : '']} />
+                                <TextInput underlineColorAndroid='rgba(0,0,0,0)' style={[styles.input, this.state.errorMessage ? styles.inputError : '']} placeholder='E-mail' autoCapitalize='none' placeholderTextColor={colors.light} onChangeText={username => this.setState({username})} value={this.state.username!=null?this.state.username:''}/>
+                                { !!this.state.errorMessage && <Text style={styles.txtError}>{ this.state.errorMessage }</Text>}
                             </View>
+                            <TouchableOpacity onPress={this.signIn} disabled={this.state.username != null ? false : true} >
+                                    <View style={[styles.boxButton, this.state.username!=null?{backgroundColor: colors.primary}:{backgroundColor: colors.gray}]}>
+                                        <Text style={styles.txtSign}>ENVIAR</Text>
+                                    </View>
+                            </TouchableOpacity>
+                        </View>
+                        <TouchableOpacity onPress={() => { this.props.navigation.navigate('Finish'); this.setState({ screen: 'Finish' }) }}>
+                            <Text>VER Finish</Text>
                         </TouchableOpacity>
                 </View>
-            </ScrollView>
             </View>
         );
     }

@@ -21,14 +21,92 @@ export default class addEmployee extends Component {
       
     constructor(props) {
         super(props);
-        this.stateInput = { 
-            nome: '',
-            cpf: '',
-            email: '',
-        };
-        this.state = {
-            viewSection :false
-        }
+    }
+
+    state = {
+        viewSection :false,
+        idUser: 0,
+        nameUser: null,
+        nome: null,
+        cpf: null,
+        email: null,
+        arrayUser: [
+            {
+                id: 1,
+                email:"admin@3aworldwide.com.br",
+                loja:"3aW",
+                name:"Admin dev",
+                phone:"2122711700",
+                pontuacao:"510",
+                cpf: "111.222.333.44",
+                ranking:"4",
+                username:"admin",
+            },
+            {
+                id: 2,
+                email:"ronald@3aworldwide.com.br",
+                loja:"3aW",
+                name:"Admin dev",
+                phone:"2122711700",
+                pontuacao:"510",
+                cpf: "111.222.333.44",
+                ranking:"4",
+                username:"admin",
+            },
+            {
+                id: 3,
+                email:"vvvvvv@3aworldwide.com.br",
+                loja:"3aW",
+                name:"Admin dev",
+                phone:"2122711700",
+                pontuacao:"510",
+                cpf: "111.222.333.44",
+                ranking:"4",
+                username:"admin",
+            },
+            {
+                id: 4,
+                email:"aaaaa@3aworldwide.com.br",
+                loja:"3aW",
+                name:"Admin dev",
+                phone:"2122711700",
+                pontuacao:"510",
+                cpf: "111.222.333.44",
+                ranking:"4",
+                username:"admin",
+            }
+        ]
+    }
+
+    formData() {
+        return (
+            <View style={styles.contentAddUser}>
+                {this.state.arrayUser.map(arrayUser => {
+                    console.log(arrayUser)
+                    this.setState({nameUser: arrayUser.name})
+                    return (
+                        <View>
+                            {arrayUser.id == this.state.idUser &&
+                                <View>
+                                    <View style={styles.boxInput}> 
+                                        <Text style={styles.inputText}>NOME</Text>
+                                        <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(nome) => this.setState({nome})} placeholder={arrayUser.name} placeholderTextColor={colors.textColor}/>
+                                    </View>
+                                    <View style={styles.boxInput}> 
+                                        <Text style={styles.inputText}>CPF</Text>
+                                        <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(cpf) => this.setState({cpf})} placeholder={arrayUser.cpf} placeholderTextColor={colors.textColor}/>
+                                    </View>
+                                    <View style={styles.boxInput}> 
+                                        <Text style={styles.inputText}>E-MAIL</Text>
+                                        <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})} placeholder={arrayUser.email} placeholderTextColor={colors.textColor}/>
+                                    </View>
+                                </View>
+                            }
+                        </View>
+                    )
+                })}
+            </View>
+        );
     }
 
     renderBottomComponent(){
@@ -48,27 +126,16 @@ export default class addEmployee extends Component {
     }
    
   	render() {
+        this.state.idUser = 2;
+
     	return (              
 			<View style={styles.containerAdd}>
-                <AlertBox mensager={"Alterações salvas!"}/> 
+                {/* <AlertBox mensager={"Alterações salvas!"}/>  */}
  
                 <ScrollView style={{marginBottom: 50, padding: 18}}>
                     <TitleTop textContent={'ADICIONAR FUNCIONÁRIOS'} />
 
-                    <View style={styles.contentAddUser}>  
-                        <View style={styles.boxInput}> 
-                            <Text style={styles.inputText}>NOME</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(nome) => this.setState({nome})} value={this.stateInput.nome} placeholderTextColor={colors.textColor}/>
-                        </View>
-                        <View style={styles.boxInput}> 
-                            <Text style={styles.inputText}>CPF</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(cpf) => this.setState({cpf})} value={this.stateInput.cpf} placeholderTextColor={colors.textColor}/>
-                        </View>
-                        <View style={styles.boxInput}> 
-                            <Text style={styles.inputText}>E-MAIL</Text>
-                            <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(email) => this.setState({email})} value={this.stateInput.email} placeholderTextColor={colors.textColor}/>
-                        </View>
-                    </View>
+                    {this.formData()}
 
                     <View style={styles.addEmplayee}>
                         <TouchableOpacity style={styles.addBtn} onPress={() => {this.setState({visibleModal: false})} }>
@@ -83,10 +150,10 @@ export default class addEmployee extends Component {
                             <Text style={styles.textBtn}>EXCLUIR FUNCIONÁRIO</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.deleteBtnTransparent} onPress={this.buttonPress}>
+                        {/* <TouchableOpacity style={styles.deleteBtnTransparent} onPress={this.buttonPress}>
                             <MaterialIcon name="delete" size={15} style={styles.iconDeleteTransparent}></MaterialIcon>
                             <Text style={styles.textBtnTransparent}>EXCLUIR FUNCIONÁRIO</Text>
-                        </TouchableOpacity> 
+                        </TouchableOpacity>  */}
                     </View> 
                 </ScrollView>  
                 {this.renderBottomComponent()}
