@@ -10,10 +10,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        height: 32,
-        width: 72,
-        alignItems: 'center',
-        justifyContent: 'center',
+        height: 50,
+        resizeMode: 'contain'
     }
 });
 

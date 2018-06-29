@@ -91,7 +91,10 @@ export default class Login extends Component {
                                 <Text style={styles.txtSign}>ENTRAR</Text>
                             </View>
                         </TouchableOpacity>
-                        <Text style={styles.txtForgot}>ESQUECI MINHA SENHA</Text>
+                        <TouchableOpacity onPress={() => { this.props.navigation.navigate('Password'); this.setState({ screen: 'Password' }) }}>
+                            <Text style={styles.txtForgot}>ESQUECI MINHA SENHA</Text>
+                        </TouchableOpacity>
+
                 </View>
             </View>
             </ScrollView>

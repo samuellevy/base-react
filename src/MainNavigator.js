@@ -21,11 +21,12 @@ import More from './scenes/more';
 import Rule from './scenes/rule';
 import Splash from './scenes/splash';
 import Password from './scenes/password';
+import Finish from './scenes/password/finish';
 import FeedBack from './scenes/feedback';
 import Answers from './scenes/feedback/answers';
 import Profile from './scenes/profile';
 import Employe from './scenes/employee';
-import addEmployee from './scenes/employee/addEmployee';
+// import addEmployee from './scenes/employee/addEmployee';
 import AboutCourse from './scenes/aboutCourse';
 import Aula from './scenes/curso/aula'; 
 import Question from './scenes/question'; 
@@ -43,10 +44,9 @@ const RootScene = TabNavigator({
   Rule: {screen: Rule},
   More: {screen: More},
   Contact: {screen: Contact},
-  Password: {screen: Password},
   AboutCourse: {screen: AboutCourse},
   Profile: {screen: Profile},
-  addEmployee: {screen: addEmployee},
+  // addEmployee: {screen: addEmployee},
   Employe: {screen: Employe},
   FeedBack: {screen: FeedBack},
   // Answers: {screen: Answers},
@@ -69,6 +69,8 @@ RootScene.navigationOptions = {
 export default StackNavigator({
   Splash: {screen: Splash},
   Login: {screen: Login}, // has a skip button that navigates to root
+  Password: {screen: Password},
+  Finish: {screen: Finish},
   Home: {screen: RootScene},
   Question: {screen: Question}
 }, {
