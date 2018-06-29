@@ -13,6 +13,8 @@ import AlertBox from '../components/alert';
 import ModalDelete from '../components/modal';
 import TitleTop from '../../../components/title/primary';
 
+const nameUser =  null;
+
 export default class addEmployee extends Component {
   	static navigationOptions = {
     	title: 'products',
@@ -26,13 +28,13 @@ export default class addEmployee extends Component {
     state = {
         viewSection :false,
         idUser: 0,
-        nameUser: null,
         nome: null,
         cpf: null,
         email: null,
+        // params: [{'user':null}],
         arrayUser: [
             {
-                id: 1,
+                id: 10,
                 email:"admin@3aworldwide.com.br",
                 loja:"3aW",
                 name:"Admin dev",
@@ -81,13 +83,14 @@ export default class addEmployee extends Component {
     formData() {
         return (
             <View style={styles.contentAddUser}>
-                {this.state.arrayUser.map(arrayUser => {
-                    console.log(arrayUser)
-                    this.setState({nameUser: arrayUser.name})
+                {this.state.arrayUser.map((arrayUser, index) => {
+                    // this.setState({nameUser: arrayUser.name})
                     return (
-                        <View>
+                        <View key={index}>
                             {arrayUser.id == this.state.idUser &&
                                 <View>
+                                    {/* {nameUser = arrayUser.name} */}
+                                    <Text>teste</Text>
                                     <View style={styles.boxInput}> 
                                         <Text style={styles.inputText}>NOME</Text>
                                         <TextInput style={styles.input} underlineColorAndroid='transparent' onChangeText={(nome) => this.setState({nome})} placeholder={arrayUser.name} placeholderTextColor={colors.textColor}/>
@@ -112,7 +115,7 @@ export default class addEmployee extends Component {
     renderBottomComponent(){
         if(this.state.viewSection) {
             return (
-                <ModalDelete />
+                <ModalDelete id={this.state.idUser}/>
             )
         }
     } 
@@ -126,7 +129,9 @@ export default class addEmployee extends Component {
     }
    
   	render() {
-        this.state.idUser = 2;
+        this.state.idUser = 10;
+        let idUser = this.props.navigation.state.params;
+        console.log(idUser)
 
     	return (              
 			<View style={styles.containerAdd}>
@@ -150,10 +155,6 @@ export default class addEmployee extends Component {
                             <Text style={styles.textBtn}>EXCLUIR FUNCIONÁRIO</Text>
                         </TouchableOpacity>
 
-                        {/* <TouchableOpacity style={styles.deleteBtnTransparent} onPress={this.buttonPress}>
-                            <MaterialIcon name="delete" size={15} style={styles.iconDeleteTransparent}></MaterialIcon>
-                            <Text style={styles.textBtnTransparent}>EXCLUIR FUNCIONÁRIO</Text>
-                        </TouchableOpacity>  */}
                     </View> 
                 </ScrollView>  
                 {this.renderBottomComponent()}
