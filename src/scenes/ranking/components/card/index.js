@@ -72,7 +72,7 @@ export default class Card extends Component {
             <Text style={styles.loja}>{store}</Text>
             <Text style={[styles.score, color={color}]}>{score} pts</Text>
           </View>
-          {status=='user' && <View style={styles.history}><TouchableOpacity style={styles.historyBtn} onPress={url}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon} /></TouchableOpacity></View>}
+          {/* {status=='user' && <View style={styles.history}><TouchableOpacity style={styles.historyBtn} onPress={()=>url}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon} /></TouchableOpacity></View>} */}
         </View>
       </View>
     );

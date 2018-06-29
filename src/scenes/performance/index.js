@@ -9,6 +9,7 @@ import General from './components/general';
 import LastUpdate from './components/lastupdate';
 import Sales from './components/sales';
 import History from './components/history';
+import api from '../../services/api';
 
 export default class Performance extends Component {
     static navigationOptions = {
@@ -17,6 +18,22 @@ export default class Performance extends Component {
             return <NavIcon title={'Desempenho'} icon={'today'}/>;
         },
     };
+
+    state={
+        points:[]
+    }
+
+    getData = async () => {
+        try{
+            const response = await api.get('/points/get');
+            var points = response.data.points;
+            console.log(points);
+            this.setState({points: response.data.points});
+        } catch (response){
+            this.setState({ errorMessage: response.data.message });
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -32,11 +49,13 @@ export default class Performance extends Component {
                     <LastUpdate />
                     <Text style={styles.subtitle}>Histórico</Text>
                     <View style={styles.historyBox}>
-                        <History child='not-last' date='08/18' description='Módulo completado' score='25'/>
-                        <History child='not-last' date='07/18' description='Meta mensal atingida - 100%' score='50'/>
+                    {this.state.points.map((item,key) => (
+                        <History child={key<this.state.points.length?'not-last':'last'} date='08/18' description='Módulo completado' score='25'/>
+                    ))}
+                        {/* <History child='not-last' date='07/18' description='Meta mensal atingida - 100%' score='50'/>
                         <History child='not-last' date='06/18' description='Módulo completado' score='100'/>
                         <History child='not-last' date='06/18' description='Cadastro de funcionários' score='25'/>
-                        <History child='last' date='06/18' description='Módulo completado' score='20'/>
+                        <History child='last' date='06/18' description='Módulo completado' score='20'/> */}
                     </View>
                 </ScrollView>
             </View>
