@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         fontFamily: fonts.main,
         fontWeight: 'normal',
         marginTop: 5,
-        textAlign: 'right',
+        textAlign: 'center',
         color: colors.error,
 
     },
