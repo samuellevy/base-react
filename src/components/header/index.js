@@ -13,7 +13,7 @@ export default class Header extends Component {
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logo}
-                        source={require('../../../assets/img/marca2.png')}
+                        source={require('../../../assets/img/logo.png')}
                     />
                 </View>
             </View>

@@ -52,13 +52,9 @@ export default class Card extends Component {
     switch (status) {
       case 'user':
         color = colors.light;
-//         historyBtn = <View style={styles.history}><TouchableOpacity style={styles.historyBtn} onPress={url}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon}/>
-// </TouchableOpacity></View>;
-        historyBtn = null
         break;
       case 'non-user':
         color = colors.gray;
-        historyBtn = null;
         break;
     }
 
@@ -76,7 +72,7 @@ export default class Card extends Component {
             <Text style={styles.loja}>{store}</Text>
             <Text style={[styles.score, color={color}]}>{score} pts</Text>
           </View>
-          {historyBtn}
+          {status=='user' && <View style={styles.history}><TouchableOpacity style={styles.historyBtn} onPress={url}><Text style={styles.historyBtnText}>{'Histórico'.toUpperCase()}</Text><MaterialCommunityIcon name={'arrow-right'} size={16} color={colors.light} style={styles.icon} /></TouchableOpacity></View>}
         </View>
       </View>
     );

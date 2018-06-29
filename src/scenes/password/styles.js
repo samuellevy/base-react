@@ -8,7 +8,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    scrollView:{
+    header: {
+        width: '100%',
+        position: 'absolute',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        top: 0,
+    },
+    turnBack: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        paddingVertical: 10,
+        alignSelf: 'flex-start',
+    },
+    iconBack: {
+        paddingRight: 10,
+        color: colors.light,
+    },
+    txtBack: {
+        color: colors.primary,
+    },
+    
+    content: {
+        flex: 1,
+        justifyContent: 'center',
         padding: metrics.containerPadding,
         paddingTop: metrics.headerPadding,
     },
@@ -24,10 +47,10 @@ const styles = StyleSheet.create({
     },
     iconBack:{
         paddingRight: 10,
-        color: colors.light,
+        color: colors.primary,
     },
     txtBack:{
-        color: colors.light,
+        color: colors.primary,
     },
 
     txtWelcome:{
@@ -72,15 +95,25 @@ const styles = StyleSheet.create({
     inputIcon:{
         position: 'absolute',
         color: colors.light,
-        marginTop: 5,
+        marginTop: 10,
+    },
+
+    inputIconError:{
+        color: colors.error,
     },
 
     input:{
-        height: 40, borderColor: colors.lighter, borderBottomWidth: 1,
+        height: 40, 
+        borderColor: colors.lighter, 
+        borderBottomWidth: 1,
         backgroundColor: colors.transparent,
-        
-        color: colors.light,
+        fontSize: metrics.fonts.big,
+        color: colors.fontColor,
         paddingLeft: 40,
+    },
+    inputError:{
+        borderColor: colors.error,
+        borderBottomWidth: 1,
     },
 
     boxCheck:{
