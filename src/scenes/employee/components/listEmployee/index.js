@@ -8,7 +8,7 @@ export default class Employee extends Component {
   	render() {
         let iconSelect    = this.props.icon;
         let nameUser      = this.props.nameUser;
-        let mensager      = this.props.mensager;
+        let message      = this.props.message;
         // let navigator     = this.props.navigator;
   
     	return ( 
@@ -19,7 +19,7 @@ export default class Employee extends Component {
                         <MaterialIcon name={!iconSelect ? "error" : "done"} size={15} style={!iconSelect ? styles.iconAlert : styles.iconDone} color={"#ddd"}></MaterialIcon>
                     </View>
                     
-                    <Text style={styles.textInfo}>{mensager}</Text>
+                    <Text style={styles.textInfo}>{message}</Text>
                 </View>
 
                 <View style={styles.boxIconEdit}>
