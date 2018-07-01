@@ -42,7 +42,7 @@ const RootScene = TabNavigator({
   Performance: {screen: Performance},
   Ranking: {screen: Ranking},
   // Rule: {screen: Rule},
-  // More: {screen: More},
+  More: {screen: More},
   // Contact: {screen: Contact},
   // AboutCourse: {screen: AboutCourse},
   // Profile: {screen: Profile},

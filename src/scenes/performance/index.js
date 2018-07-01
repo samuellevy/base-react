@@ -20,15 +20,21 @@ export default class Performance extends Component {
     };
 
     state={
-        points:[]
+        points:[],
+        total:null
     }
+
+    constructor (){
+        super();
+        this.getData();
+    }
+    
 
     getData = async () => {
         try{
             const response = await api.get('/points/get');
-            var points = response.data.points;
-            console.log(points);
-            this.setState({points: response.data.points});
+            this.setState({points: response.data.points,total: response.data.total});
+            console.log(response.data.points);
         } catch (response){
             this.setState({ errorMessage: response.data.message });
         }
@@ -45,12 +51,12 @@ export default class Performance extends Component {
                     <Text style={styles.subtitle}>Vendas Mensais</Text>
                     <Sales />
                     <Text style={styles.subtitle}>Desempenho Geral</Text>
-                    <General />
+                    <General total={this.state.total}/>
                     <LastUpdate />
                     <Text style={styles.subtitle}>Histórico</Text>
                     <View style={styles.historyBox}>
                     {this.state.points.map((item,key) => (
-                        <History child={key<this.state.points.length?'not-last':'last'} date='08/18' description='Módulo completado' score='25'/>
+                        <History key={'history_'+key} child={key<this.state.points.length?'not-last':'last'} date={item.date} description={item.title} score={item.point}/>
                     ))}
                         {/* <History child='not-last' date='07/18' description='Meta mensal atingida - 100%' score='50'/>
                         <History child='not-last' date='06/18' description='Módulo completado' score='100'/>

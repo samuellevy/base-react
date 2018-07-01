@@ -9,6 +9,8 @@ export default class General extends Component {
     };
 
     render() {
+        let total = this.props.total;
+
         return (
             <View style={styles.container}>
                 <View style={styles.box}>
@@ -24,7 +26,7 @@ export default class General extends Component {
                         <View style={[styles.splitTitleBox, styles.splitTitleBoxRight]}>
                             <Text style={styles.splitTitle}>{'Pontuação'.toUpperCase()}</Text>
                         </View>
-                        <Text style={[styles.splitText, styles.splitTextScore]}>360 pontos</Text>
+                        <Text style={[styles.splitText, styles.splitTextScore]}>{total} ponto{total>1?'s':''}</Text>
                     </View>
                 </View>
             </View>
