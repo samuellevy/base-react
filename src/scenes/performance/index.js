@@ -21,7 +21,9 @@ export default class Performance extends Component {
 
     state={
         points:[],
-        total:null
+        total:null,
+        ranking:null,
+        percent:null,
     }
 
     constructor (){
@@ -33,7 +35,7 @@ export default class Performance extends Component {
     getData = async () => {
         try{
             const response = await api.get('/points/get');
-            this.setState({points: response.data.points,total: response.data.total});
+            this.setState({points: response.data.points,total: response.data.total,ranking: response.data.ranking});
             console.log(response.data.points);
         } catch (response){
             this.setState({ errorMessage: response.data.message });
@@ -49,9 +51,9 @@ export default class Performance extends Component {
                     </Text>
 
                     <Text style={styles.subtitle}>Vendas Mensais</Text>
-                    <Sales />
+                    <Sales percent={this.state.percent}/>
                     <Text style={styles.subtitle}>Desempenho Geral</Text>
-                    <General total={this.state.total}/>
+                    <General total={this.state.total} ranking={this.state.ranking}/>
                     <LastUpdate />
                     <Text style={styles.subtitle}>Histórico</Text>
                     <View style={styles.historyBox}>

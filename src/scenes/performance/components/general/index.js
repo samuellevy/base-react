@@ -10,6 +10,7 @@ export default class General extends Component {
 
     render() {
         let total = this.props.total;
+        let ranking = this.props.ranking;
 
         return (
             <View style={styles.container}>
@@ -19,7 +20,7 @@ export default class General extends Component {
                             <Text style={styles.splitTitle}>{'Ranking'.toUpperCase()}</Text>
                         </View>
                         <View style={styles.boxSplitText}>
-                            <Text style={styles.splitText}>4º Lugar</Text>
+                            <Text style={styles.splitText}>{ranking}º Lugar</Text>
                         </View>
                     </View>
                     <View style={styles.split}>
