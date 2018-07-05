@@ -6,7 +6,7 @@ export default {
   containerPadding: 30,
   marginDefault: 15,
   ...Platform.select({
-    ios: { headerHeight: 64, headerPadding: 20 },
+    ios: { headerHeight: 94, headerPadding: 24 },
     android: { headerHeight: 44, headerPadding: 15 },
   }),
   

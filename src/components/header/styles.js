@@ -4,7 +4,7 @@ import { colors, metrics } from '../../styles';
 const styles = StyleSheet.create({
     header: {
         paddingTop: (Platform.OS === 'ios') ? metrics.headerPadding : 0,
-        height: 70,
+        height: (Platform.OS === 'ios') ? metrics.headerHeight : 70,
         backgroundColor: colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
