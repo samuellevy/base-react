@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, AsyncStorage } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import NavIcon from '../../components/navigation/NavIcon';
 import styles from './styles';
@@ -14,6 +14,8 @@ import Course from './components/course';
 import Blog from './components/blog';
 import About from './components/about';
 import Button from '../../components/button';
+import FirstVideo from '../../scenes/firstVideo';
+import Regulamento from '../../scenes/regulamento';
 import { colors, metrics, fonts } from '../../styles';
 
 import Card from './components/card';
@@ -28,14 +30,55 @@ export default class Home extends Component {
   };
 
   state = {
+    accessFirst: '',
     user:{
       name: null
     }
   };
 
-  constructor (){
+  constructor (){ 
     super();
+    this.firstModal(); 
+    this.firstAccess();
     this.getUserData();
+  }
+
+ 
+  firstModal() {
+    //AsyncStorage.clear();
+    // AsyncStorage.setItem('accessFirst', 'false'); 
+  }
+
+  firstAccess = async () => {
+    try {
+      let accessFirst = await AsyncStorage.getItem('accessFirst')
+      if(accessFirst == 'true') {
+        this.setState({accessFirst: false})
+        console.log('Ja entro')
+      } else {
+        AsyncStorage.setItem('accessFirst', 'true'); 
+        this.setState({accessFirst: true})
+        console.log('nunca entro')
+      }
+    } catch(error) {
+      console.log(error)
+    }
+  }
+
+  modalFirst() {
+    if(this.state.accessFirst) {
+      return (
+        <FirstVideo />
+      )
+    }
+  }
+  
+  regulamento() {
+    if(this.state.accessFirst) {
+      return (
+        <Regulamento />
+      )
+    }
   }
 
   getUserData = async () => {
@@ -53,7 +96,17 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {/* <FirstVideo /> */}
+        {this.modalFirst()}
+        {this.regulamento()}
         <ScrollView style={styles.scrollview}>
+
+          <View style={styles.contentImage}>
+            <Image
+                style={styles.image}
+                source={require('../../../assets/img/banner3.png')}
+            />
+          </View>
 
           <SmallProfile user={this.state.user}/>
           <RankingBox user={this.state.user}/>

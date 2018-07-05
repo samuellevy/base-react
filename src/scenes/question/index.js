@@ -25,68 +25,12 @@ export default class Question extends Component {
         quizSelect: 0,  
         finish: false,
         titleQuestion: '',
-        quest: [
-            {
-                id: 1,
-                question: "1. Qual é o melhor cimento para obras internas?",
-                answer: [
-                    {id: 1, name: 'Votoran'},
-                    {id: 2, name: 'Tupi'},
-                    {id: 3, name: 'Mauá'},
-                    {id: 4, name: 'CSN'},
-                    {id: 5, name: 'Holcim'}
-                ]
-            },
-            {
-                id: 2,
-                question: '2. Qual é o melhor cimento para obras internas?',
-                answer: [
-                    {id: 1, name: 'Votoran22'},
-                    {id: 2, name: 'Tupi2'},
-                    {id: 3, name: 'Mauá2'},
-                    {id: 4, name: 'CSN2'},
-                    {id: 5, name: 'Holcim2'}
-                ]
-            },
-            {
-                id: 3,
-                question: '3. Qual é o melhor cimento para obras internas?',
-                answer: [
-                    {id: 1, name: 'Votoran3'},
-                    {id: 2, name: 'Tupi3'},
-                    {id: 3, name: 'Mauá3'},
-                    {id: 4, name: 'CSN3'},
-                    {id: 5, name: 'Holcim3'}
-                ]
-            },
-            {
-                id: 4,
-                question: '4. Qual é o melhor cimento para obras internas?',
-                answer: [
-                    {id: 1, name: 'Votoran'},
-                    {id: 2, name: 'Tupi'},
-                    {id: 3, name: 'Mauá'},
-                    {id: 4, name: 'CSN'},
-                    {id: 5, name: 'Holcim'}
-                ] 
-            },
-            {
-                id: 5,
-                question: '5. Qual é o melhor cimento para obras internas?',
-                answer: [
-                    {id: 1, name: 'Votoran'},
-                    {id: 2, name: 'Tupi'},
-                    {id: 3, name: 'Mauá'},
-                    {id: 4, name: 'CSN'},
-                    {id: 5, name: 'Holcim'}
-                ]
-            }
-        ]
     }
     constructor (){
         super();
         this.getUserData();
         this.state.quizSelect = 0;
+        this.state.question = [];
     }
     
     getUserData = async () => {
@@ -103,7 +47,13 @@ export default class Question extends Component {
     getTitle() {
         var idArray = this.state.quizSelect;
         return (
-            <Text style={styles.titleQuizBox}>{this.state.quest[idArray].question}</Text>  
+            <View>
+                {this.state.question.map((quest, index) => {
+                    if(index == idArray) {
+                        return <Text key={index} style={styles.titleQuizBox}>{quest.title}</Text>
+                    }
+                })}
+            </View>
         ) 
     }   
 
@@ -142,7 +92,6 @@ export default class Question extends Component {
 
             //this.state.arrayQuest.push({id: this.state.quizSelect, value: this.state.btnSelected})
             var data = this.state.arrayQuest;
-
             //this.finishFunction(true, data)
             this.setState({finish: true})
         } else { 
@@ -150,7 +99,6 @@ export default class Question extends Component {
 
             var arrayExemp = this.state.arrayQuest.concat({id: this.state.quizSelect, value: this.state.btnSelected});
             this.setState({arrayQuest: arrayExemp})
- 
             // this.state.arrayQuest.push({id: this.state.quizSelect, value: this.state.btnSelected})
             
             
@@ -161,7 +109,7 @@ export default class Question extends Component {
     finishFunction() {
         if(this.state.finish) {
             console.log(this.state.arrayQuest)
-            return <Finish navigator={() => { this.props.navigation.navigate('Answers', {arrayQuest: this.state.arrayQuest});}} />
+            return <Finish navigator={() => {this.props.navigation.navigate('Answers');}} />
         }
     } 
     

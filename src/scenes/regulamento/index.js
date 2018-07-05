@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Modal, ListView, Button } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import NavIcon from '../../../../components/navigation/NavIcon';
 import styles from './styles';  
-import Pie from '../../../../components/pie'
-
-import { colors, metrics, fonts } from '../../../../styles';
-
-var arrayQuest = new Array(); 
 
 export default class Finish extends Component {
     contentTop = (video) => {
@@ -27,49 +21,32 @@ export default class Finish extends Component {
     setModalVisible(visible) { 
         this.setState({modalVisible: visible});
     }
-
-    confirmQuest(page) {
-        console.log(page)
-        page;
-        this.setState({visibleModal: false});
-    } 
  
     render() {   
-
-        let navigator = this.props.navigator;
- 
         return (
             <Modal animationType="fade"      
             transparent={true}
             visible={this.state.visibleModal}
             onRequestClose={() => { this.visibleModal(false); } }> 
                <View style={styles.contentModal}>
-                    <View style={styles.modalTop} style={{backgroundColor: "#E6F2F0"}}>
+                    <View style={styles.modalTop}>
                         <View style={styles.boxTitleTop}>
-                            <Text style={styles.titleTop}>Resultado</Text>
+                            <Text style={styles.titleTop}>REGULAMENTO</Text>
 
                             <TouchableOpacity style={styles.clearBtn} onPress={() => {this.setState({visibleModal: false});}}>
                                 <MaterialIcon name="clear" size={25} style={styles.iconClear}></MaterialIcon> 
                             </TouchableOpacity>
                         </View>
-                        
-                        <View style={styles.contentPie}>                            
-                            <View style={styles.boxPie}>
-                                <Pie percent={"80"} />
-                            </View>
-                            
-                            <Text style={styles.textBottomPie}>Parabéns!</Text>
-                            <Text style={styles.textNote}>Você acertou {"80"}% do teste!</Text> 
-                        </View>
                     </View>
  
                     <View style={styles.modalBottom}>
-                        <Text style={styles.titleDescription}>Chame todo mundo!</Text>
-                        <Text style={styles.description}>Uma maneira de acumular pontos é com todos os funcionários completando o módulo do mês. Não dê bobeira ou incentive seus colegas!</Text>
+                        <ScrollView style={styles.scrollview}>
+                            <Text style={styles.textReg}>Curabitur eleifend, turpis sit amet dignissim aliquet, nisl arcu interdum nibh, vitae vestibulum nisl lacus varius quam. Phasellus lobortis iaculis sem non faucibus. In pharetra pellentesque scelerisque. Aliquam et mi imperdiet, accumsan dui nec, scelerisque mauris. Etiam gravida egestas dolor, at semper nulla euismod sit amet. Quisque sit amet nulla varius, sagittis mi at, aliquam lacus. Praesent at urna orci. Nam pretium dapibus purus, sit amet aliquam arcu sagittis id. Quisque vel tempus orci. Cras quis dolor sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse ac neque id tortor ornare finibus sit amet quis mauris. In in ligula ac ipsum convallis finibus vitae quis nibh. Vivamus varius, enim vel efficitur tempus, ex sem aliquet odio, non gravida leo quam non quam. </Text>
+                        </ScrollView>
 
                         <View style={styles.contentBtn}>
-                            <TouchableOpacity style={styles.acessMod} onPress={navigator}>
-                                <Text style={styles.textBtn}>CONTINUAR</Text> 
+                            <TouchableOpacity style={styles.acessMod} onPress={() => {this.setState({visibleModal: false});}}>
+                                <Text style={styles.textBtn}>ESTOU DE ACORDO</Text> 
                             </TouchableOpacity> 
                         </View>
                     </View> 

@@ -10,6 +10,10 @@ const styles = StyleSheet.create({
     },
     scrollview:{
         marginBottom: 55,
+    },
+    contentImage: {
+        alignItems: 'center',
+        marginTop: 10,
     }
 });
 

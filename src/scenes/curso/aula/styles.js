@@ -67,6 +67,9 @@ const styles = StyleSheet.create({
     textBtn: {
         color: colors.white,
         fontSize: 12,
+    },
+    containerCurso: {
+        marginBottom: 40,
     }
 });
 
