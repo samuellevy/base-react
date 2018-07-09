@@ -40,7 +40,7 @@ export default class ListCurso extends Component {
                     <View style={styles.containerVideo}>
                     <Title textContent="Curso de Capacitação"/>
                         {this.state.courses.map((item, key) => (
-                            <Video navigation={this.props.navigation} key={key} item={item}/> 
+                            <Video navigation={this.props.navigation} key={key} item={item} /> 
                         ))}
                     </View>
                 </ScrollView>

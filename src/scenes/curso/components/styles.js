@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     status:{
         position: 'absolute',
         left: 0,
-        backgroundColor: colors.light,
         paddingVertical: 3,
         paddingHorizontal: 9,
         zIndex: 2,
@@ -66,6 +65,12 @@ const styles = StyleSheet.create({
         fontFamily: fonts.main,
         fontWeight: 'bold',
         fontSize: metrics.fonts.xsmall
+    },
+    statusNew:{
+        backgroundColor: colors.yellow,
+    },
+    statusCompleted:{
+        backgroundColor: colors.light,
     }
 });
 

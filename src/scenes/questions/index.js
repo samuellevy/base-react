@@ -3,6 +3,7 @@ import { FlatList, ActivityIndicator, Text, View, TouchableOpacity  } from 'reac
 import Question from './components/question';
 import styles from './styles';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import rest from '../../services/rest';
 
 export default class FetchExample extends React.Component {
     
@@ -11,29 +12,17 @@ export default class FetchExample extends React.Component {
         this.state = {
             isLoading: true,
             questionKey:0,
+            dataSource: []
         }
     }
     
     componentDidMount(){
-        return fetch('http://192.168.2.71/rest/api/questions/get/2', {
-        method: 'POST',
-        headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjMsImV4cCI6MTUzMTQyMjk4MH0.pVB4W3Y8xlBjX_bdyVai-h_P54AuIlv08W9Cle246d8'
-        }})
-        .then((response) => response.json())
-        .then((responseJson) => {
+        rest.get('/questions/get/2').then((rest)=>{
             this.setState({
                 isLoading: false,
-                dataSource: responseJson.questions,
-            }, function(){
-                
+                dataSource: rest.questions
             });
         })
-        .catch((error) =>{
-            console.error(error);
-        });
     }
     
     static navigationOptions = {
@@ -44,8 +33,8 @@ export default class FetchExample extends React.Component {
         const { goBack } = this.props.navigation;
         if(this.state.isLoading){
             return(
-                <View style={{flex: 1, padding: 20}}>
-                <ActivityIndicator/>
+                <View style={{flex: 1, padding: 20, alignItems: 'center'}}>
+                    <ActivityIndicator/>
                 </View>
             )
         }
