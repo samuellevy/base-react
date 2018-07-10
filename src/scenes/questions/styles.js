@@ -61,6 +61,9 @@ const styles = StyleSheet.create({
         alignItems: 'center', 
         backgroundColor: colors.graylight, 
     },
+    selectedAnswer: {
+        backgroundColor: colors.yellow, 
+    },
     boxBtn: {
         alignItems: 'center', 
     },
@@ -69,6 +72,9 @@ const styles = StyleSheet.create({
     }, 
     textQuestionSelect: {
         color: colors.white, 
+    },
+    textAnswerSelected: {
+        color: colors.white
     },
     btnConfirm: {
         backgroundColor: colors.regular,

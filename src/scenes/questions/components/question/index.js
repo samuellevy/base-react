@@ -4,6 +4,9 @@ import { View, Text, TouchableOpacity } from 'react-native';
 
 import styles from '../../styles';
 
+
+// nao sendo usado 
+
 export default class Question extends Component {
     render() {
         let question = this.props.question;

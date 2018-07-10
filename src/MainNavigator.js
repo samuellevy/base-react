@@ -74,7 +74,7 @@ export default StackNavigator({
   Home: {screen: RootScene},
   Question: {screen: Questions}
 }, {
-  initialRouteName: 'Home',
+  initialRouteName: 'Splash',
   // headerMode: 'none',
   mode: 'modal',
   swipeEnabled: false,  

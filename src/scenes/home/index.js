@@ -95,55 +95,55 @@ export default class Home extends Component {
     }
     return (
       <View style={styles.container}>
-      {/* <FirstVideo /> */}
-      {this.modalFirst()}
-      {this.regulamento()}
-      <ScrollView style={styles.scrollview}>
-      
-      <View style={styles.contentImage}>
-      <Image
-      style={styles.image}
-      source={require('../../../assets/img/banner3.png')}
-      />
-      </View>
-      
-      <SmallProfile user={this.state.user}/>
-      <RankingBox user={this.state.user}/>
-      <LastUpdate/>
-      
-      <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Performance');}}>
-      <Card title={'Desempenho'} icon={'today'} color={colors.blue}>
-      <Performance/>
-      <CardFooter color={colors.blue} url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }}>{'Acompanhe o desempenho da loja'.toUpperCase()}</CardFooter>
-      </Card>
-      </TouchableOpacity>
-      
-      <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Curso');}}>
-      <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>
-      <Course/>
-      <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
-      </Card>
-      </TouchableOpacity>
-      
-      <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Curso');}}>
-      <Card title={'Blog'} icon={'public'} color={colors.purple}>
-      <Blog/>
-      <View style={{paddingTop: 10, paddingBottom: 20}}>
-      <TouchableOpacity onPress={this.signIn}>
-      <Button title={'Ir para o Blog'} size={60} color={colors.purple}/>
-      </TouchableOpacity>
-      </View>
-      </Card>
-      </TouchableOpacity>
-      
-      <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('AboutCourse'); }}>
-      <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>
-      <About/>
-      <CardFooter>{'Saiba mais'.toUpperCase()}</CardFooter>
-      </Card>
-      </TouchableOpacity>
-      
-      </ScrollView>
+        {/* <FirstVideo /> */}
+        {this.modalFirst()}
+        {this.regulamento()}
+        <ScrollView style={styles.scrollview}>
+            
+            <View style={styles.contentImage}>
+                <Image
+                style={styles.image}
+                source={require('../../../assets/img/banner3.png')}
+                />
+            </View>
+            
+            <SmallProfile user={this.state.user}/>
+            <RankingBox user={this.state.user}/>
+            <LastUpdate/>
+            
+            <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Performance');}}>
+                <Card title={'Desempenho'} icon={'today'} color={colors.blue}>
+                    <Performance/>
+                    <CardFooter color={colors.blue} url={() => { this.props.navigation.navigate('Performance'); this.setState({ screen: 'Performance' }) }}>{'Acompanhe o desempenho da loja'.toUpperCase()}</CardFooter>
+                </Card>
+            </TouchableOpacity>
+            
+            <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Curso');}}>
+                <Card title={'Curso de Capacitação'} icon={'video-library'} color={colors.yellow}>
+                    <Course/>
+                    <CardFooter>{'Ir para o módulo'.toUpperCase()}</CardFooter>
+                </Card>
+            </TouchableOpacity>
+            
+            <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('Curso');}}>
+                <Card title={'Blog'} icon={'public'} color={colors.purple}>
+                    <Blog/>
+                    <View style={{paddingTop: 10, paddingBottom: 20}}>
+                        <TouchableOpacity onPress={this.signIn}>
+                            <Button title={'Ir para o Blog'} size={60} color={colors.purple}/>
+                        </TouchableOpacity>
+                    </View>
+                </Card>
+            </TouchableOpacity>
+            
+            <TouchableOpacity activeOpacity={1} onPress={() => { this.props.navigation.navigate('AboutCourse'); }}>
+                <Card title={'Sobre o Programa'} icon={'info-outline'} color={colors.dark}>
+                    <About/>
+                    <CardFooter>{'Saiba mais'.toUpperCase()}</CardFooter>
+                </Card>
+            </TouchableOpacity>
+            
+        </ScrollView>
       </View>
     );
   }

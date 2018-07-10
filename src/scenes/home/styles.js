@@ -3,17 +3,17 @@ import { colors, metrics, fonts } from '../../styles';
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
-        // padding: metrics.containerPadding,
         backgroundColor: '#f7fbfc',
-        justifyContent: 'center',
     },
     scrollview:{
         marginBottom: 55,
     },
     contentImage: {
         alignItems: 'center',
-        marginTop: 10,
+    },
+    image: {
+        width: '100%',
+        resizeMode: 'cover'
     }
 });
 
