@@ -69,12 +69,24 @@ export default class Questions extends React.Component {
                 </View>
             )
         }
-        if (this.state.toFinish){
+        if (!this.state.toFinish){
             return(
-                <Result/>
+                <View style={styles.contentAll}> 
+                    <View style={styles.contentModal}>
+                        <TouchableOpacity style={styles.clearBtn} onPress={() => {goBack()}}>
+                            <MaterialIcon name="clear" size={25} style={styles.iconClear}></MaterialIcon>
+                        </TouchableOpacity>
+                        <View style={styles.titleModulo}>
+                            <Text style={styles.titleQuiz}>MÓDULO 03: CIMENTO CPII</Text>
+                        </View>
+
+                        <Result/>
+                    </View>
+                </View>
+                
             )
         }
-        else{
+        if(2==1){
             return(
                 <View style={styles.contentAll}> 
                     <View style={styles.contentModal}>

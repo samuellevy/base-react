@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         paddingRight: 30, 
     },
     btnConfirmOk: {
-        backgroundColor: "#FFB100",    
+        backgroundColor: "#FFB100", 
     },
     textBtn: {
         color: colors.white, 
@@ -108,6 +108,10 @@ const styles = StyleSheet.create({
     iconSliderSelect: {
         color: colors.yellow, 
     },
+    contentModal:{
+        flex: 1,
+        alignItems: 'center',
+    }
 })
 
 export default styles;
