@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, Dimensions } from 'react-native';
 import { colors, metrics, fonts } from '../../styles';
 
 const styles = StyleSheet.create({
@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     contentImage: {
         alignItems: 'center',
         marginTop: 10,
+    },
+    image: {
+        width: ((Dimensions.get('window').width - 20)),
+        height: 180,
     }
 });
 
