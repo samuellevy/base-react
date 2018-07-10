@@ -23,13 +23,14 @@ import Splash from './scenes/splash';
 import Password from './scenes/password';
 import Finish from './scenes/password/finish';
 import FeedBack from './scenes/feedback';
-import Answers from './scenes/feedback/answers';
+// import Answers from './scenes/feedback/answers';
 import Profile from './scenes/profile';
 import Employe from './scenes/employee';
 // import addEmployee from './scenes/employee/addEmployee';
 import AboutCourse from './scenes/aboutCourse';
 import Aula from './scenes/curso/aula'; 
 import Questions from './scenes/questions'; 
+import Result from './scenes/questions/components/result'; 
 
 // Other confs
 console.disableYellowBox = true;
@@ -72,7 +73,8 @@ export default StackNavigator({
   Password: {screen: Password},
   Finish: {screen: Finish},
   Home: {screen: RootScene},
-  Question: {screen: Questions}
+  Question: {screen: Questions},
+  Result: {screen: Result}
 }, {
   initialRouteName: 'Splash',
   // headerMode: 'none',
