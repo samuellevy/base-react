@@ -12,6 +12,8 @@ target 'LaFarge' do
     # Pods for testing
     pod 'react-native-icons', :path => '../node_modules/react-native-icons'
 
+    pod 'react-native-video', :path => '../node_modules/react-native-video'
+
   end
 
   target 'LaFargeTests' do

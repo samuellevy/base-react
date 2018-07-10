@@ -31,6 +31,7 @@ import AboutCourse from './scenes/aboutCourse';
 import Aula from './scenes/curso/aula'; 
 import Questions from './scenes/questions'; 
 import Result from './scenes/questions/components/result'; 
+import Player from './scenes/player';
 
 // Other confs
 console.disableYellowBox = true;
@@ -52,6 +53,7 @@ const RootScene = TabNavigator({
   // FeedBack: {screen: FeedBack},
   // Answers: {screen: Answers},
   // Sent: {screen: Sent},
+  Player: {screen: Player}
   
 }, {
   tabBarComponent: ({navigation}) => <Nav navigation={navigation} />,
