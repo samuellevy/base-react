@@ -29,7 +29,7 @@ import Employe from './scenes/employee';
 // import addEmployee from './scenes/employee/addEmployee';
 import AboutCourse from './scenes/aboutCourse';
 import Aula from './scenes/curso/aula'; 
-import Question from './scenes/question'; 
+import Questions from './scenes/questions'; 
 
 // Other confs
 console.disableYellowBox = true;
@@ -60,9 +60,9 @@ const RootScene = TabNavigator({
   tabBarPosition: 'bottom',
   swipeEnabled: false,
 });
-  
 RootScene.navigationOptions = {
-  header: <Header/>,
+  header: ({ navigation }) => (<Header navigation={navigation}/>
+  ),
 };
 
 // Main navigator
@@ -72,7 +72,7 @@ export default StackNavigator({
   Password: {screen: Password},
   Finish: {screen: Finish},
   Home: {screen: RootScene},
-  Question: {screen: Question}
+  Question: {screen: Questions}
 }, {
   initialRouteName: 'Splash',
   // headerMode: 'none',
